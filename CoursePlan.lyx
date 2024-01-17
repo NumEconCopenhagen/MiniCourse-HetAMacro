@@ -1,0 +1,730 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+% general
+\usepackage[titletoc]{appendix}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{tikz}
+
+% algorithm
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\IncMargin{2.5cm}
+\DecMargin{2cm}
+\usepackage{fullwidth}
+\usepackage{enumitem}
+\setlist{leftmargin=1.7cm}
+
+% tables
+\usepackage{tabularx, siunitx, multirow, booktabs}
+\begingroup
+% Allow `_` and `:` in macro names (LaTeX3 style)
+\catcode`\_=11
+\catcode`\:=11
+% Internal code of `S`
+\gdef\tabularxcolumn#1{%
+    >{\__siunitx_table_collect_begin:Nn S{} }%
+    p{#1}%  <- this is different (is `c` in normal `S`)
+    <{\__siunitx_table_print:}%
+}
+\endgroup
+
+% figures
+\usepackage{subfig}
+\usepackage{caption}
+\captionsetup[subfloat]{position=top}
+
+% footnotes
+\setlength{\skip\footins}{1cm}
+\usepackage[hang,splitrule]{footmisc}
+\setlength{\footnotemargin}{0.3cm} %.5
+\setlength{\footnotesep}{0.4cm}
+
+% links
+\hypersetup{colorlinks=true,citecolor=blue}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\hypersetup{colorlinks=true,urlcolor=blue}
+
+% code
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{background}{HTML}{F5F5F5}
+\definecolor{keyword}{HTML}{4B69C6}
+\definecolor{string}{HTML}{448C27}
+\definecolor{comment}{HTML}{448C27}
+
+\usepackage{inconsolata}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{comment},
+    keywordstyle=\color{keyword},
+    stringstyle=\color{string},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+	showlines=true
+}
+
+\lstset{style=mystyle}
+
+% manual
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=1cm}
+\setlist[itemize]{leftmargin=0.5cm}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification false
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style danish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-25mm}
+\end_layout
+
+\end_inset
+
+Course Plan:
+\series bold
+ Heterogeneous Agent Macro
+\end_layout
+
+\begin_layout Author
+Jeppe Druedahl
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Course page:
+\series default
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "sites.google.com/view/numeconcph-het-agent-macro/home"
+target "sites.google.com/view/numeconcph-het-agent-macro/home"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Preparation:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Install Python and VSCode as explained 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://sites.google.com/view/numeconcph-het-agent-macro/python"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Watch the lecture videos on Python (~ 10 hours) 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://youtube.com/playlist?list=PLpFlKyGKUp8fo3FPxi0z1drVQJXlwcIqD&si=Aqo9uJ3pc957zB1K"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Go through the associated lecture notebooks 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://github.com/NumEconCopenhagen/IntroProg-lectures"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-4mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Lectures
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenpenalty=10000
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lecture 0.
+ Introduction
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+Overview: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "heathcote_quantitative_2009,kaplan_microeconomic_2018,cherrier_household_2023"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lecture 1.
+ Consumption-saving
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+Central: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "carroll_buffer-stock_1997,druedahl_guide_2021"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+More economics: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "modigliani_utility_1954,friedman_theory_1957,deaton_saving_1991,carroll_buffer-stock_1992,carroll_method_2006,kaplan_model_2014,kaplan_wealthy_2014,jorgensen_lifecycle_2017,carroll_liquidity_2021,guvenen_what_2021,fagereng_mpc_2021,harmenberg_consumption_2021,druedahl_high_2021,druedahl_long-run_2022"
+literal "false"
+
+\end_inset
+
+.
+ More computational: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "carroll_method_2006,iskhakov_endogenous_2017,druedahl_general_2017,harmenberg_aggregating_2021"
+literal "false"
+
+\end_inset
+
+.
+ Deep learning: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "maliar_deep_2021,azinovic_deep_2022,kase_estimating_2022,han_deepham_2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lecture 2.
+ Stationary equilibrium
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+Central:
+\series bold
+ 
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand citet
+key "aiyagari_uninsured_1994,hubmer_sources_2021"
+literal "false"
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+GEModelTools: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "druedahl_documentation_2024,druedahl_gemodeltools_2024-3,druedahl_gemodeltools_2024-2"
+literal "false"
+
+\end_inset
+
+.
+
+\series bold
+ 
+\series default
+Histogram simulation: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "young_solving_2010,tan_fast_2020,ocampo_computing_2022"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lecture 3.
+ Transitional dynamics
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+Central: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "boppart_exploiting_2018,auclert_using_2021"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+GEModelTools: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "druedahl_documentation_2024,druedahl_gemodeltools_2024-3,druedahl_gemodeltools_2024-2"
+literal "false"
+
+\end_inset
+
+.
+ More on policy: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mckay_optimal_2023,davila_optimal_2023"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lecture 4.
+ HANK
+\series default
+\bar under
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar default
+Central: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "werning_incomplete_2015,kaplan_monetary_2018,auclert_intertemporal_2023,broer_fiscal_2023"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+GEModelTools: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "druedahl_gemodeltools_2024-4,druedahl_gemodeltools_2024-5,druedahl_gemodeltools_2024-6,druedahl_gemodeltools_2024-1,druedahl_gemodeltools_2024"
+literal "false"
+
+\end_inset
+
+.
+ More HANK: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "bayer_precautionary_2019,hagedorn_fiscal_2019,auclert_micro_2020,auclert_exchange_2021,druedahl_transmission_2022"
+literal "false"
+
+\end_inset
+
+.
+ More zero-liquidity: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mckay_discounted_2017,acharya_understanding_2020,broer_new_2020,bilbiie_monetary_2021,ravn_macroeconomic_2021,broer_unemployment-risk_2023"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Plan
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Monday:
+\series default
+ Lecture 0+1: 9:00 - 13:00
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Tuesday:
+\series default
+ Lecture 2: 10:00 - 13:00
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Wednesday:
+\series default
+ Lecture 3: 10:00 - 13:00
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Thursday:
+\series default
+ Lecture 4: 10:00 - 13:00
+\end_layout
+
+\begin_layout Section*
+Code-packages
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+EconModel:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/EconModel"
+target "https://github.com/NumEconCopenhagen/EconModel"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/EconModelNotebooks"
+target "https://github.com/NumEconCopenhagen/EconModelNotebooks"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+ConSav:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/ConsumptionSaving"
+target "https://github.com/NumEconCopenhagen/ConsumptionSaving"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/ConsumptionSavingNotebooks"
+target "https://github.com/NumEconCopenhagen/ConsumptionSavingNotebooks"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+GEModelTools:
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/GEModelTools"
+target "https://github.com/NumEconCopenhagen/GEModelTools"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/GEModelToolsNotebooks"
+target "https://github.com/NumEconCopenhagen/GEModelToolsNotebooks"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "HetAgentMacro"
+options "apalike"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
