@@ -1222,18 +1222,6 @@ Different types of shocks:
 \begin_layout Enumerate
 MPC of 
 \emph on
-permanent
-\emph default
- income change: 
-\begin_inset Formula $\frac{\partial c_{0}}{\partial w}\approx1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-MPC of 
-\emph on
 windfall
 \emph default
  income: 
@@ -1249,7 +1237,19 @@ MPC of
 future
 \emph default
  income change: 
-\begin_inset Formula $\frac{\partial c_{0}}{\partial wz_{t}}=\frac{r}{1+r}\left(1+r\right)^{-t}$
+\begin_inset Formula $\frac{\partial c_{0}}{\partial wz_{t}}\approx\frac{r}{1+r}\left(1+r\right)^{-t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+MPC of 
+\emph on
+permanent
+\emph default
+ income change: 
+\begin_inset Formula $\frac{\partial c_{0}}{\partial w}\approx\frac{r}{1+r}\frac{1}{1-(1+r)^{-1}}=1$
 \end_inset
 
 
@@ -1262,6 +1262,20 @@ Dynamic affects:
 \series default
 The same when 
 \begin_inset Formula $\beta R=1$
+\end_inset
+
+, for all 
+\begin_inset Formula $k>0$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial c_{k}}{\partial s_{0}} & =\frac{\partial c_{0}}{\partial s_{0}}\\
+\frac{\partial c_{k}}{\partial wz_{t}} & =\frac{\partial c_{0}}{\partial wz_{t}}\\
+\frac{\partial c_{k}}{\partial w} & =\frac{\partial c_{0}}{\partial w}
+\end{align*}
+
 \end_inset
 
 
@@ -1388,12 +1402,22 @@ a_{0}=Ra_{-1}+wz_{0}-c_{0}
 \end_layout
 
 \begin_layout Itemize
-
+Hard 
 \series bold
-Borrowing constraint:
+borrowing constraint:
 \series default
  
 \begin_inset Formula $a_{0}\geq-w\cdot b$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+for a soft constraint the interest rate only increases
+\end_layout
+
 \end_inset
 
 
@@ -3036,8 +3060,9 @@ vspace{-2mm}
 \begin{align*}
 \breve{v}_{t+1}(z^{i_{z}},a) & =\text{baseline + slope}\times\text{distance}\\
  & =v_{t+1}(z^{i_{z}},a^{\iota})+\omega(a-a^{\iota})\\
-\omega & \equiv\frac{v_{t+1}(z^{i_{z}},a^{\iota+1})-v_{t+1}(z^{i_{z}},a^{\iota})}{a^{\iota+1}-a^{\iota}}\\
-\iota & \equiv\text{largest }i_{a}\in\{0,1,\dots,\#_{a}-2\}\text{ such that }a^{i_{a}}\leq a
+ & \text{where}\\
+ & \omega\equiv\frac{v_{t+1}(z^{i_{z}},a^{\iota+1})-v_{t+1}(z^{i_{z}},a^{\iota})}{a^{\iota+1}-a^{\iota}}\\
+ & \iota\equiv\text{largest }i_{a}\in\{0,1,\dots,\#_{a}-2\}\text{ such that }a^{i_{a}}\leq a
 \end{align*}
 
 \end_inset
@@ -3545,7 +3570,7 @@ vspace{-1mm}
 
 \begin_inset Formula 
 \[
-q(z^{i_{z}},a^{i_{a}})=\sum_{i_{z+}=0}^{\#_{z}-1}\pi_{i_{z},i_{z+}}c_{+}(z^{i_{z+}},a^{i_{a}})^{-\sigma}
+q(z^{i_{z}},a^{i_{a}})=\sum_{i_{z+}=0}^{\#_{z}-1}\pi_{i_{z},i_{z+}}c_{+}^{\ast}(z^{i_{z+}},a^{i_{a}})^{-\sigma}
 \]
 
 \end_inset
@@ -3761,7 +3786,7 @@ Terminal period:
 Recursive problem:
 \series default
  For 
-\begin_inset Formula $\text{own}_{t}\in\{0,1\}$
+\begin_inset Formula $\text{own}_{t-1}\in\{0,1\}$
 \end_inset
 
 
@@ -3783,7 +3808,7 @@ vspace{-2mm}
 \begin_inset Formula 
 \begin{align*}
 v_{t}(\text{own}_{t-1},a_{t-1},y_{t}) & =\max_{c_{t},\text{sell}_{t}\in\{0,1\}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}(\text{own}_{t},a_{t},y_{t+1})\right]\\
-\text{s.t.\,\,\,}\text{own}_{t}= & \text{sell}_{t}\text{own}_{t-1}\\
+\text{s.t.\,\,\,}\text{own}_{t} & =(1-\text{sell}_{t})\text{own}_{t-1}\\
 m_{t} & =a_{t-1}+y_{t}+\text{sell}_{t}\text{own}_{t-1}(1-\gamma)k\\
 a_{t} & =m_{t}-c_{t}\\
 y_{t+1} & =1\\
@@ -3884,6 +3909,18 @@ vspace{-2mm}
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
 
 \series bold
 Post-decision value function:
@@ -3895,13 +3932,10 @@ w_{t}(\text{own}_{t},a_{t}) & =\mathbb{E}_{t}\left[\begin{cases}
 v_{t+1}(\text{own}_{t},m_{t+1}) & \text{if}\text{ own}_{t}=0\text{ or }t=T-1\\
 \overline{v}_{t+1}(m_{t+1}) & \text{\text{if}}\text{ own}_{t}=1\text{ and }t<T-1
 \end{cases}\right]\\
- & \,\,\,m_{t+1}=a_{t}+y_{t+1}
+ & \,\,\,m_{t+1}=a_{t}+y_{t+1}\\
+ & \text{where }v_{T}(\text{own}_{T-1},m_{T})=\frac{\left(m_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}
 \end{align*}
 
-\end_inset
-
-where 
-\begin_inset Formula $v_{T}(\text{own}_{T-1},m_{T})=\frac{\left(m_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
 \end_inset
 
 
@@ -4019,7 +4053,7 @@ Upper envelope (given
 Step 1: 
 \series default
 Generate candidate points, 
-\begin_inset Formula $\forall i_{a}\in\{0,1,\dots,\#_{a}-1\}$
+\begin_inset Formula $\forall i_{a}$
 \end_inset
 
  
@@ -4069,16 +4103,22 @@ Upper envelope (given
 Step 2: 
 \series default
 Apply upper-envelope,
-\begin_inset Formula $\forall i_{m}\in\{0,1,\dots,\#_{m}-1\}$
+\begin_inset Formula $\forall i_{m}$
 \end_inset
 
- 
+, 
+\begin_inset Formula $c^{\ast}(m^{i_{m}})=c^{i_{m},j^{\ast}}$
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align*}
-c^{\ast}(m^{i_{m}}) & =c^{i_{m},j^{\ast}}\\
 j^{\ast} & =\arg\max_{j\in\{0,1,\dots\#_{a}-2\}}u\left(c^{i_{m},j}\right)+w^{i_{m},j}\\
  & \text{s.t.}\\
-\text{potential segment: }m^{i_{m}} & \in\left[m^{j},m^{j+1}\right]\\
+\text{potential segment: }m^{i_{m}} & \in\begin{cases}
+\left[m^{j},m^{j+1}\right] & \text{if }j<\#_{a}-2\\
+\left[m^{j},\infty\right] & \text{if }j=\#_{a}-2
+\end{cases}\\
 \text{interpolation + constraint }c^{i_{m},j} & =\min\left\{ c^{j}+\frac{c^{j+1}-c^{j}}{m^{j+1}-m^{j}}\left(m^{i_{m}}-m^{j}\right),m^{i_{m}}\right\} \\
 \text{continuation value: }w^{i_{m},j} & =\text{interp }\left\{ a^{i_{a}}\right\} \rightarrow\left\{ w^{i_{a}}\right\} \text{ at }a^{i_{m},j}\\
  & \,\,\,a^{i_{m},j}=m^{i_{m}}-c^{i_{m},j}
@@ -4174,7 +4214,7 @@ status open
 
 
 \backslash
-vspace{-6mm}
+vspace{-2mm}
 \end_layout
 
 \end_inset

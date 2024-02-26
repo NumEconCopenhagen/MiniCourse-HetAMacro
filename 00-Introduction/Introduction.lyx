@@ -775,7 +775,7 @@ from theory to implementation
 \end_layout
 
 \begin_layout Enumerate
-Not a review - 
+Not a literature review - 
 \emph on
 key entrances to literature
 \end_layout
@@ -2215,7 +2215,7 @@ use existing libraries
 Parallelisation: 
 \series default
 \emph on
-Start up costs 
+Start up costs
 \end_layout
 
 \begin_deeper
@@ -2234,15 +2234,9 @@ Hardware:
 \series bold
 Software:
 \series default
- Shared memory (
-\emph on
-OpenMP
-\emph default
-) or not (
-\emph on
-MPI
-\emph default
-)
+ Shared memory (e.g.
+ OpenMP) or not (e.g.
+ MPI)
 \end_layout
 
 \end_deeper
@@ -2437,7 +2431,20 @@ lstinline{JAX}
 
 \end_inset
 
- 
+ (or 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{PyTorch}
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
@@ -2579,6 +2586,23 @@ literal "false"
 )
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Replication: 
+\bar under
+
+\begin_inset CommandInset href
+LatexCommand href
+name "datacodestandard.org"
+target "https://datacodestandard.org/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 
 \series bold
@@ -2589,7 +2613,7 @@ Debugging
 
 \begin_deeper
 \begin_layout Enumerate
-Errors are (almost) always simple 
+Errors are (almost) always simple
 \end_layout
 
 \begin_layout Enumerate
