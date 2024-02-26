@@ -1319,7 +1319,7 @@ vspace{-1mm}
 
 \begin_inset Formula 
 \[
-\text{e.g.}\text{ integer\ensuremath{\,\subset\,}\ensuremath{\text{scalar}}\ensuremath{\,\subset\,}}\text{number}\,\subset
+\text{e.g.}\text{ integer\ensuremath{\,\subset\,}\ensuremath{\text{scalar}}\ensuremath{\,\subset\,}}\text{number}
 \]
 
 \end_inset
@@ -2073,12 +2073,12 @@ s = rng.bit_generator.state
 
 \begin_layout Plain Layout
 
-x = rng.normal(size=10)
+x = rng.normal(size=5)
 \end_layout
 
 \begin_layout Plain Layout
 
-y = rng.normal(size=10)
+y = rng.normal(size=5)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2088,7 +2088,7 @@ rng.bit_generator.state = s
 
 \begin_layout Plain Layout
 
-z = rng.normal(size=10)
+z = rng.normal(size=5)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2101,358 +2101,6 @@ end{lstlisting}
 \end_inset
 
 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-CPUs are complex
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Instruction set
-\series default
- (assembly) is not just add, subtract, etc.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Work on vectors (SIMD) 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\emph on
-homogeneity is good
-\end_layout
-
-\begin_layout Enumerate
-Out-of-order execution 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\emph on
-predictability is good
-\emph default
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-multiple branches can be calculated in advance
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-Caching 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\emph on
-latest read memory can be accessed quickly
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename figs/computer.gif
-	lyxscale 30
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename figs/memory.gif
-	lyxscale 30
-	width 30text%
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\series bold
-Compilers can optimize a lot 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\bar under
-use existing libraries
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Parallelisation: 
-\series default
-\emph on
-Start up costs
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\series bold
-Hardware:
-\series default
- Cores vs.
- CPUs vs.
- sockets vs, computers
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Software:
-\series default
- Shared memory (e.g.
- OpenMP) or not (e.g.
- MPI)
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Moore vs.
- Amdahl
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Graphics
-	filename figs/moores_law.png
-	lyxscale 20
-	width 50text%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename figs/amdahls_law.png
-	width 50text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-3mm}
-\end_layout
-
-\end_inset
-
-
-\series bold
-Moore's law: 
-\series default
-Exponential growth in computational power
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Originally: Faster CPUs (calculations per time unit)
-\end_layout
-
-\begin_layout Enumerate
-Now: More cores per CPU
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-
-\series bold
-Amdahl's law:
-\series default
- Sequential code becomes the bottleneck
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Need for speed
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Computation time vs programmer time
-\series default
- 
-\begin_inset Newline newline
-\end_inset
-
-Use not-too-model-specific insights 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\emph on
-better algorithm
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Premature optimization is the root of all evil! 
-\series default
-
-\begin_inset Newline newline
-\end_inset
-
-Use 
-\emph on
-line-profiler!
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Use available code: Stand on the shoulder of giants 
-\end_layout
-
-\begin_layout Enumerate
-In 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstinline{numpy}
-\end_layout
-
-\end_inset
-
-: Use vectorization
-\end_layout
-
-\begin_layout Enumerate
-Else: Use 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstinline{numba}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\series bold
-Automatic differentiation?
-\series default
- Use 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstinline{JAX}
-\end_layout
-
-\end_inset
-
- (or 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstinline{PyTorch}
-\end_layout
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Faster still?
-\series default
- Implement bottleneck in C++ and call from Python
 \end_layout
 
 \end_deeper
@@ -2736,6 +2384,366 @@ TPU: Even more specialized at AI (incl.
 \begin_inset Separator plain
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+Computers
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+CPUs are complex
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Instruction set
+\series default
+ (assembly) is not just add, subtract, etc.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Work on vectors (SIMD) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\emph on
+homogeneity is good
+\end_layout
+
+\begin_layout Enumerate
+Out-of-order execution 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\emph on
+predictability is good
+\emph default
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+multiple branches can be calculated in advance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Caching 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\emph on
+latest read memory can be accessed quickly
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/computer.gif
+	lyxscale 30
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/memory.gif
+	lyxscale 30
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Compilers can optimize a lot 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\bar under
+use existing libraries
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Parallelisation: 
+\series default
+\emph on
+Start up costs
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Hardware:
+\series default
+ Cores vs.
+ CPUs vs.
+ sockets vs, computers
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Software:
+\series default
+ Shared memory (e.g.
+ OpenMP) or not (e.g.
+ MPI)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Moore vs.
+ Amdahl
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/moores_law.png
+	lyxscale 20
+	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/amdahls_law.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-3mm}
+\end_layout
+
+\end_inset
+
+
+\series bold
+Moore's law: 
+\series default
+Exponential growth in computational power
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Originally: Faster cores (calculations per time unit)
+\end_layout
+
+\begin_layout Enumerate
+Now: More cores per CPU
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Amdahl's law:
+\series default
+ Sequential code becomes the bottleneck
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Need for speed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Computation time vs programmer time
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+Use not-too-model-specific insights 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\emph on
+better algorithm
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Premature optimization is the root of all evil! 
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Use 
+\emph on
+line-profiler!
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Use available code: Stand on the shoulder of giants 
+\end_layout
+
+\begin_layout Enumerate
+In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{numpy}
+\end_layout
+
+\end_inset
+
+: Use vectorization
+\end_layout
+
+\begin_layout Enumerate
+Else: Use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{numba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Automatic differentiation?
+\series default
+ Use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{JAX}
+\end_layout
+
+\end_inset
+
+ (or 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{PyTorch}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Faster still?
+\series default
+ Implement bottleneck in C++ and call from Python
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

@@ -1841,6 +1841,18 @@ a_{2} & =(1+r)a_{1}+w\underline{z}=a_{0}-(1+r)^{2}\Delta\\
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
 
 \series bold
 Natural borrowing constraint: 
@@ -2771,8 +2783,8 @@ Stochastic transition:
  such that
 \begin_inset Formula 
 \begin{align*}
-\text{Pr}\left[z_{t+1}\,|\,z_{t}=1\right] & =\pi_{t}\\
-\text{Pr}\left[z_{t+1}\in\{1-\Delta,1-\Delta\}\,|\,z_{t}=1\right] & =\frac{1-\pi_{t}}{2}\\
+\text{Pr}\left[z_{t+1}=1\,|\,z_{t}=1\right] & =\pi\\
+\text{Pr}\left[z_{t+1}\in\{1-\Delta,1-\Delta\}\,|\,z_{t}=1\right] & =\frac{1-\pi}{2}\\
 \text{Pr}\left[z_{t+1}=z_{t}\,|\,z_{t}\in\{1-\Delta,1+\Delta\}\right] & =1
 \end{align*}
 
@@ -3167,7 +3179,7 @@ vspace{-7mm}
 
 \begin_inset Formula 
 \begin{align*}
-v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t}) & =u(c_{t})+\sum_{i_{z+1}=0}^{\#_{z}-1}\pi\left(i_{z},i_{z+1}\right)v_{t+1}(z^{i_{z}},a^{i_{a}})\\
+v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t}) & =u(c_{t})+\sum_{i_{z+1}=0}^{\#_{z}-1}\pi\left(i_{z},i_{z+1}\right)\breve{v}_{t+1}(z^{i_{z}},a)\\
  & \text{with }a_{t}=(1+r)a^{i_{a-}}+wz^{i_{z}}-c_{t}
 \end{align*}
 
