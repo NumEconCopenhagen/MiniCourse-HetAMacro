@@ -2599,6 +2599,28 @@ Amdahl's law:
  Sequential code becomes the bottleneck
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+Time in tasks done in parallel 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+95% done in parallel 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ max 20x speed-up
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -2743,10 +2765,6 @@ Faster still?
 
 \end_layout
 
-\begin_layout Standard
-
-\end_layout
-
 \begin_layout Section
 Coding
 \end_layout
@@ -2817,7 +2835,7 @@ Task 2:
 status open
 
 \begin_layout Plain Layout
-Coding: Debugging
+Debugging
 \end_layout
 
 \end_inset
@@ -2848,7 +2866,7 @@ Notebook:
 status open
 
 \begin_layout Plain Layout
-Coding: Speed
+Need for Speed
 \end_layout
 
 \end_inset
@@ -2879,7 +2897,7 @@ Notebook:
 status open
 
 \begin_layout Plain Layout
-Coding: EconModelClass
+EconModelClass
 \end_layout
 
 \end_inset

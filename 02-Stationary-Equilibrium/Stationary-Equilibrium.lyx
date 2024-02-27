@@ -1679,10 +1679,10 @@ vspace{-2mm}
 
 \begin_inset Formula 
 \begin{align*}
-v_{0}(\beta_{i},z_{it},a_{it-1}) & =\max_{\{c_{it}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta_{i}^{t}u(c_{it})\\
+v_{0}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =\max_{\{c_{it}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta_{i}^{t}u(c_{it})\\
  & \text{s.t.}\\
-\ell_{it} & =z_{it}\\
-a_{it} & =(1+r_{t})a_{it-1}+w_{t}\phi_{i}\ell_{it}-c_{it}+\Pi_{t}\\
+\ell_{it} & =\phi_{i}z_{it}\\
+a_{it} & =(1+r_{t})a_{it-1}+w_{t}\ell_{it}-c_{it}+\Pi_{t}\\
 \log z_{it+1} & =\rho_{z}\log z_{it}+\psi_{it+1},\,\,\,\psi_{it}\sim\mathcal{N}(\mu_{\psi},\sigma_{\psi}),\,\,\,\mathbb{E}[z_{it}]=1\\
 a_{it} & \geq0
 \end{align*}
@@ -1842,10 +1842,10 @@ Value function
 (at decision)
 \begin_inset Formula 
 \begin{align*}
-v_{t}(\beta_{i},z_{it},a_{it-1}) & =\max_{c_{t}}u(c_{t})+\beta\underline{v}_{t+1}(\beta_{i},z_{it},a_{it})\\
+v_{t}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =\max_{c_{t}}u(c_{t})+\beta\underline{v}_{t+1}(\beta_{i},\phi_{i},z_{it},a_{it})\\
  & \text{s.t.}\\
-\ell_{it} & =z_{it}\\
-a_{it} & =(1+r_{t})a_{it-1}+w_{t}\phi_{i}\ell_{it}-c_{it}+\Pi_{t}\\
+\ell_{it} & =\phi_{i}z_{it}\\
+a_{it} & =(1+r_{t})a_{it-1}+w_{t}\ell_{it}-c_{it}+\Pi_{t}\\
 \log z_{it+1} & =\rho_{z}\log z_{it}+\psi_{it+1}\\
 a_{it} & \geq0
 \end{align*}
@@ -1873,7 +1873,7 @@ Beginning-of-period value function
  (before shock realization):
 \begin_inset Formula 
 \[
-\underline{v}_{t}(\beta_{i},z_{it-1},a_{it-1})=\mathbb{E}\left[v_{t}(\beta_{i},z_{it},a_{it-1})\,|\,\beta_{i},z_{it-1},a_{it-1}\right]
+\underline{v}_{t}(\beta_{i},\phi_{i},z_{it-1},a_{it-1})=\mathbb{E}\left[v_{t}(\beta_{i},\phi_{i},z_{it},a_{it-1})\,|\,\beta_{i},\phi_{i},z_{it-1},a_{it-1}\right]
 \]
 
 \end_inset
@@ -1897,7 +1897,7 @@ status open
 Envelop-condition:
 \begin_inset Formula 
 \[
-\underline{v}_{a,t}(\beta_{i},z_{it-1},a_{it-1})\equiv\frac{\partial\underline{v}_{t}}{\partial a_{it-1}}=\mathbb{E}\left[(1+r_{t})c_{it}^{-\sigma}\,|\,\beta_{i},z_{it-1},a_{it-1}\right]
+\underline{v}_{a,t}(\beta_{i},\phi_{i},z_{it-1},a_{it-1})\equiv\frac{\partial\underline{v}_{t}}{\partial a_{it-1}}=\mathbb{E}\left[(1+r_{t})c_{it}^{-\sigma}\,|\,\beta_{i},\phi_{i},z_{it-1},a_{it-1}\right]
 \]
 
 \end_inset
@@ -1947,8 +1947,8 @@ Euler-equation:
 
 \begin_inset Formula 
 \begin{align*}
-c_{it}^{-\sigma} & =\beta_{i}\underline{v}_{a,t+1}(\beta_{i},z_{it},a_{it})\\
- & =\beta_{i}\mathbb{E}_{t}\left[v_{a,t+1}(\beta_{i},z_{it+1},a_{it})\right]\\
+c_{it}^{-\sigma} & =\beta_{i}\underline{v}_{a,t+1}(\beta_{i},\phi_{i},z_{it},a_{it})\\
+ & =\beta_{i}\mathbb{E}_{t}\left[v_{a,t+1}(\beta_{i},\phi_{i},z_{it+1},a_{it})\right]\\
  & =\beta_{i}(1+r_{t+1})\mathbb{E}_{t}\left[c_{it+1}^{-\sigma}\right]\\
  & =\beta_{i}(1+r_{t+1})q(z_{it},a_{it})
 \end{align*}
@@ -2006,7 +2006,7 @@ Aggregate prices are hidden as inputs, i.e.
 
 \begin_inset Formula 
 \begin{align*}
-x_{t}^{*}(\beta_{i},z_{it},a_{it-1}) & =x^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1},\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t})\text{ for }x\in\{a,\ell,c\}
+x_{t}^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =x^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1},\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t})\text{ for }x\in\{a,\ell,c\}
 \end{align*}
 
 \end_inset
@@ -2212,7 +2212,7 @@ Aggregate consumption and savings:
 
 \begin_inset Formula 
 \begin{align*}
-X_{t}^{hh} & =\int x_{t}^{\ast}(\beta_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}=X^{hh}\left(\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t},\underline{\boldsymbol{D}}_{0}\right)\text{ for }x\in\{a,\ell,c\}
+X_{t}^{hh} & =\int x_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}=X^{hh}\left(\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t},\underline{\boldsymbol{D}}_{0}\right)\text{ for }x\in\{a,\ell,c\}
 \end{align*}
 
 \end_inset
@@ -2417,6 +2417,10 @@ Solve:
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
+, 
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
  and 
 \begin_inset Formula $z_{it}$
 \end_inset
@@ -2451,7 +2455,7 @@ Calculate endogenous grid
 
 \begin_layout Enumerate
 Interpolate at 
-\begin_inset Formula $m_{it}=(1+r_{t})a_{it-1}+w_{t}z_{it}+\Pi_{t}$
+\begin_inset Formula $m_{it}=(1+r_{t})a_{it-1}+w_{t}\phi_{i}z_{it}+\Pi_{t}$
 \end_inset
 
  to get optimal 
@@ -2484,7 +2488,7 @@ Consumption is
 Expecation:
 \begin_inset Formula 
 \[
-\underline{v}_{a,t}(\beta_{i},z_{it-1},a_{it-1})=\sum_{i_{z}=0}^{\#_{z}-1}\pi_{i_{z-},i_{z}}(1+r_{t})c_{it}^{-\rho}
+\underline{v}_{a,t}(\beta_{i},\phi_{i},z_{it-1},a_{it-1})=\sum_{i_{z}=0}^{\#_{z}-1}\pi_{i_{z-},i_{z}}(1+r_{t})c_{it}^{-\rho}
 \]
 
 \end_inset
@@ -2532,7 +2536,7 @@ Capital market:
 Labor market:
 \series default
  
-\begin_inset Formula $L_{t}=\int\phi_{i}\ell_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}=\int z_{it}d\boldsymbol{D}_{t}=1$
+\begin_inset Formula $L_{t}=\int\ell_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}=\int\phi_{i}z_{it}d\boldsymbol{D}_{t}=1$
 \end_inset
 
 
@@ -2576,7 +2580,7 @@ Walras:
 \begin_inset Formula 
 \begin{align*}
 C_{t}^{hh}+I_{t} & =\int c_{it}^{*}d\boldsymbol{D}_{t}+\left[K_{t}-(1-\delta)K_{t-1}\right]\\
- & =\int\left[(1+r_{t})a_{it-1}+w_{t}z_{it}-a_{it}\right]d\boldsymbol{D}_{t}\\
+ & =\int\left[(1+r_{t})a_{it-1}+w_{t}\phi_{i}z_{it}-a_{it}\right]d\boldsymbol{D}_{t}\\
  & =\left[(1+r_{t})K_{t-1}+w_{t}L_{t}-K_{t}\right]+\left[K_{t}-(1-\delta)K_{t-1}\right]\\
  & =r_{t}^{K}K_{t-1}+w_{t}L_{t}\\
  & =Y_{t}
@@ -2699,7 +2703,7 @@ status open
 
 
 \backslash
-vspace{1mm}
+vspace{-2mm}
 \end_layout
 
 \end_inset
@@ -2709,19 +2713,10 @@ vspace{1mm}
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\boldsymbol{D}_{t}(z^{i_{z}},a^{i_{a-}})=\sum_{i_{z-}=0}^{\text{\#}_{z}-1}\pi_{i_{z-},i_{z}}\boldsymbol{\underline{\boldsymbol{D}}}_{t}(z^{i_{z-}},a^{i_{a-}})$
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{1mm}
-\end_layout
+\begin_inset Formula 
+\[
+\boldsymbol{D}_{t}(z^{i_{z}},a^{i_{a-}})=\sum_{i_{z-}=0}^{\text{\#}_{z}-1}\pi_{i_{z-},i_{z}}\boldsymbol{\underline{\boldsymbol{D}}}_{t}(z^{i_{z-}},a^{i_{a-}})
+\]
 
 \end_inset
 
@@ -2803,7 +2798,7 @@ status open
 
 
 \backslash
-vspace{1mm}
+vspace{2mm}
 \end_layout
 
 \end_inset
@@ -2839,7 +2834,7 @@ status open
 
 
 \backslash
-vspace{1mm}
+vspace{2mm}
 \end_layout
 
 \end_inset
@@ -2870,7 +2865,7 @@ status open
 
 
 \backslash
-vspace{1mm}
+vspace{2mm}
 \end_layout
 
 \end_inset
@@ -2905,7 +2900,7 @@ status open
 
 
 \backslash
-vspace{1mm}
+vspace{2mm}
 \end_layout
 
 \end_inset
@@ -2933,14 +2928,24 @@ Increment
 \end_inset
 
 
-\begin_inset ERT
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-vspace{1mm}
+Implementation
 \end_layout
 
 \end_inset
@@ -2948,8 +2953,7 @@ vspace{1mm}
 
 \end_layout
 
-\end_deeper
-\end_deeper
+\begin_deeper
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -2963,9 +2967,9 @@ status open
 
 
 \series bold
-Review: 
+Comparison with Monte Carlo:
 \series default
-Comparison with Monte Carlo in ConSavModel/
+ See ConSavModel/
 \end_layout
 
 \begin_deeper
@@ -2983,27 +2987,46 @@ Computationally efficient and no randomness
 Con: 
 \series default
 Introduces a non-continuous distribution
-\begin_inset Newline newline
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Small example
+
+
+\backslash
+vspace{2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<+->
+\end_layout
+
+\end_inset
+
+
+\series bold
+Toy example: 
+\series default
+simple_histogram_simulation.xlsx
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
 \end_layout
 
 \end_inset
@@ -3026,6 +3049,19 @@ Grids:
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3035,6 +3071,19 @@ Transition matrix:
 \series default
  
 \begin_inset Formula $\pi_{0,0}=\pi_{1,1}=0.5$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
 \end_inset
 
 
@@ -3065,6 +3114,19 @@ High income: Let
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3078,6 +3140,19 @@ Initial distribution
 1 & \text{if }z_{it}=\underline{z}\text{ and }a_{it}=0\\
 0 & \text{else}
 \end{cases}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
 \end_inset
 
 
@@ -3097,13 +3172,6 @@ Calculate by hand the transitions to
 \end_inset
 
 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\emph on
-See simple simple_histogram_simulation.xlsx
 \end_layout
 
 \end_deeper
@@ -3306,6 +3374,19 @@ is derived from the
 \end_inset
 
 's
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2mm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3319,6 +3400,28 @@ Young (2010), Tan (2020),
 \end_inset
 
 Ocampo and Robinson (2022)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Notebook:
+\series default
+ ConSavModel/Extra.
+ The matrix formulation.ipynb
 \end_layout
 
 \end_deeper
@@ -3503,12 +3606,40 @@ and the policy functions
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\size small
+
+\backslash
+vspace{-1mm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \size small
 are such that
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\size small
+
+\backslash
+vspace{-1mm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -4051,6 +4182,92 @@ Prices:
 \begin_layout Enumerate
 Quantities: 
 \begin_inset Formula $K_{ss}/Y_{ss}=1.776$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Code
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Notebook:
+\series default
+ HANC/HANC.ipynb in 
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/GEModelToolsNotebooks"
+target "https://github.com/NumEconCopenhagen/GEModelToolsNotebooks"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Used packages:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+EconModel: 
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/EconModel"
+target "https://github.com/NumEconCopenhagen/EconModel"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ConSav:
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/ConsumptionSaving"
+target "https://github.com/NumEconCopenhagen/ConsumptionSaving"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+GEModelTools: 
+\begin_inset CommandInset href
+LatexCommand href
+name "github.com/NumEconCopenhagen/GEModelTools"
+target "https://github.com/NumEconCopenhagen/GEModelTools"
+literal "false"
+
 \end_inset
 
 
@@ -4715,6 +4932,18 @@ Heterogeneous returns? (incl.
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+
+\series bold
+Notebook:
+\series default
+ 
+\begin_inset Formula $\phi_{i}\in\{0.5,1,1.5\}$
+\end_inset
+
+ with equal shares
+\end_layout
+
 \begin_layout Itemize
 
 \series bold

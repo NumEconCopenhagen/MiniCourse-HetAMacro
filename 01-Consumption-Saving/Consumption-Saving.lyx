@@ -3295,6 +3295,15 @@ Economic insights
 \begin_layout Itemize
 
 \series bold
+Notebook: 
+\series default
+01.
+ ConSavModel.ipynb
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
 Consumption lower than under PIH and concave in assets
 \end_layout
 
@@ -4325,6 +4334,15 @@ Economic insights
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+
+\series bold
+Notebook: 
+\series default
+02.
+ Illiquid.ipynb
+\end_layout
+
 \begin_layout Enumerate
 
 \series bold
@@ -4989,8 +5007,7 @@ vspace{-1mm}
 \begin_inset Formula 
 \begin{align*}
 \boldsymbol{v}_{t}(\boldsymbol{m}_{t}) & =\max_{\boldsymbol{c}_{t}}\frac{\boldsymbol{c}_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[\psi_{t+1}^{1-\rho}\boldsymbol{v}_{t+1}(\boldsymbol{m}_{t+1})\right]\\
- & \text{s.t.}\\
-\boldsymbol{a}_{t} & =\boldsymbol{m}_{t}-\boldsymbol{c}_{t}\\
+\text{s.t.\,\,\,\,\,}\boldsymbol{a}_{t} & =\boldsymbol{m}_{t}-\boldsymbol{c}_{t}\\
 \boldsymbol{m}_{t+1} & =\frac{1+r}{\psi_{t+1}}\boldsymbol{a}_{t}+w\xi_{t+1}\\
 \boldsymbol{a}_{t} & \geq-wb
 \end{align*}
@@ -5014,6 +5031,14 @@ c_{t}^{-\sigma}=\beta(1+r)\mathbb{E}_{t}\left[c_{t+1}^{-\sigma}\right]\Leftright
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Simulation speed-up: 
+\series default
+Harmenberg (2021)
 \end_layout
 
 \end_deeper
