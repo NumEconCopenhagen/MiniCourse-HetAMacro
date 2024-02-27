@@ -1897,7 +1897,7 @@ status open
 Envelop-condition:
 \begin_inset Formula 
 \[
-\underline{v}_{a,t}(\beta_{i},\phi_{i},z_{it-1},a_{it-1})\equiv\frac{\partial\underline{v}_{t}}{\partial a_{it-1}}=\mathbb{E}\left[(1+r_{t})c_{it}^{-\sigma}\,|\,\beta_{i},\phi_{i},z_{it-1},a_{it-1}\right]
+\underline{v}_{a,t}(\beta_{i},\phi_{i},z_{it-1},a_{it-1})\equiv\frac{\partial\underline{v}_{t}}{\partial a_{it-1}}=\mathbb{E}\left[(1+r_{t})u^{\prime}(c_{it})\,|\,\beta_{i},\phi_{i},z_{it-1},a_{it-1}\right]
 \]
 
 \end_inset
@@ -1949,7 +1949,7 @@ Euler-equation:
 \begin{align*}
 c_{it}^{-\sigma} & =\beta_{i}\underline{v}_{a,t+1}(\beta_{i},\phi_{i},z_{it},a_{it})\\
  & =\beta_{i}\mathbb{E}_{t}\left[v_{a,t+1}(\beta_{i},\phi_{i},z_{it+1},a_{it})\right]\\
- & =\beta_{i}(1+r_{t+1})\mathbb{E}_{t}\left[c_{it+1}^{-\sigma}\right]\\
+ & =\beta_{i}(1+r_{t+1})\mathbb{E}_{t}\left[u^{\prime}(c_{it+1})\right]\\
  & =\beta_{i}(1+r_{t+1})q(z_{it},a_{it})
 \end{align*}
 
@@ -2006,7 +2006,7 @@ Aggregate prices are hidden as inputs, i.e.
 
 \begin_inset Formula 
 \begin{align*}
-x_{t}^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =x^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1},\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t})\text{ for }x\in\{a,\ell,c\}
+x_{t}^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =x^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1},\left\{ r_{\tau},w_{\tau},\Pi_{\tau}\right\} _{\tau\geq t})\text{ for }x\in\{a,\ell,c\}
 \end{align*}
 
 \end_inset
@@ -2171,7 +2171,7 @@ vspace{-1mm}
 
 \begin_inset Formula 
 \[
-\Lambda_{t}=\Lambda\left(\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t}\right)
+\Lambda_{t}=\Lambda\left(\left\{ r_{\tau},w_{\tau},\Pi_{\tau}\right\} _{\tau\geq t}\right)
 \]
 
 \end_inset
@@ -2184,7 +2184,28 @@ status open
 
 
 \backslash
-vspace{-5mm}
+vspace{-3mm}
+\end_layout
+
+\end_inset
+
+Interpretation: 
+\begin_inset Quotes ald
+\end_inset
+
+The aggregate policy function
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5mm}
 \end_layout
 
 \end_inset
@@ -2212,7 +2233,7 @@ Aggregate consumption and savings:
 
 \begin_inset Formula 
 \begin{align*}
-X_{t}^{hh} & =\int x_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}=X^{hh}\left(\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t},\underline{\boldsymbol{D}}_{0}\right)\text{ for }x\in\{a,\ell,c\}
+X_{t}^{hh} & =\int x_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}=X^{hh}\left(\left\{ r_{\tau},w_{\tau},\Pi_{\tau}\right\} _{\tau=0}^{t},\underline{\boldsymbol{D}}_{0}\right)\text{ for }x\in\{a,\ell,c\}
 \end{align*}
 
 \end_inset
@@ -3611,7 +3632,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size small
 
 \backslash
 vspace{-1mm}
@@ -3631,7 +3651,6 @@ status open
 
 \begin_layout Plain Layout
 
-\size small
 
 \backslash
 vspace{-1mm}

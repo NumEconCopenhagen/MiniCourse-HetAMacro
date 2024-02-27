@@ -1178,7 +1178,7 @@ Initially away from steady state:
 
 \series bold
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/figs/K_ini_lag.pdf
+	filename figs/K_ini_lag.pdf
 	width 80text%
 
 \end_inset
@@ -1228,7 +1228,7 @@ Technology shock:
 
 \series bold
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/figs/Gamma_shock.pdf
+	filename figs/Gamma_shock.pdf
 	width 95text%
 
 \end_inset
@@ -1281,7 +1281,7 @@ Technology shock:
 
 \series bold
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/figs/Gamma_shock_future.pdf
+	filename figs/Gamma_shock_future.pdf
 	width 95text%
 
 \end_inset
@@ -1340,7 +1340,7 @@ vspace{-2mm}
 
 \begin_inset Formula 
 \begin{align*}
-v_{0}(\beta_{i},z_{it},a_{it-1}) & =\max_{\{c_{it}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta_{i}^{t}u(c_{it})\\
+v_{0}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =\max_{\{c_{it}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta_{i}^{t}u(c_{it})\\
  & \text{s.t.}\\
 \ell_{it} & =z_{it}\\
 a_{it} & =(1+r_{t})a_{it-1}+w_{t}\phi_{i}\ell_{it}-c_{it}+\Pi_{t}\\
@@ -1395,7 +1395,7 @@ Aggregate prices are hidden as inputs, i.e.
 
 \begin_inset Formula 
 \begin{align*}
-x_{t}^{*}(\beta_{i},z_{it},a_{it-1}) & =x^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1},\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t})\text{ for }x\in\{a,\ell,c\}
+x_{t}^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =x^{*}(\beta_{i},\phi_{i},z_{it},a_{it-1},\left\{ r_{\tau},w_{\tau},\Pi_{\tau}\right\} _{\tau\geq t})\text{ for }x\in\{a,\ell,c\}
 \end{align*}
 
 \end_inset
@@ -1560,7 +1560,7 @@ vspace{-1mm}
 
 \begin_inset Formula 
 \[
-\Lambda_{t}=\Lambda\left(\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t}\right)
+\Lambda_{t}=\Lambda\left(\left\{ r_{\tau},w_{\tau},\Pi_{\tau}\right\} _{\tau\geq t}\right)
 \]
 
 \end_inset
@@ -1601,8 +1601,8 @@ Aggregate consumption and savings:
 
 \begin_inset Formula 
 \begin{align*}
-X_{t}^{hh} & =\int x_{t}^{\ast}(\beta_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}\text{ for }x\in\{a,\ell,c\}\\
- & =X^{hh}\left(\left\{ r_{\tau},w_{\tau}\right\} _{\tau\geq t},\underline{\boldsymbol{D}}_{0}\right)\\
+X_{t}^{hh} & =\int x_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}\text{ for }x\in\{a,\ell,c\}\\
+ & =X^{hh}\left(\left\{ r_{\tau},w_{\tau},\Pi_{\tau}\right\} _{\tau=0}^{t},\underline{\boldsymbol{D}}_{0}\right)\\
  & =\boldsymbol{x}_{t}^{*\prime}\boldsymbol{D}_{t}
 \end{align*}
 
@@ -2681,7 +2681,7 @@ centering
 
 
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/DAG.png
+	filename figs/DAG.png
 	lyxscale 30
 	width 50text%
 
@@ -2794,7 +2794,7 @@ centering
 
 
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/jac_hh.pdf
+	filename figs/jac_hh.pdf
 	width 100text%
 
 \end_inset
@@ -2839,7 +2839,7 @@ centering
 
 
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/transition_path.pdf
+	filename figs/transition_path.pdf
 	width 100text%
 
 \end_inset
@@ -2884,7 +2884,7 @@ centering
 
 
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/c_func_path.pdf
+	filename figs/c_func_path.pdf
 	width 100text%
 
 \end_inset
@@ -2939,7 +2939,7 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/distribution_path_0.pdf
+	filename figs/distribution_path_0.pdf
 	width 50text%
 
 \end_inset
@@ -2954,7 +2954,7 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/distribution_path_10.pdf
+	filename figs/distribution_path_10.pdf
 	width 50text%
 
 \end_inset
@@ -2971,7 +2971,7 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/distribution_path_20.pdf
+	filename figs/distribution_path_20.pdf
 	width 50text%
 
 \end_inset
@@ -2986,7 +2986,7 @@ centering
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/distribution_path_40.pdf
+	filename figs/distribution_path_40.pdf
 	width 50text%
 
 \end_inset
@@ -3119,7 +3119,7 @@ centering
 
 
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/decomposition.pdf
+	filename figs/decomposition.pdf
 	width 100text%
 
 \end_inset
@@ -3151,7 +3151,7 @@ More shocks: Future technology shock
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/future_technology_shock_varnames.pdf
+	filename figs/future_technology_shock_varnames.pdf
 	width 100text%
 
 \end_inset
@@ -3183,7 +3183,7 @@ More shocks: 5% less capital
 \begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
-	filename ../../../Teaching/AdvMacroHet/IIES/Lecture2/HANC/figs/initial_distribution_varnames.pdf
+	filename figs/initial_distribution_varnames.pdf
 	width 100text%
 
 \end_inset
