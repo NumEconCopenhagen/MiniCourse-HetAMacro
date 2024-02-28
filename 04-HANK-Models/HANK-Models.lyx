@@ -413,7 +413,11 @@ status open
 \series bold
 Today: 
 \series default
-HANK - Heterogeneous Agent New Keynesian Model
+HANK - Heterogeneous Agent 
+\emph on
+New Keynesian
+\emph default
+ Model
 \end_layout
 
 \begin_deeper
@@ -572,7 +576,7 @@ Idiosyncratic productivity,
 \end_layout
 
 \begin_layout Enumerate
-Risk-less holds, 
+Risk-less bonds, 
 \begin_inset Formula $b_{t-1}$
 \end_inset
 
@@ -605,7 +609,7 @@ Budget constraint,
 
 \begin_layout Enumerate
 Borrowing constraint: 
-\begin_inset Formula $b_{t}>0$
+\begin_inset Formula $b_{t}\geq0$
 \end_inset
 
 
@@ -631,7 +635,7 @@ Unconstrained,
 :
 \begin_inset Formula 
 \[
-c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}=\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{it})^{-\sigma}]
+c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}=\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}]
 \]
 
 \end_inset
@@ -641,13 +645,13 @@ c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}=\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{
 
 \begin_layout Enumerate
 Constrained, 
-\begin_inset Formula $b_{it}=0$
+\begin_inset Formula $b_{t}=0$
 \end_inset
 
 :
 \begin_inset Formula 
 \[
-c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}>\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{it})^{-\sigma}]
+c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}>\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}]
 \]
 
 \end_inset
@@ -688,7 +692,7 @@ Market clearing:
 Goods: 
 \begin_inset Formula 
 \[
-Y_{t}=C_{t}^{hh}=\int b_{t}^{\ast}(s_{t},b_{t-1})d\boldsymbol{D}_{t}
+Y_{t}=C_{t}^{hh}=\int c_{t}^{\ast}(s_{t},b_{t-1})d\boldsymbol{D}_{t}
 \]
 
 \end_inset
@@ -718,7 +722,11 @@ Vanishing liquidity
 \begin_inset Formula $B_{t}\rightarrow0$
 \end_inset
 
- (equilibrium section rule): 
+ (equilibrium section rule):
+\begin_inset Newline newline
+\end_inset
+
+
 \emph on
 An infinitesimal increase in 
 \begin_inset Formula $R_{t}$
@@ -789,10 +797,8 @@ Equilibrium condition:
  is given by the Euler-equation of the 
 \emph on
 marginal saver,
-\end_layout
+\emph default
 
-\begin_deeper
-\begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
 R_{t}^{\ast} & \equiv R_{t}^{\ast}(\{Y_{t}\}_{t\geq0})=\min_{s_{t}\in\mathcal{S}}\tilde{R_{t}}(s_{t})
@@ -811,7 +817,6 @@ where
 
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 
 \series bold
@@ -1189,7 +1194,7 @@ Employed:
 \begin_inset Formula $\overline{y}Y^{\gamma},\gamma>0$
 \end_inset
 
- (margi
+ (marginal saver)
 \end_layout
 
 \begin_layout Itemize
@@ -3395,6 +3400,18 @@ Monetary Policy According to HANK
 \end_layout
 
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-4mm}
+\end_layout
+
+\end_inset
+
 
 \series bold
 RANK: 
@@ -6370,7 +6387,7 @@ Some aggregate neutrality results - still distributional concerns
 \end_layout
 
 \begin_layout Enumerate
-Size of mechanisms are different - cash-flow effects are more important
+Size of mechanisms are different - cash-flow effects important
 \end_layout
 
 \begin_layout Enumerate

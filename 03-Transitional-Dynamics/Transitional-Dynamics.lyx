@@ -1269,12 +1269,16 @@ Technology shock:
 \series default
 
 \begin_inset Formula $\Gamma_{t}=\begin{cases}
-1.01\Gamma_{ss} & \text{if }t\in[10,20)\\
+1.01\cdot\Gamma_{ss} & \text{if }t\in[10,20)\\
 \Gamma_{ss} & \text{else}
 \end{cases}$
 \end_inset
 
- (exogenous, deterministic)
+ 
+\begin_inset Newline newline
+\end_inset
+
+(exogenous, deterministic)
 \end_layout
 
 \begin_layout Standard
@@ -2232,6 +2236,14 @@ Calculate
 \end_layout
 
 \begin_layout Enumerate
+Stop if 
+\begin_inset Formula $\left|\boldsymbol{H}^{i}\right|_{\infty}$
+\end_inset
+
+ below tolerance
+\end_layout
+
+\begin_layout Enumerate
 Update Jacobian by 
 \begin_inset Formula $\boldsymbol{H}_{\boldsymbol{K}}^{i}=\begin{cases}
 \boldsymbol{H}_{\boldsymbol{K,}ss} & \text{if }i=0\\
@@ -2240,14 +2252,6 @@ Update Jacobian by
 \end_inset
 
 
-\end_layout
-
-\begin_layout Enumerate
-Stop if 
-\begin_inset Formula $\left|\boldsymbol{H}^{i}\right|_{\infty}$
-\end_inset
-
- below tolerance
 \end_layout
 
 \begin_layout Enumerate
@@ -4253,7 +4257,7 @@ status open
 
 
 \series bold
-Today: 
+New: 
 \series default
 Just consider the 
 \emph on
@@ -5232,7 +5236,7 @@ Identical and independent distributed innovations:
 \begin_inset Formula 
 \[
 \mathbb{E}\left[\epsilon_{t}^{i}\epsilon_{t^{\prime}}^{j}\right]=\begin{cases}
-\sigma_{i} & \text{if }t=t^{\prime}\text{ and }i=j\\
+\sigma_{i}^{2} & \text{if }t=t^{\prime}\text{ and }i=j\\
 0 & \text{el}
 \end{cases}
 \]

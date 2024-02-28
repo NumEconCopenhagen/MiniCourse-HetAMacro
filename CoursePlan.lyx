@@ -387,7 +387,7 @@ literal "false"
  More computational: 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "carroll_method_2006,iskhakov_endogenous_2017,druedahl_general_2017,harmenberg_aggregating_2021"
+key "carroll_method_2006,iskhakov_endogenous_2017,druedahl_general_2017,harmenberg_aggregating_2021,rendahl_continuous_2022"
 literal "false"
 
 \end_inset
