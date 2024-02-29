@@ -651,7 +651,7 @@ Constrained,
 :
 \begin_inset Formula 
 \[
-c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}>\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}]
+c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}\geq\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}]
 \]
 
 \end_inset
@@ -1318,10 +1318,6 @@ Propagation:
 
 \end_deeper
 \end_deeper
-\begin_layout Frame
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1416,7 +1412,8 @@ Produce differentiated goods with labor
 \end_layout
 
 \begin_layout Enumerate
-Set price under monopolistic competition
+Set price under monopolistic competition with adj.
+ cost
 \end_layout
 
 \begin_layout Enumerate
@@ -2834,7 +2831,7 @@ vspace{-2mm}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\boldsymbol{H}\left(\boldsymbol{\pi,w},\boldsymbol{Y},\boldsymbol{i}^{\ast},\boldsymbol{\Gamma},\underline{\boldsymbol{D}}_{0}\right) & =\boldsymbol{0}\\
+\boldsymbol{H}\left(\boldsymbol{\pi,w},\boldsymbol{Y},\boldsymbol{i}^{\ast},\boldsymbol{\Gamma},\boldsymbol{G},\underline{\boldsymbol{D}}_{0}\right) & =\boldsymbol{0}\\
 \left[\begin{array}{c}
 \log(1+\pi_{t})-\left[\kappa\left(\frac{w_{t}}{Z_{t}}-\frac{1}{\mu}\right)+\frac{Y_{t+1}}{Y_{t}}\frac{\log(1+\pi_{t+1}}{1+r_{t+1}})\right]\\
 N_{t}-\int n_{t}^{\ast}(z_{it},a_{it-1})d\boldsymbol{D}_{t}\\
@@ -5365,6 +5362,7 @@ Cumulative multiplier still one
 \begin_inset Formula 
 \begin{align*}
 \frac{\boldsymbol{q}^{\prime}d\boldsymbol{Y}}{\boldsymbol{q}^{\prime}d\boldsymbol{G}} & =\frac{\boldsymbol{q}^{\prime}d\boldsymbol{G}_{t}+\frac{\lambda}{1-\lambda}\boldsymbol{q}^{\prime}\left[d\boldsymbol{G}-d\boldsymbol{T}\right]}{\boldsymbol{q}^{\prime}d\boldsymbol{G}}\\
+ & =\frac{\boldsymbol{q}^{\prime}d\boldsymbol{G}_{t}}{\boldsymbol{q}^{\prime}d\boldsymbol{G}_{t}}\\
  & =1
 \end{align*}
 
@@ -5980,7 +5978,7 @@ Job value:
 
 \begin_inset Formula 
 \begin{align*}
-V_{t}^{j} & =p_{t}^{x}Z_{t}-w_{ss}+\beta^{\text{firm}}\mathbb{E}_{t}\left[(1-\delta_{ss})V_{t+1}^{j}\right]
+V_{t}^{j} & =p_{t}^{X}Z_{t}-w_{ss}+\beta^{\text{firm}}\mathbb{E}_{t}\left[(1-\delta_{ss})V_{t+1}^{j}\right]
 \end{align*}
 
 \end_inset
