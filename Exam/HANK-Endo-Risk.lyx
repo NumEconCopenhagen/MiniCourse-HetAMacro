@@ -1060,7 +1060,7 @@ d\mathbf{C}^{hh} & =\left(\gamma\mathbf{M}-(1-\gamma)\chi\mathbf{M}_{\delta}\rig
 where 
 \begin_inset Formula 
 \[
-\chi=\frac{Z_{ss}}{\overline{\phi}-\underline{\phi}}
+\chi=\frac{Z_{ss}^{-1}}{\overline{\phi}-\underline{\phi}}
 \]
 
 \end_inset
