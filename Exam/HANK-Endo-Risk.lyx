@@ -377,7 +377,7 @@ where
 \begin_inset Formula $\nu$
 \end_inset
 
- is the inverse of the Frish elasticity.
+ is the inverse of the Frisch elasticity.
 \end_layout
 
 \begin_layout Standard
@@ -665,11 +665,15 @@ aggregate inputs
 \begin_inset Formula $\Delta_{t}$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $\delta_{t}$
 \end_inset
 
+ and 
+\begin_inset Formula $r_{t}^{a}=r_{t-1}$
+\end_inset
 
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -1202,7 +1206,7 @@ endogenous
 \text{Pr}\left[u_{it+1}=1|u_{it}=0\right] & =\delta_{t+1}\\
 \text{Pr}\left[u_{it+1}=0|u_{it}=0\right] & =1-\delta_{t+1}\\
 \text{Pr}\left[u_{it+1}=1|u_{it}=1\right] & =(1-\lambda)+\lambda\delta_{t+1}\\
-\text{Pr}\left[u_{it+1}=0|u_{it}=0\right] & =(1-\delta_{t+1})\lambda
+\text{Pr}\left[u_{it+1}=0|u_{it}=1\right] & =(1-\delta_{t+1})\lambda
 \end{align*}
 
 \end_inset
