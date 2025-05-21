@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -95,14 +95,17 @@
 }
 
 \lstset{style=mystyle}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \options t,10pt
 \use_default_options false
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
 \inputencoding utf8
-\fontencoding global
+\fontencoding auto
 \font_roman "lmodern" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -110,7 +113,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -144,15 +149,17 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
 \secnumdepth 2
 \tocdepth 1
-\paragraph_separation skip
-\defskip smallskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style danish
@@ -160,11 +167,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -186,7 +198,8 @@ vspace{-2mm}}
 
 
 \backslash
-subtitle{Mini-Course: Heterogenous Agent Macro} 
+subtitle{Mini-Course:
+ Heterogenous Agent Macro} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -200,7 +213,7 @@ author{Jeppe Druedahl}
 
 
 \backslash
-date{2024}
+date{2025}
 \end_layout
 
 \begin_layout Plain Layout
@@ -245,7 +258,8 @@ maketitle
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -277,7 +291,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -309,7 +324,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -341,7 +357,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -473,7 +490,7 @@ Central economic topics:
 
 \begin_deeper
 \begin_layout Enumerate
-Consumption-saving behavior under risk and constraints
+Consumption-saving with risk and constraints (single-agent)
 \end_layout
 
 \begin_layout Enumerate
@@ -504,7 +521,8 @@ History:
 \begin_deeper
 \begin_layout Enumerate
 Heathcote et al.
- (2009), 
+ (2009),
+ 
 \begin_inset Quotes ald
 \end_inset
 
@@ -516,7 +534,8 @@ Quantitative Macroeconomics with Heterogeneous Households
 \end_layout
 
 \begin_layout Enumerate
-Kaplan and Violante (2018), 
+Kaplan and Violante (2018),
+ 
 \begin_inset Quotes ald
 \end_inset
 
@@ -529,11 +548,28 @@ Microeconomic Heterogeneity and Macroeconomic Shocks
 
 \begin_layout Enumerate
 Cherrier et al.
- (2023), 
+ (2023),
+ 
 \begin_inset Quotes ald
 \end_inset
 
-Household Heterogeneity in Macroeconomic Models: A Historical Perspective
+Household Heterogeneity in Macroeconomic Models:
+ A Historical Perspective
+\begin_inset Quotes ard
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Auclert et.
+ al.
+ (2025),
+ 
+\begin_inset Quotes ald
+\end_inset
+
+Fiscal and Monetary Policy with Heterogeneous Agents
 \begin_inset Quotes ard
 \end_inset
 
@@ -545,6 +581,7 @@ Household Heterogeneity in Macroeconomic Models: A Historical Perspective
 
 \series bold
 Central technical method:
+
 \series default
  
 \emph on
@@ -668,7 +705,8 @@ in
 \emph on
  
 \emph default
-preferences, abilities etc.
+preferences,
+ abilities etc.
 \end_layout
 
 \begin_layout Standard
@@ -683,7 +721,8 @@ Ex post
 \begin_layout Itemize
 
 \series bold
-HANC: 
+HANC:
+ 
 \series default
 Heterogeneous Agent 
 \emph on
@@ -695,13 +734,14 @@ model
 
 
 \size footnotesize
-(Aiyagari-Bewley-Hugget-Imrohoroglu or Standard Incomplete Market model)
+(Aiyagari-Bewley-Hugget-Imrohoroglu or Standard Incomplete Markets model)
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
-HANK: 
+HANK:
+ 
 \series default
 Heterogeneous Agent 
 \emph on
@@ -794,62 +834,6 @@ key entrances to literature
 status open
 
 \begin_layout Plain Layout
-Exam
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Format:
-\series default
- Take-home exam
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Baseline:
-\series default
- 
-\emph on
-One of the models from the course
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Questions: 
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Implement an extension (in Python code)
-\end_layout
-
-\begin_layout Enumerate
-Analyze the economic dynamics
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Python
 \end_layout
 
@@ -863,6 +847,7 @@ Python
 
 \series bold
 Assumed knowledge:
+
 \series default
  Similar to my undergraduate course 
 \begin_inset ERT
@@ -901,20 +886,14 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate
-Python
-\end_layout
-
-\begin_layout Enumerate
-VSCode
-\end_layout
-
-\begin_layout Enumerate
-git 
+\begin_layout Standard
+Content:
+ Python + VSCode + git 
 \end_layout
 
 \begin_layout Standard
-Preparation: 
+Preparation:
+ 
 \begin_inset ERT
 status open
 
@@ -930,7 +909,7 @@ textcolor{DarkRed}{
 
 \begin_inset CommandInset href
 LatexCommand href
-name "video playlist"
+name "Video playlist"
 target "https://sites.google.com/view/numeconcph-het-agent-macro/python"
 literal "false"
 
@@ -955,6 +934,7 @@ status open
 
 \series bold
 Updated Python:
+
 \series default
  Install (or re-install) newest Anaconda
 \end_layout
@@ -963,11 +943,14 @@ Updated Python:
 
 \series bold
 Packages:
+
 \family typewriter
 \series default
  
 \size small
-pip install quantecon, EconModel, consav
+pip install quantecon,
+ EconModel,
+ consav
 \end_layout
 
 \begin_layout Enumerate
@@ -996,6 +979,158 @@ pip install -e .
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+
+\series bold
+Other repositories used in the course:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{DarkRed}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "EconModelNotebooks"
+target "https://github.com/NumEconCopenhagen/EconModelNotebooks"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{DarkRed}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "ConsumptionSavingNotebooks"
+target "https://github.com/NumEconCopenhagen/ConsumptionSavingNotebooks"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{DarkRed}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "GEModelToolsNotebooks"
+target "https://github.com/NumEconCopenhagen/GEModelToolsNotebooks"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{DarkRed}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "MiniCourse-HetAMacro"
+target "MiniCourse-HetAMacro"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1005,7 +1140,7 @@ pip install -e .
 \end_layout
 
 \begin_layout Section
-Programming principles
+Programming in Python
 \end_layout
 
 \begin_layout FragileFrame
@@ -1054,7 +1189,8 @@ lstinline{.attribute}
 
 \end_inset
 
-, state
+,
+ state
 \end_layout
 
 \begin_layout Itemize
@@ -1070,11 +1206,29 @@ lstinline{.method()}
 
 \end_inset
 
-, action (incl.
+,
+ action (incl.
  changing self)
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Inheritance (of methods) (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{class Child(Parent)}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Itemize
 Arithmetic operators (e.g.
  
@@ -1121,6 +1275,7 @@ not a copy!
 
 \series bold
 Question:
+
 \series default
  What does 
 \begin_inset ERT
@@ -1135,7 +1290,8 @@ lstinline{a}
 
 \end_inset
 
- end up as? What if 
+ end up as?
+ What if 
 \begin_inset ERT
 status open
 
@@ -1148,7 +1304,8 @@ lstinline{a = [1,2,3]}
 
 \end_inset
 
-? 
+?
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1225,7 +1382,7 @@ end{lstlisting}
 status open
 
 \begin_layout Plain Layout
-Containers and inheritance
+Types and in-place operations
 \end_layout
 
 \end_inset
@@ -1238,6 +1395,7 @@ Containers and inheritance
 
 \series bold
 Atomic types:
+
 \series default
  
 \begin_inset ERT
@@ -1247,7 +1405,10 @@ status open
 
 
 \backslash
-lstinline{int, float, str, bool,}
+lstinline{int,
+ float,
+ str,
+ bool,}
 \end_layout
 
 \end_inset
@@ -1268,63 +1429,16 @@ status open
 
 
 \backslash
-lstinline{list, tuple, dict, set, np.array,}
+lstinline{list,
+ tuple,
+ dict,
+ set,
+ np.array,}
 \end_layout
 
 \end_inset
 
  etc.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Inheritance
-\series default
- (build from def.
- of 
-\begin_inset Quotes ald
-\end_inset
-
-parent
-\begin_inset Quotes ard
-\end_inset
-
-, 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstinline{class Child(Parent)}
-\end_layout
-
-\end_inset
-
-)
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-1mm}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\text{e.g.}\text{ integer\ensuremath{\,\subset\,}\ensuremath{\text{scalar}}\ensuremath{\,\subset\,}}\text{number}
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -1341,7 +1455,8 @@ status open
 
 
 \backslash
-lstinline{list, np.array}
+lstinline{list,
+ np.array}
 \end_layout
 
 \end_inset
@@ -1357,7 +1472,7 @@ can change in-place
 \begin_layout Enumerate
 
 \series bold
-Augmentation operators
+In-place operators
 \series default
  (
 \begin_inset ERT
@@ -1367,7 +1482,8 @@ status open
 
 
 \backslash
-lstinline{+=, -=}
+lstinline{+=,
+ -=}
 \end_layout
 
 \end_inset
@@ -1380,7 +1496,8 @@ lstinline{+=, -=}
 \series bold
 Slicing
 \series default
-: 
+:
+ 
 \begin_inset ERT
 status open
 
@@ -1409,7 +1526,8 @@ Immutables
 \begin_layout Standard
 
 \series bold
-Questions: 
+Questions:
+ 
 \series default
 What does 
 \begin_inset ERT
@@ -1501,7 +1619,7 @@ end{lstlisting}
 status open
 
 \begin_layout Plain Layout
-Functions
+Functions and scope
 \end_layout
 
 \end_inset
@@ -1553,7 +1671,8 @@ global scope
 \begin_layout Standard
 
 \series bold
-Questions: 
+Questions:
+ 
 \series default
 What is the output?
 \end_layout
@@ -1659,7 +1778,13 @@ status open
 
 
 \backslash
-lstinline{==, !=, <, <=, not, and, or}
+lstinline{==,
+ !=,
+ <,
+ <=,
+ not,
+ and,
+ or}
 \end_layout
 
 \end_inset
@@ -1680,7 +1805,9 @@ status open
 
 
 \backslash
-lstinline{if, elif, else}
+lstinline{if,
+ elif,
+ else}
 \end_layout
 
 \end_inset
@@ -1701,7 +1828,10 @@ status open
 
 
 \backslash
-lstinline{for, while, continue, break}
+lstinline{for,
+ while,
+ continue,
+ break}
 \end_layout
 
 \end_inset
@@ -1720,7 +1850,8 @@ Convergence
 \begin_layout Standard
 
 \series bold
-Questions: 
+Questions:
+ 
 \series default
 How could this be implemented with a 
 \begin_inset ERT
@@ -1779,7 +1910,8 @@ for i in range(n):
 
 \begin_layout Plain Layout
 
-    if check(y): break
+    if check(y):
+ break
 \end_layout
 
 \begin_layout Plain Layout
@@ -1822,7 +1954,7 @@ end{lstlisting}
 status open
 
 \begin_layout Plain Layout
-Everything is discrete
+Decimal numbers are not exact
 \end_layout
 
 \end_inset
@@ -1848,7 +1980,9 @@ Best with numbers are around 1 (underflow and overflow)
 
 \end_deeper
 \begin_layout Itemize
-Division, exp, log etc.
+Division,
+ exp,
+ log etc.
  (costly) approximations 
 \end_layout
 
@@ -1863,7 +1997,8 @@ Function approximation and interpolation often needed
 \begin_layout Standard
 
 \series bold
-Questions: 
+Questions:
+ 
 \series default
 Which are 
 \begin_inset ERT
@@ -2004,13 +2139,15 @@ Monte Carlo
 
 \begin_deeper
 \begin_layout Enumerate
-Static alternative: Use 
+Static alternative:
+ Use 
 \series bold
 quadrature rules 
 \end_layout
 
 \begin_layout Enumerate
-Dynamic alternative: Discretize and derive 
+Dynamic alternative:
+ Discretize and derive 
 \series bold
 transition matrix
 \end_layout
@@ -2019,7 +2156,8 @@ transition matrix
 \begin_layout Standard
 
 \series bold
-Questions: 
+Questions:
+ 
 \series default
 What is 
 \begin_inset ERT
@@ -2130,7 +2268,8 @@ Documentation and debugging
 \series bold
 No code is self-explanatory
 \series default
- (for others, incl.
+ (for others,
+ incl.
  future you) 
 \end_layout
 
@@ -2162,7 +2301,8 @@ Important
 \series bold
 design patterns
 \series default
-: 
+:
+ 
 \end_layout
 
 \begin_deeper
@@ -2236,7 +2376,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Standard
-Replication: 
+Replication:
+ 
 \bar under
 
 \begin_inset CommandInset href
@@ -2256,7 +2397,8 @@ literal "false"
 \series bold
 Debugging
 \series default
- 
+ (see 02.
+ Debugging.ipynb)
 \end_layout
 
 \begin_deeper
@@ -2311,7 +2453,8 @@ High level languages:
 \series bold
 MATLAB
 \series default
-: Costly and not better.
+:
+ Costly and not better.
  
 \end_layout
 
@@ -2320,7 +2463,9 @@ MATLAB
 \series bold
 R
 \series default
-: Better at statistics and data work, but not pure numerical work.
+:
+ Better at statistics and data work,
+ but not pure numerical work.
 \end_layout
 
 \begin_layout Enumerate
@@ -2328,8 +2473,10 @@ R
 \series bold
 Julia
 \series default
-: Faster than Python (incl.
- numba), slower than C++.
+:
+ Faster than Python (incl.
+ numba),
+ slower than C++.
  Smallish community.
 \end_layout
 
@@ -2345,6 +2492,7 @@ Low level languages:
 
 \series bold
 C++:
+
 \series default
  State-of-the-art for fastest code.
 \end_layout
@@ -2354,7 +2502,8 @@ C++:
 \series bold
 Fortran
 \series default
-: No benefits relative to C++ (only legacy...).
+:
+ No benefits relative to C++ (only legacy...).
 \end_layout
 
 \end_deeper
@@ -2366,16 +2515,20 @@ Hardware:
 
 \begin_deeper
 \begin_layout Enumerate
-CPU: Most complex cores.
+CPU:
+ Fastest cores.
 \end_layout
 
 \begin_layout Enumerate
-GPU: More cores, but more specialized at linear algebra.
+GPU:
+ Many more cores,
+ but specialized for e.g.
+ linear algebra.
 \end_layout
 
 \begin_layout Enumerate
-TPU: Even more specialized at AI (incl.
- machine learning)
+TPU (Google):
+ Even more specialized at AI (machine learning)
 \end_layout
 
 \end_deeper
@@ -2385,10 +2538,6 @@ TPU: Even more specialized at AI (incl.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Computers
 \end_layout
 
 \begin_layout Frame
@@ -2410,7 +2559,9 @@ CPUs are complex
 \series bold
 Instruction set
 \series default
- (assembly) is not just add, subtract, etc.
+ (assembly) is not just add,
+ subtract,
+ etc.
  
 \end_layout
 
@@ -2492,7 +2643,8 @@ use existing libraries
 \begin_layout Itemize
 
 \series bold
-Parallelisation: 
+Parallelisation:
+ 
 \series default
 \emph on
 Start up costs
@@ -2503,16 +2655,19 @@ Start up costs
 
 \series bold
 Hardware:
+
 \series default
  Cores vs.
  CPUs vs.
- sockets vs, computers
+ sockets vs,
+ computers
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 Software:
+
 \series default
  Shared memory (e.g.
  OpenMP) or not (e.g.
@@ -2576,18 +2731,21 @@ vspace{-3mm}
 
 
 \series bold
-Moore's law: 
+Moore's law:
+ 
 \series default
 Exponential growth in computational power
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Originally: Faster cores (calculations per time unit)
+Originally:
+ Faster cores (calculations per time unit)
 \end_layout
 
 \begin_layout Enumerate
-Now: More cores per CPU
+Now:
+ More cores per CPU
 \end_layout
 
 \end_deeper
@@ -2595,6 +2753,7 @@ Now: More cores per CPU
 
 \series bold
 Amdahl's law:
+
 \series default
  Sequential code becomes the bottleneck
 \end_layout
@@ -2634,7 +2793,8 @@ Time in tasks done in parallel
 status open
 
 \begin_layout Plain Layout
-Need for speed
+Need for speed (03.
+ NeedForSpeed.ipynb)
 \end_layout
 
 \end_inset
@@ -2664,7 +2824,8 @@ better algorithm
 \begin_layout Itemize
 
 \series bold
-Premature optimization is the root of all evil! 
+Premature optimization is the root of all evil!
+ 
 \series default
 
 \begin_inset Newline newline
@@ -2677,7 +2838,8 @@ line-profiler!
 
 \begin_deeper
 \begin_layout Enumerate
-Use available code: Stand on the shoulder of giants 
+Use available code:
+ Stand on the shoulder of giants 
 \end_layout
 
 \begin_layout Enumerate
@@ -2694,11 +2856,13 @@ lstinline{numpy}
 
 \end_inset
 
-: Use vectorization
+:
+ Use vectorization
 \end_layout
 
 \begin_layout Enumerate
-Else: Use 
+Else:
+ Use 
 \begin_inset ERT
 status open
 
@@ -2719,6 +2883,7 @@ lstinline{numba}
 
 \series bold
 Automatic differentiation?
+
 \series default
  Use 
 \begin_inset ERT
@@ -2753,135 +2918,9 @@ lstinline{PyTorch}
 
 \series bold
 Faster still?
+
 \series default
  Implement bottleneck in C++ and call from Python
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Coding
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Coding: Fractions
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Notebook:
-\series default
- 01.
- Fractions.ipynb
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Task 1:
-\series default
- Implement a class defining a fraction and allowing for 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-lstinline{a+b}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Task 2:
-\series default
- Implement a class for defining a list of fractions, which you can loop
- through
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Debugging
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Notebook:
-\series default
- 02.
- Debugging.ipynb
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Need for Speed
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Notebook:
-\series default
- 03.
- NeedForSpeed.ipynb
 \end_layout
 
 \end_deeper
@@ -2909,7 +2948,8 @@ EconModelClass
 \begin_layout Itemize
 
 \series bold
-Code:
+Package:
+
 \series default
  EconModel 
 \end_layout
@@ -2917,7 +2957,32 @@ Code:
 \begin_layout Itemize
 
 \series bold
-Notebook:
+Purpose:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Make it easy to write well-structed code.
+\end_layout
+
+\begin_layout Enumerate
+Provide standard functionality for copying,
+ saving and loading.
+\end_layout
+
+\begin_layout Enumerate
+Provide an easy interface to call numba JIT compilled functions.
+\end_layout
+
+\begin_layout Enumerate
+Provide an easy interface to call C++ functions.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Notebooks:
 \begin_inset Newline newline
 \end_inset
 
@@ -2936,7 +3001,8 @@ EconModelNotebooks
 \begin_layout Itemize
 
 \series bold
-Video: 
+Video:
+ 
 \series default
 
 \begin_inset ERT
@@ -2972,38 +3038,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Consumption-Saving
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Consumption-Saving
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\emph on
-Next slide set
 \end_layout
 
 \end_deeper

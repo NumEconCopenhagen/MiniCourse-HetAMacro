@@ -32,7 +32,7 @@ class ConSavModelClass(EconModelClass):
         par.w = 1.0 # wage level        
         par.pi = 0.50 # prob. of not changing in productivity
         par.Delta = 0.80 # absolute change in productivity (+/-)
-        par.chi = np.array([0.0,0.0,0.0]) # deterministic component of income
+        par.chi = np.array([0.0,0.0,0.0]) # deterministic transfer component of income
 
         # saving
         par.r = 0.0 # interest rate
@@ -235,7 +235,7 @@ def solve_hh_backwards_egm(par,c_plus,c,a,chi):
 # simulation - monte carlo #
 ############################
 
-#@nb.njit(parallel=True)
+@nb.njit(parallel=True)
 def simulate_forwards_mc(t,par,sim,sol):
     """ monte carlo simulation of model. """
     

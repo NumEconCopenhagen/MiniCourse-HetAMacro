@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -95,14 +95,17 @@
 }
 
 \lstset{style=mystyle}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \options t,10pt
 \use_default_options false
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
 \inputencoding utf8
-\fontencoding global
+\fontencoding auto
 \font_roman "lmodern" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -110,7 +113,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -144,15 +149,17 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
 \secnumdepth 2
 \tocdepth 1
-\paragraph_separation skip
-\defskip smallskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style danish
@@ -160,11 +167,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -186,7 +198,8 @@ vspace{-2mm}}
 
 
 \backslash
-subtitle{Mini-Course: Heterogenous Agent Macro}
+subtitle{Mini-Course:
+ Heterogenous Agent Macro}
 \end_layout
 
 \begin_layout Plain Layout
@@ -200,7 +213,7 @@ author{Jeppe Druedahl}
 
 
 \backslash
-date{2024}
+date{2025}
 \end_layout
 
 \begin_layout Plain Layout
@@ -245,7 +258,8 @@ maketitle
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -277,7 +291,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -309,7 +324,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -341,7 +357,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -427,11 +444,13 @@ Generations of models:
 \series bold
 Permanent income hypothesis (PIH)
 \series default
- (Friedman, 1957)
+ (Friedman,
+ 1957)
 \begin_inset Newline newline
 \end_inset
 
-or life-cycle model (Modigliani and Brumburg, 1954) 
+or life-cycle model (Modigliani and Brumburg,
+ 1954) 
 \end_layout
 
 \begin_layout Enumerate
@@ -443,7 +462,11 @@ Buffer-stock consumption model
 \begin_inset Newline newline
 \end_inset
 
-Deaton (1991, 1992); Carroll (1992, 1997, 2019)
+Deaton (1991,
+ 1992);
+ Carroll (1992,
+ 1997,
+ 2019)
 \end_layout
 
 \begin_layout Enumerate
@@ -456,7 +479,8 @@ Multiple-asset buffer-stock consumption models
 \end_inset
 
 e.g.
- Kaplan and Violante (2014); Harmenberg and Öberg (2021)
+ Kaplan and Violante (2014);
+ Harmenberg and Öberg (2021)
 \end_layout
 
 \end_deeper
@@ -470,7 +494,8 @@ Consumption-and-saving over the life-cycle dynamic
 \end_inset
 
 e.g.
- Gourinchas and Parker (2002); Druedahl and Martinello (2022)
+ Gourinchas and Parker (2002);
+ Druedahl and Martinello (2022)
 \end_layout
 
 \begin_layout Itemize
@@ -490,6 +515,7 @@ e.g.
  Fagereng et.
  al.
  (2021);
+
 \series bold
  
 \series default
@@ -514,6 +540,7 @@ vspace{5mm}
 
 \series bold
 Book:
+
 \series default
  
 \begin_inset ERT
@@ -548,7 +575,8 @@ status open
 
 \end_inset
 
-, Jappelli and Pistaferri (2017)
+,
+ Jappelli and Pistaferri (2017)
 \end_layout
 
 \end_deeper
@@ -661,7 +689,8 @@ Variables:
 
 \begin_deeper
 \begin_layout Standard
-Consumption: 
+Consumption:
+ 
 \begin_inset Formula $c_{t}$
 \end_inset
 
@@ -669,7 +698,8 @@ Consumption:
 \end_layout
 
 \begin_layout Standard
-Productivity: 
+Productivity:
+ 
 \begin_inset Formula $z_{t}$
 \end_inset
 
@@ -677,7 +707,8 @@ Productivity:
 \end_layout
 
 \begin_layout Standard
-End-of-period savings: 
+End-of-period savings:
+ 
 \begin_inset Formula $a_{t}$
 \end_inset
 
@@ -697,7 +728,8 @@ Parameters:
 
 \begin_deeper
 \begin_layout Standard
-Discount factor: 
+Discount factor:
+ 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -705,7 +737,8 @@ Discount factor:
 \end_layout
 
 \begin_layout Standard
-Wage: 
+Wage:
+ 
 \begin_inset Formula $w$
 \end_inset
 
@@ -713,7 +746,8 @@ Wage:
 \end_layout
 
 \begin_layout Standard
-Interest rate: 
+Interest rate:
+ 
 \begin_inset Formula $r$
 \end_inset
 
@@ -804,7 +838,8 @@ problem:
 \begin_layout Enumerate
 
 \series bold
-Information: 
+Information:
+ 
 \series default
 
 \begin_inset Formula $z_{t}$
@@ -825,8 +860,10 @@ Information:
 
 \series bold
 Target:
+
 \series default
- Discounted utility, 
+ Discounted utility,
+ 
 \begin_inset Formula $\sum_{t=0}^{T-1}\beta^{t}u(c_{t})$
 \end_inset
 
@@ -837,6 +874,7 @@ Target:
 
 \series bold
 Behavior:
+
 \series default
  Choose 
 \begin_inset Formula $c_{0},c_{1},\dots,c_{T-1}$
@@ -850,7 +888,8 @@ simultaneously
 \begin_layout Enumerate
 
 \series bold
-Solution: 
+Solution:
+ 
 \series default
 Sequence of consumption 
 \emph on
@@ -984,7 +1023,8 @@ FOC and Euler-equation
 \series bold
 First order conditions
 \series default
-: 
+:
+ 
 \begin_inset Formula 
 \[
 \forall t:0=\beta^{t}u^{\prime}(c_{t})-\lambda(1+r)^{-t}\Leftrightarrow u^{\prime}(c_{t})=-\lambda\left(\beta R\right)^{-t}
@@ -1041,6 +1081,7 @@ Consumption choice
 
 \series bold
 CRRA:
+
 \series default
  
 \begin_inset Formula $u(c_{t})=\frac{c_{t}^{1-\sigma}}{1-\sigma}$
@@ -1109,15 +1150,17 @@ for
 \begin_inset Formula $(\beta R)^{1/\sigma}R^{-1}<1$
 \end_inset
 
-: Let 
+:
+ Let 
 \begin_inset Formula $T\rightarrow\infty$
 \end_inset
 
  to get
 \begin_inset Formula 
-\[
-c_{0}^{\ast}=\left(1-\frac{(\beta R)^{1/\sigma}}{R}\right)(s_{0}+h_{0})
-\]
+\begin{align*}
+c_{0}^{\ast} & =\left(1-\frac{(\beta R)^{1/\sigma}}{R}\right)(s_{0}+h_{0})\\
+\text{if }\forall z_{t}=1:\,c_{0}^{\ast} & =\left(1-\frac{(\beta R)^{1/\sigma}}{R}\right)\left(Ra_{-1}+\frac{R}{R-1}w\right)
+\end{align*}
 
 \end_inset
 
@@ -1127,12 +1170,9 @@ c_{0}^{\ast}=\left(1-\frac{(\beta R)^{1/\sigma}}{R}\right)(s_{0}+h_{0})
 \begin_layout Itemize
 
 \series bold
-Consume annuity value: 
-\begin_inset Formula 
-\begin{align*}
-\beta R & =1,z_{t}=1\Rightarrow c_{0}^{\ast}=ra_{-1}+w
-\end{align*}
-
+Consume annuity value:
+ 
+\begin_inset Formula $\beta R=1,z_{t}=1\Rightarrow c_{0}^{\ast}=ra_{-1}+w$
 \end_inset
 
 
@@ -1193,7 +1233,11 @@ Constant consumption if:
 status open
 
 \begin_layout Plain Layout
-Propensities to consume
+Propensities to consume (
+\begin_inset Formula $\beta R\approx1,z_{t}\approx1$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1205,7 +1249,7 @@ Propensities to consume
 \begin_layout Standard
 \begin_inset Formula 
 \[
-c_{0}^{\ast}=\left(1-\frac{(\beta R)^{1/\sigma}}{R}\right)(s_{0}+h_{0})\approx ra_{-1}+w
+c_{0}^{\ast}\approx\frac{r}{1+r}\left((1+r)a_{-1}+\sum_{t=0}^{\infty}\frac{wz_{t}}{\left(1+r\right)^{t}}\right)\approx ra_{-1}+w
 \]
 
 \end_inset
@@ -1224,7 +1268,8 @@ MPC of
 \emph on
 windfall
 \emph default
- income: 
+ income:
+ 
 \begin_inset Formula $\frac{\partial c_{0}}{\partial s_{0}}\approx\frac{r}{1+r}$
 \end_inset
 
@@ -1236,7 +1281,8 @@ MPC of
 \emph on
 future
 \emph default
- income change: 
+ income change:
+ 
 \begin_inset Formula $\frac{\partial c_{0}}{\partial wz_{t}}\approx\frac{r}{1+r}\left(1+r\right)^{-t}$
 \end_inset
 
@@ -1248,7 +1294,8 @@ MPC of
 \emph on
 permanent
 \emph default
- income change: 
+ income change:
+ 
 \begin_inset Formula $\frac{\partial c_{0}}{\partial w}\approx\frac{r}{1+r}\frac{1}{1-(1+r)^{-1}}=1$
 \end_inset
 
@@ -1258,13 +1305,15 @@ permanent
 \begin_layout Standard
 
 \series bold
-Dynamic affects: 
+Dynamic affects:
+ 
 \series default
 The same when 
 \begin_inset Formula $\beta R=1$
 \end_inset
 
-, for all 
+,
+ for all 
 \begin_inset Formula $k>0$
 \end_inset
 
@@ -1405,9 +1454,10 @@ a_{0}=Ra_{-1}+wz_{0}-c_{0}
 Hard 
 \series bold
 borrowing constraint:
+
 \series default
  
-\begin_inset Formula $a_{0}\geq-w\cdot b$
+\begin_inset Formula $a_{0}\geq-wb$
 \end_inset
 
 
@@ -1427,6 +1477,7 @@ for a soft constraint the interest rate only increases
 
 \series bold
 Maximum consumption:
+
 \series default
  
 \begin_inset Formula $\overline{c}_{0}=Ra_{-1}+wz_{0}+wb$
@@ -1438,14 +1489,12 @@ Maximum consumption:
 \begin_layout Itemize
 
 \series bold
-Optimal consumption: 
+Optimal consumption:
+ 
 \series default
 Constrained or unconstrained.
-\end_layout
-
-\begin_layout Standard
-
 \family typewriter
+
 \begin_inset Formula 
 \[
 c_{0}^{\ast}=\min\left\{ \overline{c}_{0},\left(1-\frac{(\beta R)^{1/\sigma}}{R}\right)(s_{0}+h_{0})\right\} 
@@ -1469,11 +1518,11 @@ Empirical realism.
 \begin_layout Itemize
 
 \series bold
-Technical issue: 
+Technical issue:
+ 
 \series default
 \emph on
-Borrowing constraints further in the future complicates the analytical solution
- considerably.
+Borrowing constraints further in the future complicates the analytical solution considerably.
 \end_layout
 
 \end_deeper
@@ -1513,6 +1562,7 @@ Empirical MPCs
 
 \series bold
 Source:
+
 \series default
  Fagereng et.
  al.
@@ -1591,7 +1641,8 @@ vspace{-3mm}
 \series bold
 Stochastic income
 \series default
- from 1st order Markov-process, 
+ from 1st order Markov-process,
+ 
 \begin_inset Formula $\mathcal{Z}$
 \end_inset
 
@@ -1609,7 +1660,8 @@ A true dynamic problem:
 \begin_layout Enumerate
 
 \series bold
-Information: 
+Information:
+ 
 \series default
 
 \begin_inset Formula $z_{t}$
@@ -1622,12 +1674,14 @@ Information:
 
 \series bold
 Target:
+
 \series default
  
 \emph on
 Expected
 \emph default
- discounted utility, 
+ discounted utility,
+ 
 \begin_inset Formula $\mathbb{E}_{0}\left[\sum_{t=0}^{\infty}\beta^{t}u(c_{t})\right]$
 \end_inset
 
@@ -1637,7 +1691,8 @@ Expected
 \begin_layout Enumerate
 
 \series bold
-Behavior: 
+Behavior:
+ 
 \series default
 Choose 
 \begin_inset Formula $c_{t}$
@@ -1654,12 +1709,14 @@ sequentially
 
 \series bold
 Solution:
+
 \series default
  Sequence of consumption 
 \emph on
 functions
 \emph default
-, 
+,
+ 
 \begin_inset Formula $c_{t}^{\ast}(z_{t},a_{t-1})$
 \end_inset
 
@@ -1712,7 +1769,8 @@ What if
 \begin_inset Formula $T\rightarrow\infty$
 \end_inset
 
-? 
+?
+ 
 \series default
 We must have 
 \begin_inset Formula $\lim_{T\rightarrow\infty}R^{-(T-1)}a_{T-1}=0$
@@ -1726,14 +1784,16 @@ We must have
 \begin_inset Formula $\lim_{T\rightarrow\infty}R^{-(T-1)}a_{T-1}>0$
 \end_inset
 
-: Consumption can be increased
+:
+ Consumption can be increased
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\lim_{T\rightarrow\infty}R^{-(T-1)}a_{T-1}<0$
 \end_inset
 
-: Violates No-Ponzi game condition
+:
+ Violates No-Ponzi game condition
 \end_layout
 
 \end_deeper
@@ -1855,7 +1915,8 @@ vspace{-2mm}
 
 
 \series bold
-Natural borrowing constraint: 
+Natural borrowing constraint:
+ 
 \begin_inset Formula $a_{t}\geq\underline{a}=-w\min\left\{ b,\frac{\underline{z}}{r}\right\} $
 \end_inset
 
@@ -1888,6 +1949,7 @@ Euler-equation from variation argument
 
 \series bold
 Case I:
+
 \series default
  If 
 \begin_inset Formula $u^{\prime}(c_{t})>\beta R\mathbb{E}_{t}\left[u^{\prime}(c_{t+1})\right]$
@@ -1906,7 +1968,8 @@ Increase
 \begin_inset Formula $\Delta>0$
 \end_inset
 
-, and lower 
+,
+ and lower 
 \begin_inset Formula $c_{t+1}$
 \end_inset
 
@@ -1921,8 +1984,10 @@ Increase
 
 \series bold
 Feasible:
+
 \series default
- Yes, if 
+ Yes,
+ if 
 \begin_inset Formula $a_{t}>\underline{a}$
 \end_inset
 
@@ -1933,6 +1998,7 @@ Feasible:
 
 \series bold
 Utility change:
+
 \series default
  
 \begin_inset Formula $u^{\prime}(c_{t})+\beta\left(-R\right)\mathbb{E}_{t}\left[u^{\prime}(c_{t+1})\right]>0$
@@ -1959,12 +2025,14 @@ vspace{2mm}
 
 \series bold
 Case II:
+
 \series default
  If 
 \begin_inset Formula $u^{\prime}(c_{t})<\beta R\mathbb{E}_{t}\left[u^{\prime}(c_{t+1})\right]$
 \end_inset
 
-: 
+:
+ 
 \end_layout
 
 \begin_deeper
@@ -1977,7 +2045,8 @@ Lower
 \begin_inset Formula $\Delta>0$
 \end_inset
 
-, and increase 
+,
+ and increase 
 \begin_inset Formula $c_{t+1}$
 \end_inset
 
@@ -1992,6 +2061,7 @@ Lower
 
 \series bold
 Feasible:
+
 \series default
  Yes (always)
 \end_layout
@@ -1999,7 +2069,8 @@ Feasible:
 \begin_layout Enumerate
 
 \series bold
-Utility change: 
+Utility change:
+ 
 \series default
 
 \begin_inset Formula $u^{\prime}(c_{t})+\beta R\mathbb{E}_{t}\left[u^{\prime}(c_{t+1})\right]>0$
@@ -2025,7 +2096,8 @@ vspace{2mm}
 \begin_layout Itemize
 
 \series bold
-Conclusion: 
+Conclusion:
+ 
 \series default
 By contradiction
 \end_layout
@@ -2035,6 +2107,7 @@ By contradiction
 
 \series bold
 Constrained:
+
 \series default
  
 \begin_inset Formula $a_{t}=\underline{a}$
@@ -2044,13 +2117,15 @@ Constrained:
 \begin_inset Formula $u^{\prime}(c_{t})\geq\beta R\mathbb{E}_{t}\left[u^{\prime}(c_{t+1})\right]$
 \end_inset
 
-, or
+,
+ or
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 Unconstrained:
+
 \series default
  
 \begin_inset Formula $a_{t}>\underline{a}$
@@ -2067,14 +2142,16 @@ Unconstrained:
 \begin_layout Itemize
 
 \series bold
-Sufficiency: 
+Sufficiency:
+ 
 \series default
 From concavity of value function
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
-FOC: 
+FOC:
+ 
 \begin_inset Formula $c_{t}^{-\sigma}=\beta\mathbb{E}_{t}\left[v_{a}(z_{t+1},a_{t})\right]$
 \end_inset
 
@@ -2082,7 +2159,8 @@ FOC:
 \end_layout
 
 \begin_layout Standard
-Envelope: 
+Envelope:
+ 
 \begin_inset Formula $v_{a}(z_{t},a_{t-1})=(1+r)c_{t}^{-\sigma}$
 \end_inset
 
@@ -2103,7 +2181,8 @@ Envelope:
 status open
 
 \begin_layout Plain Layout
-Special case I: Quadratic utility
+Special case I:
+ Quadratic utility
 \end_layout
 
 \end_inset
@@ -2116,6 +2195,7 @@ Special case I: Quadratic utility
 
 \series bold
 Quadratic utility:
+
 \series default
  
 \begin_inset Formula $u(c_{t})=-\frac{1}{2}(\overline{c}-c)^{2}$
@@ -2143,7 +2223,8 @@ large
 \begin_layout Itemize
 
 \series bold
-Euler-equation: 
+Euler-equation:
+ 
 \series default
 \emph on
 Consumption = expected future consumption
@@ -2188,6 +2269,7 @@ where we formally disregard the borrowing constraint
 
 \series bold
 Certainty equivalence:
+
 \series default
  
 \emph on
@@ -2209,7 +2291,8 @@ Only expected income matter
 status open
 
 \begin_layout Plain Layout
-Special case II: CARA utility
+Special case II:
+ CARA utility
 \end_layout
 
 \end_inset
@@ -2222,6 +2305,7 @@ Special case II: CARA utility
 
 \series bold
 CARA utility:
+
 \series default
  
 \begin_inset Formula $u(c_{t})=-\frac{1}{\alpha}e^{-\alpha c}$
@@ -2303,7 +2387,8 @@ where we formally disregard the borrowing constraint
 \begin_layout Itemize
 
 \series bold
-Precautionary saving: 
+Precautionary saving:
+ 
 \series default
 
 \begin_inset Formula $\sigma_{\psi}^{2}\uparrow$
@@ -2350,7 +2435,8 @@ accumulation of buffer-stock
 status open
 
 \begin_layout Plain Layout
-Dynamic solution: Bellman's Principle of Optimality
+Dynamic solution:
+ Bellman's Principle of Optimality
 \end_layout
 
 \end_inset
@@ -2363,19 +2449,24 @@ Dynamic solution: Bellman's Principle of Optimality
 
 \series bold
 Origin:
+
 \series default
- Bellman, 1957, Chap.
+ Bellman,
+ 1957,
+ Chap.
  III.3.
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
-Value function, 
+Value function,
+ 
 \begin_inset Formula $v_{t}$
 \end_inset
 
 :
+
 \series default
  Defined 
 \emph on
@@ -2426,11 +2517,13 @@ vspace{2mm}
 \begin_layout Itemize
 
 \series bold
-Policy function, 
+Policy function,
+ 
 \begin_inset Formula $c_{t}^{*}$
 \end_inset
 
-: 
+:
+ 
 \series default
 Is the same as
 \begin_inset Formula 
@@ -2506,7 +2599,8 @@ vspace{-3mm}
 
 
 \series bold
-State variables: 
+State variables:
+ 
 \series default
 
 \begin_inset Formula $z_{t}$
@@ -2527,6 +2621,7 @@ Control
 (choice)
 \series bold
  variable:
+
 \series default
  
 \begin_inset Formula $c_{t}$
@@ -2539,6 +2634,7 @@ Control
 
 \series bold
 Continuation value:
+
 \series default
  
 \begin_inset Formula $\beta\mathbb{E}_{t}[v_{t+1}(z_{t+1},a_{t})]$
@@ -2550,17 +2646,20 @@ Continuation value:
 \begin_layout Enumerate
 
 \series bold
-Parameters: 
+Parameters:
+ 
 \series default
 
 \begin_inset Formula $r$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $w$
 \end_inset
 
-, and stuff in 
+,
+ and stuff in 
 \begin_inset Formula $u(\bullet)$
 \end_inset
 
@@ -2571,9 +2670,12 @@ Parameters:
 
 \series bold
 Note:
+
 \series default
- Straightforward to extend to more goods, more assets or other states, more
- complex uncertainty, bounded rationality etc.
+ Straightforward to extend to more goods,
+ more assets or other states,
+ more complex uncertainty,
+ bounded rationality etc.
  
 \end_layout
 
@@ -2590,7 +2692,8 @@ Note:
 status open
 
 \begin_layout Plain Layout
-Infinite horizon: 
+Infinite horizon:
+ 
 \begin_inset Formula $T\rightarrow\infty?$
 \end_inset
 
@@ -2644,6 +2747,7 @@ vspace{-3mm}
 
 \series bold
 Contraction mapping result:
+
 \series default
  
 \emph on
@@ -2651,8 +2755,7 @@ If
 \begin_inset Formula $\beta$
 \end_inset
 
- is low enough (strong enough impatience) then the value and policy functions
- converge to 
+ is low enough (strong enough impatience) then the value and policy functions converge to 
 \begin_inset Formula $v(z_{t},a_{t-1})$
 \end_inset
 
@@ -2671,6 +2774,7 @@ If
 
 \series bold
 In practice:
+
 \series default
  
 \end_layout
@@ -2686,8 +2790,7 @@ Make arbitrary initial guess (e.g.
 \end_layout
 
 \begin_layout Enumerate
-Solve backwards until value and policy functions does not change anymore
- (given some tolerance)
+Solve backwards until value and policy functions does not change anymore (given some tolerance)
 \end_layout
 
 \end_deeper
@@ -2721,6 +2824,7 @@ status open
 
 \series bold
 Expected discounted utility:
+
 \series default
  
 \begin_inset Formula $v(z_{0},a_{-1})=\mathbb{E}_{0}\sum_{t=0}^{2}\beta^{t}\frac{c_{t}^{1-\sigma}}{1-\sigma}$
@@ -2756,7 +2860,8 @@ y_{t}=wz_{t}+\chi_{t}
 \begin_layout Itemize
 
 \series bold
-Cash-on-hand, savings and borrowing constraint:
+Cash-on-hand,
+ savings and borrowing constraint:
 \series default
 
 \begin_inset Formula 
@@ -2774,7 +2879,8 @@ a_{t} & \geq\underline{a}
 \begin_layout Itemize
 
 \series bold
-Stochastic transition: 
+Stochastic transition:
+ 
 \series default
 
 \begin_inset Formula $\text{Pr}\left[z_{t+1}|z_{t}\right]=\pi_{t}(z_{t},z_{t+1})$
@@ -2878,7 +2984,8 @@ Discretization
 \begin_layout Itemize
 
 \series bold
-Discretization: 
+Discretization:
+ 
 \series default
 All state variables belong to discrete sets 
 \begin_inset Formula $\equiv$
@@ -2917,7 +3024,8 @@ a_{t} & \in\mathcal{G}_{a}=\{a^{0},a^{1},\dots,a^{\#_{a}-1}\}\\
 \begin_layout Itemize
 
 \series bold
-Expectation: 
+Expectation:
+ 
 \series default
 Numerical integration by
 \series bold
@@ -2935,7 +3043,8 @@ Numerical integration by
 \begin_layout Itemize
 
 \series bold
-ConSav: 
+ConSav:
+ 
 \series default
 
 \begin_inset ERT
@@ -2950,7 +3059,8 @@ lstinline{grids.nonlinspace}
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset ERT
 status open
 
@@ -2969,7 +3079,8 @@ lstinline{grids.equilogspace}
 \begin_layout Itemize
 
 \series bold
-ConSavNotebook: 
+ConSavNotebook:
+ 
 \series default
 
 \begin_inset ERT
@@ -2987,6 +3098,73 @@ lstinline{04.
 \end_inset
 
  
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Grids and transition probabilities
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/grids.pdf
+	width 57text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/z_trans.pdf
+	width 43text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3086,7 +3264,8 @@ vspace{-2mm}
 \begin_layout Itemize
 
 \series bold
-ConSav: 
+ConSav:
+ 
 \series default
 
 \begin_inset ERT
@@ -3107,7 +3286,8 @@ lstinline{linear_interp.interp1d}
 \begin_layout Itemize
 
 \series bold
-ConSavNotebook: 
+ConSavNotebook:
+ 
 \series default
 
 \begin_inset ERT
@@ -3125,6 +3305,38 @@ lstinline{04.
 \end_inset
 
  
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Linear interpolation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/linear_interpolation.pdf
+	width 95text%
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3191,7 +3403,8 @@ v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t}) & =u(c_{t})+\sum_{i_{z+1}=0}^{\#_{z}-1}\pi\lef
 \begin_layout Itemize
 
 \series bold
-Inner loop: 
+Inner loop:
+ 
 \series default
 For each grid point in 
 \begin_inset Formula $\mathcal{G}_{z}\times\mathcal{G}_{a}$
@@ -3213,7 +3426,8 @@ numerical optimizer
 \begin_layout Itemize
 
 \series bold
-Outer loop: 
+Outer loop:
+ 
 \series default
 Backwards from 
 \begin_inset Formula $t=T-1$
@@ -3223,13 +3437,15 @@ Backwards from
 \begin_inset Formula $\underline{v}_{T}=0$
 \end_inset
 
-, or known)
+,
+ or known)
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
-ConSav+QuantEcon: 
+ConSav+QuantEcon:
+ 
 \series default
 Various optimizers in 
 \begin_inset ERT
@@ -3250,7 +3466,8 @@ lstinline{numba}
 \begin_layout Itemize
 
 \series bold
-ConSavNotebook: 
+ConSavNotebook:
+ 
 \series default
 
 \begin_inset ERT
@@ -3283,6 +3500,176 @@ lstinline{04.
 status open
 
 \begin_layout Plain Layout
+Consumption function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/c_func.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Savings function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/a_func.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Change in savings function
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/a_diff_func.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+MPC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/MPC.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intertemporal MPC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/MPC_dyn_1.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/MPC_dyn_2.pdf
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Economic insights
 \end_layout
 
@@ -3295,7 +3682,8 @@ Economic insights
 \begin_layout Itemize
 
 \series bold
-Notebook: 
+Notebook:
+ 
 \series default
 01.
  ConSavModel.ipynb
@@ -3312,11 +3700,11 @@ Consumption lower than under PIH and concave in assets
 
 \series bold
 Intuition:
+
 \series default
  
 \emph on
-Precautionary saving motive is relatively larger for asset poor households
- because income risk is the same for everybody
+Precautionary saving motive is relatively larger for asset poor households because income risk is the same for everybody
 \end_layout
 
 \begin_layout Standard
@@ -3355,7 +3743,8 @@ Larger effective discounting of future income
 
 \begin_deeper
 \begin_layout Standard
-(extreme: no effect of future income changes if constrained before)
+(extreme:
+ no effect of future income changes if constrained before)
 \end_layout
 
 \end_deeper
@@ -3385,7 +3774,8 @@ Numerical Monte Carlo simulation
 \begin_layout Itemize
 
 \series bold
-Initial distribution: 
+Initial distribution:
+ 
 \series default
 Draw 
 \begin_inset Formula $z_{i,-1}$
@@ -3405,7 +3795,8 @@ Draw
 \begin_layout Itemize
 
 \series bold
-Simulation: 
+Simulation:
+ 
 \series default
 Forwards in time from 
 \begin_inset Formula $t=0$
@@ -3461,6 +3852,7 @@ Review:
 
 \series bold
 Pro:
+
 \series default
  Simple to implement
 \end_layout
@@ -3469,8 +3861,34 @@ Pro:
 
 \series bold
 Con:
+
 \series default
  Computationally costly and introduces randomness
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Infinite horizon:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Assume 
+\begin_inset Formula $z_{it}$
+\end_inset
+
+ has an ergodic distribution
+\end_layout
+
+\begin_layout Enumerate
+Ergodic distribution of 
+\begin_inset Formula $a_{it}$
+\end_inset
+
+ around buffer-stock target 
 \end_layout
 
 \end_deeper
@@ -3510,6 +3928,7 @@ Replace numerical optimization with root-finding
 
 \series bold
 Time iteration:
+
 \series default
  For each 
 \begin_inset Formula $a_{t-1}$
@@ -3536,11 +3955,13 @@ c_{t}^{-\sigma}=\beta(1+r)\mathbb{E}_{t}[c_{t+1}^{-\sigma}]
 
 \begin_deeper
 \begin_layout Standard
-Note: 
+Note:
+ 
 \emph on
 Necessary and sufficient
 \emph default
- (for interior choices, else 
+ (for interior choices,
+ else 
 \begin_inset Formula $a_{t}=\underline{a}$
 \end_inset
 
@@ -3697,42 +4118,92 @@ vspace{-1mm}
 
 \series bold
 Consumption function:
+
 \series default
  Calculate 
 \begin_inset Formula $m=(1+r)a^{i_{a-}}+wz^{i_{z}}$
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-If 
+\begin_layout Enumerate
+Binding constraint:
+ If 
 \begin_inset Formula $m\leq m(z^{i_{z}},a^{0})$
 \end_inset
 
- constraint binds: 
-\begin_inset Formula $c^{\ast}(z^{i_{z}},a^{i_{a-}})=m+\underline{a}$
+ then
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-1mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+c^{\ast}(z^{i_{z}},a^{i_{a-}})=m+\underline{a}
+\]
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-Else: 
-\begin_inset Formula $c^{\ast}(z^{i_{z}},a^{i_{a-}})=$
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-3mm}
+\end_layout
+
 \end_inset
 
- interpolate 
-\begin_inset Formula $m(z^{i_{z}},:)$
+Interior choice:
+ Else
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-1mm}
+\end_layout
+
 \end_inset
 
- to 
-\begin_inset Formula $c(z^{i_{z}},:)$
-\end_inset
 
- at 
-\begin_inset Formula $m$
+\begin_inset Formula 
+\[
+c^{\ast}(z^{i_{z}},a^{i_{a-}})=\text{interpolate }m(z^{i_{z}},m)\rightarrow c(z^{i_{z}},m)
+\]
+
 \end_inset
 
 
@@ -3769,6 +4240,7 @@ An illiquid asset
 
 \series bold
 Illiuid asset:
+
 \series default
  Worth 
 \begin_inset Formula $k$
@@ -3778,7 +4250,8 @@ Illiuid asset:
 \begin_inset Formula $T$
 \end_inset
 
-, else 
+,
+ else 
 \begin_inset Formula $(1-\gamma)k$
 \end_inset
 
@@ -3793,6 +4266,7 @@ Illiuid asset:
 
 \series bold
 Terminal period:
+
 \series default
  
 \begin_inset Formula $v_{T}(\text{own}_{T-1},a_{T-1},y_{T})=\frac{\left(a_{T-1}+y_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
@@ -3805,6 +4279,7 @@ Terminal period:
 
 \series bold
 Recursive problem:
+
 \series default
  For 
 \begin_inset Formula $\text{own}_{t-1}\in\{0,1\}$
@@ -3844,24 +4319,23 @@ a_{t} & \geq0
 \begin_layout Itemize
 
 \series bold
-Euler-equation: 
+Euler-equation:
+ 
 \series default
 Still 
 \emph on
 necessary
 \emph default
-, but no longer
+,
+ but no longer
 \emph on
  sufficient
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Necessary: From variation argument conditional on 
-\begin_inset Formula $\text{own}_{t}$
-\end_inset
-
- 
+Necessary:
+ From variation argument conditional on own/sell choice
 \end_layout
 
 \begin_layout Enumerate
@@ -3945,6 +4419,7 @@ vspace{-2mm}
 
 \series bold
 Post-decision value function:
+
 \series default
  
 \begin_inset Formula 
@@ -4004,6 +4479,7 @@ Post-decision marginal value of cash
 
 \series bold
 Post-decision marginal value of cash:
+
 \series default
  
 \begin_inset Formula 
@@ -4029,13 +4505,105 @@ c_{t+1}^{\ast}(1,m_{t+1})^{-\sigma} & \text{\ensuremath{\text{else}}}
 \begin_layout Itemize
 
 \series bold
-Euler-equation Bellman:
+Euler-equation:
 \series default
 
 \begin_inset Formula 
 \begin{align*}
 u^{\prime}(c_{t})=\beta q_{t}\Leftrightarrow c_{t}^{-\sigma} & =\beta q_{t}
 \end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conditional consumption function in 
+\begin_inset Formula $t=T-2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Solution method:
+ 
+\series default
+EGM
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/illiquid_wq_final.pdf
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/illiquid_solve_final.pdf
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Unconditional owner behavior,
+ 
+\begin_inset Formula $t=T-2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/illiquid_owner_behavior_final.pdf
+	height 90theight%
 
 \end_inset
 
@@ -4071,9 +4639,11 @@ Upper envelope (given
 \begin_layout Standard
 
 \series bold
-Step 1: 
+Step 1:
+ 
 \series default
-Generate candidate points, 
+Generate candidate points,
+ 
 \begin_inset Formula $\forall i_{a}$
 \end_inset
 
@@ -4090,6 +4660,73 @@ v^{i_{a}} & =u\left(c^{i_{a}}\right)+w^{i_{a}}
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problems with EGM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Post-decision values in 
+\begin_inset Formula $t=T-2$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/illiquid_wq_initial.pdf
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Problems for owners:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/illiquid_c_endo_initial.pdf
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Reason:
+ 
+\series default
+Non-sufficient Euler-equation!
 \end_layout
 
 \end_deeper
@@ -4121,13 +4758,15 @@ Upper envelope (given
 \begin_layout Standard
 
 \series bold
-Step 2: 
+Step 2:
+ 
 \series default
 Apply upper-envelope,
 \begin_inset Formula $\forall i_{m}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $c^{\ast}(m^{i_{m}})=c^{i_{m},j^{\ast}}$
 \end_inset
 
@@ -4153,7 +4792,8 @@ j^{\ast} & =\arg\max_{j\in\{0,1,\dots\#_{a}-2\}}u\left(c^{i_{m},j}\right)+w^{i_{
 \begin_layout Standard
 
 \series bold
-ConSav: 
+ConSav:
+ 
 \series default
 
 \begin_inset ERT
@@ -4174,7 +4814,8 @@ lstinline{upperenvelope}
 \begin_layout Standard
 
 \series bold
-ConSavNotebook: 
+ConSavNotebook:
+ 
 \series default
 
 \begin_inset ERT
@@ -4243,8 +4884,10 @@ vspace{-2mm}
 
 \series bold
 Numbering:
+
 \series default
- Different levels of end-of-period assets, 
+ Different levels of end-of-period assets,
+ 
 \begin_inset Formula $a^{i_{a}}$
 \end_inset
 
@@ -4255,6 +4898,7 @@ Numbering:
 
 \series bold
 Problem:
+
 \series default
  Find the consumption function at 
 \begin_inset Formula $m_{1}$
@@ -4271,6 +4915,7 @@ Problem:
 
 \series bold
 Largest value-of-choice:
+
 \series default
  Denoted by the 
 \emph on
@@ -4295,9 +4940,11 @@ vspace{1mm}
 \begin_layout Standard
 
 \series bold
-Sources:
+Source:
+
 \series default
- Druedahl and Jørgensen (2017), 
+ Druedahl and Jørgensen (2017),
+ 
 \begin_inset Formula $G^{2}EGM$
 \end_inset
 
@@ -4305,8 +4952,45 @@ Sources:
 \end_layout
 
 \begin_layout Standard
-Druedahl (2021), 
+Druedahl (2021),
+ 
 \begin_inset Formula $NEGM$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conditional consumption function in 
+\begin_inset Formula $t=T-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/illiquid_solve_initial.pdf
+	width 90text%
+
 \end_inset
 
 
@@ -4337,7 +5021,8 @@ Economic insights
 \begin_layout Standard
 
 \series bold
-Notebook: 
+Notebook:
+ 
 \series default
 02.
  Illiquid.ipynb
@@ -4373,11 +5058,17 @@ Precautionary savings:
 
 \begin_deeper
 \begin_layout Enumerate
-Frequent shocks: Liquid assets important
+Frequent shocks:
+ Liquid assets important
 \end_layout
 
 \begin_layout Enumerate
-Infrequent shocks: Illiquid assets enough
+Infrequent shocks:
+ Illiquid assets enough
+\end_layout
+
+\begin_layout Standard
+(see Larkin (2024)
 \end_layout
 
 \end_deeper
@@ -4407,7 +5098,7 @@ Empirical evidence for hands-to-mouth households
 \begin_inset Graphics
 	filename figs/Kaplan_HtM_1.png
 	lyxscale 50
-	height 40theight%
+	special height=0.4\textheight
 
 \end_inset
 
@@ -4415,7 +5106,7 @@ Empirical evidence for hands-to-mouth households
 \begin_inset Graphics
 	filename figs/Kaplan_HtM_2.png
 	lyxscale 50
-	height 40theight%
+	special height=0.4\textheight
 
 \end_inset
 
@@ -4423,15 +5114,20 @@ Empirical evidence for hands-to-mouth households
 \end_layout
 
 \begin_layout Standard
-Poor HtM: Low liquid net worth, low total net worth
+Poor HtM:
+ Low liquid net worth,
+ low total net worth
 \end_layout
 
 \begin_layout Standard
-Wealthy HtM: Low liquid net worth, high total net worth
+Wealthy HtM:
+ Low liquid net worth,
+ high total net worth
 \end_layout
 
 \begin_layout Standard
-Source: Kaplan et.
+Source:
+ Kaplan et.
  al.
  (2014)
 \end_layout
@@ -4449,7 +5145,8 @@ Source: Kaplan et.
 status open
 
 \begin_layout Plain Layout
-Extra: Adding smoothing
+Extra:
+ Adding smoothing
 \end_layout
 
 \end_inset
@@ -4462,13 +5159,15 @@ Extra: Adding smoothing
 
 \series bold
 Taste shocks:
+
 \series default
  Following Iskhakov et.
- al., 2017)
+ al.,
+ 2017)
 \begin_inset Formula 
 \begin{align*}
 \overline{v}_{t}(m_{t}) & =\max\left\{ v_{t}(0,m_{t}^{\text{sell}})+\sigma_{\varepsilon}\varepsilon(0),v_{t}(1,m_{t})+\sigma_{\varepsilon}\varepsilon(1)\right\} \\
- & \,\,\,\vartheta(x)\sim\text{Extreme value}
+ & \,\,\,\varepsilon(x)\sim\text{Extreme value}
 \end{align*}
 
 \end_inset
@@ -4562,7 +5261,8 @@ status open
 \begin_layout Itemize
 
 \series bold
-Persistent-transitory income process: 
+Persistent-transitory income process:
+ 
 \series default
 
 \begin_inset Formula 
@@ -4578,7 +5278,8 @@ z_{t} & =\tilde{z}_{t}\xi_{t},\,\,\,\log\xi_{t}\sim\mathcal{N}(\mu_{\xi},\sigma_
 
 \begin_deeper
 \begin_layout Enumerate
-Transitory shock: 
+Transitory shock:
+ 
 \begin_inset Formula $\xi_{t}$
 \end_inset
 
@@ -4586,7 +5287,8 @@ Transitory shock:
 \end_layout
 
 \begin_layout Enumerate
-Persistent shock: 
+Persistent shock:
+ 
 \begin_inset Formula $\psi_{t}$
 \end_inset
 
@@ -4602,7 +5304,8 @@ Normalization using
 \begin_inset Formula $\mu_{\xi}$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\mathbb{E}\left[z_{t}\right]=\mathbb{E}\left[\tilde{z}_{t}\right]=1$
 \end_inset
 
@@ -4613,7 +5316,8 @@ Normalization using
 \begin_layout Itemize
 
 \series bold
-ConSav: 
+ConSav:
+ 
 \series default
 
 \begin_inset ERT
@@ -4634,7 +5338,8 @@ lstinline{qudarature.log_normal_gauss_hermite}
 \begin_layout Itemize
 
 \series bold
-ConSavNotebook: 
+ConSavNotebook:
+ 
 \series default
 
 \begin_inset ERT
@@ -4684,7 +5389,8 @@ Discretization of
 \begin_inset Formula $\xi_{t}$
 \end_inset
 
-: 
+:
+ 
 \series default
 Derive 
 \begin_inset Formula $\mathcal{G}_{\xi}$
@@ -4706,15 +5412,19 @@ x\sim\mathcal{N}(\mu,\sigma^{2}):\,\,\,\mathbb{E}[h(x)]\approx\frac{1}{\sqrt{\pi
 
 \end_inset
 
-where nodes, 
+where nodes,
+ 
 \begin_inset Formula $x_{i}$
 \end_inset
 
-, and weights, 
+,
+ and weights,
+ 
 \begin_inset Formula $\omega_{i}$
 \end_inset
 
-, have analytical expressions
+,
+ have analytical expressions
 \end_layout
 
 \begin_layout Itemize
@@ -4724,7 +5434,8 @@ Discretization of
 \begin_inset Formula $\tilde{z}_{t}$
 \end_inset
 
-: 
+:
+ 
 \series default
 Derive
 \series bold
@@ -4755,7 +5466,8 @@ If
 \begin_inset Formula $\rho_{z}=1$
 \end_inset
 
-: Also use quadrature here.
+:
+ Also use quadrature here.
 \end_layout
 
 \end_deeper
@@ -4763,6 +5475,7 @@ If
 
 \series bold
 Combined:
+
 \series default
  Derive 
 \begin_inset Formula $\mathcal{G}_{z}=\mathcal{G}_{\tilde{z}}\times\mathcal{G_{\xi}}$
@@ -4786,7 +5499,8 @@ Combined:
 \begin_layout Itemize
 
 \series bold
-ConSav: 
+ConSav:
+ 
 \series default
 
 \begin_inset ERT
@@ -4801,7 +5515,8 @@ lstinline{markov.log_rouwenhorst}
 
 \end_inset
 
-, 
+,
+ 
 \begin_inset ERT
 status open
 
@@ -4820,7 +5535,8 @@ lstinline{markov.log_tauchen}
 \begin_layout Itemize
 
 \series bold
-ConSavNotebook: 
+ConSavNotebook:
+ 
 \series default
 
 \begin_inset ERT
@@ -4961,6 +5677,7 @@ status open
 
 \series bold
 Assumption:
+
 \series default
  
 \begin_inset Formula $\rho_{z}=1\Leftrightarrow\tilde{z}_{t+1}=\tilde{z}_{t}\psi_{t+1}$
@@ -4973,6 +5690,7 @@ Assumption:
 
 \series bold
 Define normalized variables:
+
 \series default
  
 \begin_inset Formula $\boldsymbol{x}_{t}=x_{t}/\tilde{z}_{t}$
@@ -5036,7 +5754,8 @@ c_{t}^{-\sigma}=\beta(1+r)\mathbb{E}_{t}\left[c_{t+1}^{-\sigma}\right]\Leftright
 \begin_layout Itemize
 
 \series bold
-Simulation speed-up: 
+Simulation speed-up:
+ 
 \series default
 Harmenberg (2021)
 \end_layout
@@ -5072,7 +5791,10 @@ Basically:
 
 \begin_deeper
 \begin_layout Enumerate
-Born, working, retied, die
+Born,
+ working,
+ retied,
+ die
 \end_layout
 
 \begin_layout Enumerate
@@ -5089,7 +5811,9 @@ Add-ons:
 
 \begin_deeper
 \begin_layout Enumerate
-Labor supply, human capital, occupation
+Labor supply,
+ human capital,
+ occupation
 \end_layout
 
 \begin_layout Enumerate
@@ -5101,7 +5825,8 @@ Family formation
 \end_layout
 
 \begin_layout Enumerate
-Health, mortality
+Health,
+ mortality
 \end_layout
 
 \begin_layout Enumerate
@@ -5123,16 +5848,19 @@ etc.
 
 \series bold
 Good starting example:
+
 \series default
  
 \begin_inset Quotes ald
 \end_inset
 
-Life‐Cycle Consumption and Children: Evidence from a Structural Estimation
+Life‐Cycle Consumption and Children:
+ Evidence from a Structural Estimation
 \begin_inset Quotes ard
 \end_inset
 
-, Jørgensen (2017)
+,
+ Jørgensen (2017)
 \end_layout
 
 \end_deeper
@@ -5191,6 +5919,7 @@ textwidth}
 
 \series bold
 Paper:
+
 \series default
  Gourinchas and Parker (2021)
 \end_layout
@@ -5202,7 +5931,8 @@ Life-cycle consumption-saving model with retirement
 \end_layout
 
 \begin_layout Itemize
-Young households: 
+Young households:
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -5320,6 +6050,7 @@ status open
 
 \series bold
 Natural experiment:
+
 \series default
  Wealth depletion after sudden inheritance
 \end_layout
@@ -5348,22 +6079,23 @@ Fast wealth depletation requires high risk-aversion
 \end_layout
 
 \end_deeper
-\begin_layout Standard
+\end_deeper
+\begin_layout Frame
 \begin_inset Graphics
 	filename figs/Druedahl_Martinello.png
 	lyxscale 50
-	width 100text%
+	width 95text%
 
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+Source:
+ Druedahl and Martinello (2022)
 \end_layout
 
-\begin_layout Itemize
-Source: Druedahl and Martinello (2022)
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -5401,7 +6133,8 @@ Annual earnings-changes are far from log-normal:
 \end_layout
 
 \begin_layout Frame
-Source: Guvenen et.
+Source:
+ Guvenen et.
  al.
  (2021)
 \end_layout
@@ -5443,7 +6176,8 @@ Many with zero-growth month-month:
 \end_layout
 
 \begin_layout Frame
-Source: Druedahl et.
+Source:
+ Druedahl et.
  al.
  (2021)
 \end_layout
@@ -5496,12 +6230,6 @@ v_{t}\left(z_{t},m_{t}\right) & = & \max_{c_{t}}\left[\left(1-\beta\right)\cdot 
 
 \end_layout
 
-\end_deeper
-\begin_layout Frame
-
-\end_layout
-
-\begin_deeper
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -5518,13 +6246,15 @@ vspace{-4mm}
 
 \series bold
 Preferences:
+
 \series default
  
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Patience: 
+Patience:
+ 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -5532,7 +6262,8 @@ Patience:
 \end_layout
 
 \begin_layout Enumerate
-Intertemporal substitution: 
+Intertemporal substitution:
+ 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5540,7 +6271,8 @@ Intertemporal substitution:
 \end_layout
 
 \begin_layout Enumerate
-Risk-aversion: 
+Risk-aversion:
+ 
 \begin_inset Formula $\rho$
 \end_inset
 
@@ -5552,6 +6284,7 @@ Risk-aversion:
 
 \series bold
 Euler-equation:
+
 \series default
  
 \begin_inset Formula $v_{t}=\left[\beta R\cdot\mathbb{E}_{t}\left[c_{t+1}^{-\sigma}\cdot\left(\frac{w_{t+1}}{v_{t+1}}\right)^{\rho-\sigma}\right]\right]^{-\frac{1}{\sigma}}$
@@ -5575,7 +6308,8 @@ vspace{2mm}
 
 \begin_deeper
 \begin_layout Enumerate
-FOC: 
+FOC:
+ 
 \begin_inset Formula $0=v_{t}^{\sigma}\cdot\left[\left(1-\beta\right)\cdot c_{t}^{-\sigma}-\beta R\cdot w_{t+1}^{\rho-\sigma}\cdot\mathbb{E}_{t}\left[v_{t+1}^{-\rho}\cdot\frac{\partial v_{t+1}}{\partial m_{t+1}}\right]\right]$
 \end_inset
 
@@ -5617,7 +6351,8 @@ vspace{1mm}
 \end_layout
 
 \begin_layout Enumerate
-Envelope condition: 
+Envelope condition:
+ 
 \begin_inset Formula $\frac{\partial v_{t}\left(z_{t},m_{t}\right)}{\partial m_{t}}=v_{t}^{\sigma}\cdot\left(1-\beta\right)\cdot c_{t}^{-\sigma}$
 \end_inset
 
@@ -5703,7 +6438,8 @@ status open
 \begin_layout Itemize
 
 \series bold
-Curse of dimensionality: 
+Curse of dimensionality:
+ 
 \end_layout
 
 \begin_deeper
@@ -5738,16 +6474,6 @@ Approximate on simulation sample rather than on grid
 \end_layout
 
 \begin_layout Enumerate
-Various trick to get stability 
-\size footnotesize
-
-\begin_inset Newline newline
-\end_inset
-
-(replay buffers, mini-batches, target networks)
-\end_layout
-
-\begin_layout Enumerate
 Automatic differentiation (backpropagation) and GPUs for speed
 \end_layout
 
@@ -5756,6 +6482,7 @@ Automatic differentiation (backpropagation) and GPUs for speed
 
 \series bold
 Examples:
+
 \series default
  Maliar and Maliar (2021) and Azinovic and Scheidegger (2022)
 \end_layout
@@ -5763,11 +6490,449 @@ Examples:
 \begin_layout Itemize
 
 \series bold
-Work-in-progress:
+Working paper:
+
 \series default
- Druedahl and Røpke (2024)
+ Druedahl and Røpke (2025)
 \end_layout
 
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Portfolio choice
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Portfolio choice model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Risk-free asset:
+
+\series default
+ 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+ with return 
+\begin_inset Formula $r_{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Risky asset:
+
+\series default
+ 
+\begin_inset Formula $b_{t}$
+\end_inset
+
+ with return 
+\begin_inset Formula $r_{f}+\nu_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Recursive formulation:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+v_{t}(a_{t-1},b_{t-1},\nu_{t},z_{t}) & =\max_{a_{t},b_{t}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}\left(a_{t},b_{t},z_{t+1}\right)\right]\\
+ & \text{s.t.}\\
+m_{t} & =(1+r_{f})a_{t-1}+(1+r_{f}+\nu_{t})b_{t-1}+wz_{t}\\
+c_{t} & =m_{t}-a_{t}-b_{t}\\
+z_{t+1} & \sim F_{z}(z_{t})\\
+\nu_{t+1} & \sim F_{\nu}\\
+a_{t},b_{t},c_{t} & \geq0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Optimality conditions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Envelope conditions:
+\series default
+
+\begin_inset Formula 
+\[
+\frac{\partial v_{t}}{\partial a_{t-1}}=(1+r_{f})c_{t}^{-\sigma},\,\,\,\frac{\partial v_{t}}{\partial a_{t-1}}=(1+r_{f}+\nu_{t})c_{t}^{-\sigma}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+FOCs
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+-c_{t}^{-\sigma}+\beta\mathbb{E}_{t}\left[\frac{\partial v_{t+1}}{\partial a_{t}}\right] & =0\\
+-c_{t}^{-\sigma}+\beta\mathbb{E}_{t}\left[\frac{\partial v_{t+1}}{\partial b_{t}}\right] & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Combined:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+c_{t}^{-\sigma} & =\beta(1+r_{f})\mathbb{E}_{t}\left[c_{t+1}^{-\sigma}\right]\\
+0 & =\mathbb{E}_{t}\left[\nu_{v+1}c_{t+1}^{-\sigma}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reformulation with fewer states
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Consumption-decision value function:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+v_{t}(m_{t},z_{t}) & =\max_{c_{t}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta w_{t}\left(a_{t},z_{t}\right)\\
+ & \text{s.t.}\\
+a_{t} & =m_{t}-c_{t}\\
+a_{t} & \geq0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Portfolio-decision value function:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+w_{t}\left(a_{t},z_{t}\right) & =\max_{\alpha_{t}}\beta\mathbb{E}_{t}\left[v_{t+1}\left(m_{t+1},z_{t+1}\right)\right]\\
+ & \text{s.t.}\\
+m_{t+1} & =R_{t+1}a_{t}+z_{t+1}\\
+R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve for 
+\begin_inset Formula $\alpha_{t}^{\ast}\left(a_{t},z_{t}\right)$
+\end_inset
+
+ by root-finding on 
+\begin_inset Formula 
+\begin{align*}
+0 & =\mathbb{E}_{t}\left[\nu_{v+1}c_{t+1}^{-\sigma}\right]\\
+ & \text{s.t.}\\
+c_{t+1} & =c_{t+1}^{\ast}\left(m_{t+1},z_{t+1}\right)\\
+m_{t+1} & =R_{t+1}a_{t}+z_{t+1}\\
+R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}^{\ast}\left(a_{t},z_{t}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute
+\begin_inset Formula 
+\[
+q_{t}\left(a_{t},z_{t}\right)=\mathbb{E}_{t}\left[R_{t+1}c_{t+1}^{-\sigma}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $c_{t}^{\ast}\left(m_{t},z_{t}\right)$
+\end_inset
+
+ using EGM
+\begin_inset Formula 
+\begin{align*}
+c_{t}\left(a_{t},z_{t}\right) & =\left(\beta q_{t}\left(a_{t},z_{t}\right)\right)^{-\frac{1}{\sigma}}\\
+m_{t}\left(a_{t},z_{t}\right) & =c_{t}+a_{t}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Extension with participation costs 
+\begin_inset Formula $\kappa$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-10mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+v_{t}(m_{t},z_{t},\iota_{t-1}) & =\max_{c_{t}\in[0,m_{t}]}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\underline{w}_{t}\left(m_{t}-c_{t},z_{t},\iota_{t-1}\right)\\
+\\\underline{w}_{t}\left(a_{t},z_{t},\iota_{t-1}\right) & =\max_{\iota_{t}}w_{t}\left(a_{t},z_{t},\iota_{t}\right)-\kappa\boldsymbol{1}\left\{ \iota_{t}=1\land\iota_{t-1}=0\right\} \\
+ & \text{s.t.}\\
+\iota_{t} & \in\left\{ 1\right\} \text{ if }\iota_{t-1}=1\text{ else }\left\{ 0,1\right\} \\
+\\w_{t}\left(a_{t},z_{t},\iota_{t}\right) & =\max_{\alpha_{t}}\beta\mathbb{E}_{t}\left[v_{t+1}\left(m_{t+1},z_{t+1},\iota_{t}\right)\right]\\
+ & \text{s.t.}\\
+m_{t+1} & =R_{t+1}a_{t}+z_{t+1}\\
+R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}\\
+\alpha_{t} & \in\left[0,1\right]\text{ if }\iota_{t}=1\text{ else }\left\{ 0\right\} 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution method with participation costs 
+\begin_inset Formula $\kappa$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Participation is an absorbing state
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\iota_{t-1}=1$
+\end_inset
+
+ then 
+\begin_inset Formula $\iota_{t}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The same solution method as before can be used
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Before participation,
+ 
+\begin_inset Formula $\iota_{t}=0$
+\end_inset
+
+:
+ 
+\series default
+The post-decision marginal value of cash no longer needs to be monotone
+\begin_inset Formula 
+\begin{align*}
+\underline{w}_{t}\left(a_{t},z_{t},0\right) & =\mathbb{E}_{t}\left[w_{t}\left(a_{t},z_{t},\iota_{t}\right)-\kappa\boldsymbol{1}\left\{ \iota_{t}=1\right\} \right]\\
+q_{t}\left(a_{t},z_{t},\iota_{t}\right) & =\mathbb{E}_{t}\left[R_{t+1}c_{t+1}^{-\sigma}\right]\\
+\iota_{t} & =\begin{cases}
+1 & \text{if }w_{t}\left(a_{t},z_{t},1\right)-\kappa>w_{t}\left(a_{t},z_{t},0\right)\\
+0 & \text{else}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Same solution as before:
+ 
+\emph on
+Apply an upper envelope
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Unclear if this can also be done with Epstein-Zin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -5797,7 +6962,8 @@ Summary and what's next
 \begin_layout Itemize
 
 \series bold
-This lecture: 
+This lecture:
+ 
 \end_layout
 
 \begin_deeper
@@ -5813,11 +6979,16 @@ Consumption-saving models
 Basic numerical dynamic programming
 \end_layout
 
+\begin_layout Enumerate
+EGM and NEGM
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
 
 \series bold
-Next: 
+Next:
+ 
 \series default
 \emph on
 Stationary equilibrium
@@ -5835,7 +7006,8 @@ Study today's code
 \end_layout
 
 \begin_layout Enumerate
-Glance at Aiyagari (1994), 
+Glance at Aiyagari (1994),
+ 
 \begin_inset Newline newline
 \end_inset
 

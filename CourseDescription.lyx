@@ -174,13 +174,50 @@ vspace{-25mm}
 
 \end_inset
 
-Course Plan:
+Course description:
 \series bold
  Heterogeneous Agent Macro
 \end_layout
 
 \begin_layout Author
 Jeppe Druedahl
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Description:
+\series default
+ This course introduces you to the research frontier macroeconomic models,
+ where agents are heterogeneous and face uninsurable idiosyncratic shocks.
+ Such models play a central role in contemporary discussions on both long-run
+ issues, regarding e.g.
+ inequality, taxation and social security, and short-run issues, regarding
+ e.g.
+ the causes of business cycles and the effectiveness on monetary and fiscal
+ policy.
+ You will learn to both solve and simulate simple versions of such models,
+ and interpret the results from full-scale models used in research papers.
+\end_layout
+
+\begin_layout Standard
+The courses have three components.
+ The first part of the course is on stationary equilibrium Bewley-Huggett-Aiygar
+i models, and the roles of uninsurable risk and demographics for the determinati
+on of the equilibrium interest rate and inequality.
+ The second part of the course is on the analysis of transitional dynamics
+ in sequence space, and feature discussions on the dynamics of income and
+ wealth inequality and the secular trend of the neutral interest rate.
+ The third part is on Heterogeneous Agent New Keynesian models with pricing
+ frictions, where heterogeneity in the marginal propensity to consume and
+ fluctuations in risk due to e.g.
+ unemployment are important for understanding business-cycle fluctuations.
+\end_layout
+
+\begin_layout Standard
+The analytical and numerical methods you learn in this course is generally
+ applicable to questions in public finance, labor economics, trade and industria
+l organizations, where heterogeneity plays an important role.
 \end_layout
 
 \begin_layout Standard
@@ -205,20 +242,9 @@ literal "false"
 \series bold
 Preparation:
 \series default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-2mm}
-\end_layout
-
-\end_inset
-
-
+ The course relies heavily on programming in Python to give a hands-on approach
+ to working with heterogeneous agent models.
+ It is therefore strongly recommended that participants prepare as follows:
 \end_layout
 
 \begin_layout Enumerate
@@ -299,21 +325,15 @@ vspace{-4mm}
 
 \end_layout
 
-\begin_layout Section*
-Lectures
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-2mm}
-\end_layout
-
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Lectures
 \end_layout
 
 \begin_layout Standard
@@ -563,42 +583,6 @@ literal "false"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section*
-Plan
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Monday:
-\series default
- Lecture 0+1: 9:00 - 13:00
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Tuesday:
-\series default
- Lecture 2: 10:00 - 13:00
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Wednesday:
-\series default
- Lecture 3: 10:00 - 13:00
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Thursday:
-\series default
- Lecture 4: 10:00 - 13:00
 \end_layout
 
 \begin_layout Section*
