@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -65,14 +65,17 @@
 % toc
 \setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
 \setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \options t,10pt
 \use_default_options false
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
 \inputencoding utf8
-\fontencoding global
+\fontencoding auto
 \font_roman "lmodern" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -80,7 +83,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -114,15 +119,17 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
 \secnumdepth 2
 \tocdepth 1
-\paragraph_separation skip
-\defskip smallskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style danish
@@ -130,11 +137,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -156,7 +168,8 @@ vspace{-2mm}}
 
 
 \backslash
-subtitle{Mini-Course: Heterogenous Agent Macro} 
+subtitle{Mini-Course:
+ Heterogenous Agent Macro} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -170,7 +183,7 @@ author{Jeppe Druedahl}
 
 
 \backslash
-date{2024}
+date{2025}
 \end_layout
 
 \begin_layout Plain Layout
@@ -215,7 +228,8 @@ maketitle
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -247,7 +261,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -279,7 +294,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -311,7 +327,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -411,7 +428,8 @@ status open
 
 
 \series bold
-Last time: 
+Previously:
+ 
 \end_layout
 
 \begin_deeper
@@ -437,7 +455,8 @@ status open
 
 
 \series bold
-Today:
+Now:
+
 \series default
  Interaction through Walrassian markets
 \end_layout
@@ -456,6 +475,7 @@ status open
 
 \series bold
 Model:
+
 \series default
  Heterogeneous Agent Neo-Classical (HANC) model
 \end_layout
@@ -474,6 +494,7 @@ status open
 
 \series bold
 Equilibrium-concept:
+
 \series default
  
 \emph on
@@ -504,6 +525,7 @@ status open
 
 \series bold
 Code:
+
 \series default
  Based on the 
 \begin_inset ERT
@@ -547,13 +569,15 @@ Is in active development
 \end_layout
 
 \begin_layout Enumerate
-You can help to improve interface, find bugs and suggest features 
+You can help to improve interface,
+ find bugs and suggest features 
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Documentation: 
+Documentation:
+ 
 \series default
 See 
 \begin_inset ERT
@@ -594,7 +618,8 @@ status open
 \begin_layout Standard
 
 \series bold
-Original package: 
+Original package:
+ 
 \series default
 
 \begin_inset ERT
@@ -645,8 +670,8 @@ textcolor{DarkRed}{
 
 \begin_inset CommandInset href
 LatexCommand href
-name "course"
-target "https://github.com/shade-econ/nber-workshop-2022"
+name "courses"
+target "https://github.com/shade-econ"
 literal "false"
 
 \end_inset
@@ -708,6 +733,7 @@ status open
 
 \series bold
 Literature:
+
 \series default
  Aiyagari (1994) 
 \end_layout
@@ -766,7 +792,8 @@ Ramsey-recap
 status open
 
 \begin_layout Plain Layout
-Ramsey: Firms
+Ramsey:
+ Firms
 \end_layout
 
 \end_inset
@@ -778,7 +805,8 @@ Ramsey: Firms
 \begin_layout Itemize
 
 \series bold
-Production function: 
+Production function:
+ 
 \begin_inset Formula $Y_{t}=F(\Gamma_{t},K_{t-1},L_{t})$
 \end_inset
 
@@ -802,6 +830,7 @@ where
 
 \series bold
 Profits:
+
 \series default
  
 \begin_inset Formula $\Pi_{t}=Y_{t}-w_{t}L_{t}-r_{t}^{K}K_{t-1}$
@@ -813,7 +842,8 @@ Profits:
 \begin_layout Itemize
 
 \series bold
-Profit maximization: 
+Profit maximization:
+ 
 \begin_inset Formula $\max_{K_{t-1},L_{t}}\Pi_{t}$
 \end_inset
 
@@ -837,7 +867,8 @@ vspace{1mm}
 
 \begin_deeper
 \begin_layout Enumerate
-Rental rate: 
+Rental rate:
+ 
 \begin_inset Formula $\frac{\partial\Pi_{t}}{\partial K_{t-1}}=0\Leftrightarrow$
 \end_inset
 
@@ -862,7 +893,8 @@ vspace{1mm}
 \end_layout
 
 \begin_layout Enumerate
-Real wage: 
+Real wage:
+ 
 \begin_inset Formula $\frac{\partial\Pi_{t}}{\partial L_{t}}=0\Leftrightarrow w_{t}=F_{L}(\Gamma_{t},K_{t-1},L_{t})$
 \end_inset
 
@@ -895,7 +927,8 @@ vspace{1mm}
 
 \end_inset
 
-Zero profits: 
+Zero profits:
+ 
 \begin_inset Formula $\Pi_{t}=0\Rightarrow$
 \end_inset
 
@@ -938,7 +971,8 @@ vspace{2mm}
 status open
 
 \begin_layout Plain Layout
-Ramsey: Zero-profit mutual fund
+Ramsey:
+ Zero-profit mutual fund
 \end_layout
 
 \end_inset
@@ -980,11 +1014,13 @@ K_{t}=(1-\delta)K_{t-1}+I_{t}
 \series bold
 Deposits 
 \series default
-(from households), 
+(from households),
+ 
 \begin_inset Formula $A_{t-1}$
 \end_inset
 
 :
+
 \series bold
  
 \series default
@@ -1026,7 +1062,8 @@ A_{t-1}=K_{t-1}
 status open
 
 \begin_layout Plain Layout
-Ramsey: Households
+Ramsey:
+ Households
 \end_layout
 
 \end_inset
@@ -1068,7 +1105,8 @@ A_{t}^{hh} & =(1+r_{t})A_{t-1}^{hh}+w_{t}L_{t}^{hh}-C_{t}^{hh}
 
 \begin_deeper
 \begin_layout Standard
-Exogenous labor supply: 
+Exogenous labor supply:
+ 
 \begin_inset Formula $L_{t}^{hh}=1$
 \end_inset
 
@@ -1107,7 +1145,8 @@ u^{\prime}(C_{t}^{hh})=\beta(1+r_{t+1})u^{\prime}(C_{t+1}^{hh})
 status open
 
 \begin_layout Plain Layout
-Ramsey: Market Clearing
+Ramsey:
+ Market Clearing
 \end_layout
 
 \end_inset
@@ -1129,7 +1168,8 @@ status open
 
 
 \series bold
-Capital market: 
+Capital market:
+ 
 \begin_inset Formula $K_{t}=A_{t}=A_{t}^{hh}$
 \end_inset
 
@@ -1149,7 +1189,8 @@ status open
 
 
 \series bold
-Labor market: 
+Labor market:
+ 
 \begin_inset Formula $L_{t}=L_{t}^{hh}=1$
 \end_inset
 
@@ -1169,7 +1210,8 @@ status open
 
 
 \series bold
-Goods market: 
+Goods market:
+ 
 \begin_inset Formula $Y_{t}=C_{t}^{hh}+I_{t}$
 \end_inset
 
@@ -1205,6 +1247,7 @@ status open
 
 \series bold
 Walras:
+
 \series default
  Capital and labor market clears 
 \begin_inset Formula $\Rightarrow$
@@ -1237,7 +1280,8 @@ C_{t}^{hh}+I_{t} & =\left[(1+r_{t})A_{t-1}^{hh}+w_{t}L_{t}^{hh}-A_{t}^{hh})\righ
 status open
 
 \begin_layout Plain Layout
-Ramsey: Summary
+Ramsey:
+ Summary
 \end_layout
 
 \end_inset
@@ -1334,7 +1378,8 @@ L_{t} & =L_{t}^{hh}
 status open
 
 \begin_layout Plain Layout
-Ramsey: As an equation system
+Ramsey:
+ As an equation system
 \end_layout
 
 \end_inset
@@ -1380,6 +1425,7 @@ vspace{3mm}
 
 \series bold
 Note I:
+
 \series default
  There is 
 \emph on
@@ -1392,6 +1438,7 @@ perfect foresight
 
 \series bold
 Note II:
+
 \series default
  This is the so-called 
 \emph on
@@ -1413,7 +1460,8 @@ sequence-space
 status open
 
 \begin_layout Plain Layout
-Ramsey: Steady state
+Ramsey:
+ Steady state
 \end_layout
 
 \end_inset
@@ -1511,34 +1559,41 @@ Model blocks:
 
 \series bold
 Firms:
+
 \series default
- Rent capital from mutual fund and hire labor from the households, produce
- with given technology, and sell output goods
+ Rent capital from mutual fund and hire labor from the households,
+ produce with given technology,
+ and sell output goods
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 Zero-profit mutual funds:
+
 \series default
- Own capital and rent it to firms, take deposits and pay return to household
+ Own capital and rent it to firms,
+ take deposits and pay return to household
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 Households:
+
 \series default
- Face idiosyncratic productivity shocks, supplies labor exogenously and
- makes consumption-saving decisions
+ Face idiosyncratic productivity shocks,
+ supplies labor exogenously and makes consumption-saving decisions
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 Markets:
+
 \series default
- Perfect competition in labor, goods and capital markets
+ Perfect competition in labor,
+ goods and capital markets
 \end_layout
 
 \end_deeper
@@ -1556,6 +1611,7 @@ status open
 
 \series bold
 Add-on to Ramsey-Cass-Koopman:
+
 \series default
  
 \emph on
@@ -1618,7 +1674,7 @@ status open
 
 \end_inset
 
-The Standard Incomplete Market (SIM) model
+The Standard Incomplete Markets (SIM) model
 \end_layout
 
 \end_deeper
@@ -1726,7 +1782,8 @@ status open
 \emph on
 Ex ante
 \emph default
- due to different preferences, 
+ due to different preferences,
+ 
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
@@ -1748,7 +1805,8 @@ status open
 \emph on
 Ex ante
 \emph default
- due to different abilities, 
+ due to different abilities,
+ 
 \begin_inset Formula $\phi_{i}$
 \end_inset
 
@@ -1770,7 +1828,8 @@ status open
 \emph on
 Ex post
 \emph default
- due to stochastic productivity, 
+ due to stochastic productivity,
+ 
 \begin_inset Formula $z_{it}$
 \end_inset
 
@@ -1799,7 +1858,9 @@ Incomplete markets due to borrowing constraint
 
 
 \size small
-(fancy words: partial self-insurrance, lack of Arrow-Debreu securities)
+(fancy words:
+ partial self-insurrance,
+ lack of Arrow-Debreu securities)
 \end_layout
 
 \end_deeper
@@ -1931,6 +1992,7 @@ Euler-equation
 
 \series bold
 Proof:
+
 \series default
  Using 
 \emph on
@@ -1999,9 +2061,11 @@ status open
 
 
 \series bold
-Policy functions: 
+Policy functions:
+ 
 \series default
-Aggregate prices are hidden as inputs, i.e.
+Aggregate prices are hidden as inputs,
+ i.e.
 \size footnotesize
 
 \begin_inset Formula 
@@ -2057,7 +2121,8 @@ status open
 
 \end_inset
 
-Beginning-of-period: 
+Beginning-of-period:
+ 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{t}$
 \end_inset
 
@@ -2065,11 +2130,13 @@ Beginning-of-period:
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\phi_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $z_{it-1}$
 \end_inset
 
@@ -2104,7 +2171,8 @@ status open
 
 \end_inset
 
-Productivity transition: 
+Productivity transition:
+ 
 \begin_inset Formula $\boldsymbol{D}_{t}=\Pi_{z}^{\prime}\underline{\boldsymbol{D}}_{t}$
 \end_inset
 
@@ -2112,11 +2180,13 @@ Productivity transition:
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\phi_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $z_{it}$
 \end_inset
 
@@ -2151,7 +2221,8 @@ status open
 
 \end_inset
 
-Savings transition: 
+Savings transition:
+ 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{t+1}=\Lambda_{t}^{\prime}\boldsymbol{D}_{t}$
 \end_inset
 
@@ -2189,7 +2260,8 @@ vspace{-3mm}
 
 \end_inset
 
-Interpretation: 
+Interpretation:
+ 
 \begin_inset Quotes ald
 \end_inset
 
@@ -2313,7 +2385,8 @@ wrt.
 \begin_layout Enumerate
 
 \series bold
-Stationary equilibrium: 
+Stationary equilibrium:
+ 
 \series default
 Time-constant solution.
 \end_layout
@@ -2321,7 +2394,8 @@ Time-constant solution.
 \begin_layout Enumerate
 
 \series bold
-Transition path: 
+Transition path:
+ 
 \series default
 Time-varying solution due to e.g.
  initial conditions or temporary deviations of exogenous variables.
@@ -2362,7 +2436,8 @@ numerically
 \begin_layout Itemize
 
 \series bold
-Household problem: 
+Household problem:
+ 
 \begin_inset Formula $u(c_{t})=\frac{c_{t}^{1-\sigma}}{1-\sigma}$
 \end_inset
 
@@ -2393,7 +2468,7 @@ Find the stationary equilibrium
 \begin_layout Enumerate
 Find Jacobian around stationary equilibrium (
 \emph on
-next time
+later
 \emph default
 )
 \end_layout
@@ -2401,7 +2476,7 @@ next time
 \begin_layout Enumerate
 Solve using quasi-Newton solver (
 \emph on
-next time
+later
 \emph default
 )
 \end_layout
@@ -2433,12 +2508,14 @@ Solution of household problem
 
 \series bold
 Solve:
+
 \series default
  Separately for each 
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\phi_{i}$
 \end_inset
 
@@ -2543,6 +2620,7 @@ Market clearing
 
 \series bold
 Capital market:
+
 \series default
  
 \begin_inset Formula $K_{t}=A_{t}=\int a_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}$
@@ -2555,6 +2633,7 @@ Capital market:
 
 \series bold
 Labor market:
+
 \series default
  
 \begin_inset Formula $L_{t}=\int\ell_{t}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{t}=\int\phi_{i}z_{it}d\boldsymbol{D}_{t}=1$
@@ -2567,6 +2646,7 @@ Labor market:
 
 \series bold
 Goods market:
+
 \series default
  
 \begin_inset Formula $Y_{t}=C_{t}^{hh}+I_{t}$
@@ -2592,6 +2672,7 @@ vspace{2mm}
 
 \series bold
 Walras:
+
 \series default
  Capital and labor market clears 
 \begin_inset Formula $\Rightarrow$
@@ -2647,13 +2728,15 @@ status open
 
 
 \series bold
-Initial distribution: 
+Initial distribution:
+ 
 \series default
 Choose 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{0}(z_{-1},a_{-1})$
 \end_inset
 
-, which is defined on 
+,
+ which is defined on 
 \begin_inset Formula $\mathcal{G}_{z}\times\mathcal{G}_{a}$
 \end_inset
 
@@ -2683,7 +2766,8 @@ status open
 
 
 \series bold
-Simulation: 
+Simulation:
+ 
 \series default
 Forwards in time from 
 \begin_inset Formula $t=0$
@@ -2707,6 +2791,7 @@ status open
 
 \series bold
 Distribute stochastic mass:
+
 \series default
  For each 
 \begin_inset Formula $i_{z}$
@@ -2759,6 +2844,7 @@ status open
 
 \series bold
 Initial zero mass:
+
 \series default
  Set 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{t+1}(z^{i_{z}},a^{i_{a}})=0$
@@ -2802,6 +2888,7 @@ status open
 
 \series bold
 Distribute endogenous mass:
+
 \series default
  For each 
 \begin_inset Formula $i_{z}$
@@ -2988,56 +3075,8 @@ status open
 
 
 \series bold
-Comparison with Monte Carlo:
-\series default
- See ConSavModel/
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\series bold
-Pro: 
-\series default
-Computationally efficient and no randomness
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Con: 
-\series default
-Introduces a non-continuous distribution
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{2mm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<+->
-\end_layout
-
-\end_inset
-
-
-\series bold
-Toy example: 
+Toy example:
+ 
 \series default
 simple_histogram_simulation.xlsx
 \begin_inset ERT
@@ -3060,6 +3099,7 @@ vspace{1mm}
 
 \series bold
 Grids:
+
 \series default
  
 \begin_inset Formula $\mathcal{G}_{z}=\{\underline{z},\overline{z}\}$
@@ -3089,6 +3129,7 @@ vspace{1mm}
 
 \series bold
 Transition matrix:
+
 \series default
  
 \begin_inset Formula $\pi_{0,0}=\pi_{1,1}=0.5$
@@ -3113,12 +3154,14 @@ vspace{1mm}
 \begin_layout Itemize
 
 \series bold
-Policy function: 
+Policy function:
+ 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Low income: 
+Low income:
+ 
 \begin_inset Formula $a^{\ast}(\underline{z},0)=a^{\ast}(\underline{z},1)=0$
 \end_inset
 
@@ -3126,7 +3169,8 @@ Low income:
 \end_layout
 
 \begin_layout Itemize
-High income: Let 
+High income:
+ Let 
 \begin_inset Formula $a^{\ast}(\overline{z},0)=0.5$
 \end_inset
 
@@ -3156,7 +3200,8 @@ vspace{1mm}
 \series bold
 Initial distribution
 \series default
-: 
+:
+ 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{0}(z_{it},a_{it-1})=\begin{cases}
 1 & \text{if }z_{it}=\underline{z}\text{ and }a_{it}=0\\
 0 & \text{else}
@@ -3182,13 +3227,66 @@ vspace{1mm}
 \begin_layout Itemize
 
 \series bold
-Task: 
+Task:
+ 
 \series default
 Calculate by hand the transitions to
 \begin_inset Formula 
 \[
 \boldsymbol{D}_{0},\,\underline{\boldsymbol{D}}_{1},\,\boldsymbol{D}_{1},\dots
 \]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<+->
+\end_layout
+
+\end_inset
+
+
+\series bold
+Comparison with Monte Carlo:
+
+\series default
+ See ConSavModel/
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Pro:
+ 
+\series default
+Computationally efficient and no randomness
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Con:
+ 
+\series default
+Introduces a non-continuous distribution
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2mm}
+\end_layout
 
 \end_inset
 
@@ -3209,7 +3307,8 @@ Calculate by hand the transitions to
 status open
 
 \begin_layout Plain Layout
-Side-note: Matrix formulation
+Side-note:
+ Matrix formulation
 \end_layout
 
 \end_inset
@@ -3414,9 +3513,11 @@ vspace{2mm}
 \begin_layout Itemize
 
 \series bold
-Further details: 
+Further details:
+ 
 \series default
-Young (2010), Tan (2020),
+Young (2010),
+ Tan (2020),
 \begin_inset Newline newline
 \end_inset
 
@@ -3440,6 +3541,7 @@ vspace{1mm}
 
 \series bold
 Notebook:
+
 \series default
  ConSavModel/Extra.
  The matrix formulation.ipynb
@@ -3499,7 +3601,8 @@ L_{ss}-L_{ss}^{hh}
 \begin_layout Standard
 
 \series bold
-Note I: 
+Note I:
+ 
 \series default
 Households still move around 
 \begin_inset Quotes ald
@@ -3516,9 +3619,9 @@ inside
 
 \series bold
 Note II:
+
 \series default
- Steady state for aggregates (quantities and prices) and the distribution
- as such
+ Steady state for aggregates (quantities and prices) and the distribution as such
 \end_layout
 
 \end_deeper
@@ -3596,11 +3699,13 @@ the distribution
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\phi_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $z_{it}$
 \end_inset
 
@@ -3618,7 +3723,8 @@ and the policy functions
 \begin_inset Formula $a_{ss}^{\ast}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\ell_{ss}^{\ast}$
 \end_inset
 
@@ -3732,6 +3838,7 @@ Direct implementation
 
 \series bold
 Technology:
+
 \series default
  
 \begin_inset Formula $F(K,L)=\Gamma K^{\alpha}L^{1-\alpha}$
@@ -3781,7 +3888,8 @@ Solve infinite horizon household problem
 \emph on
 backwards
 \emph default
-, i.e.
+,
+ i.e.
  find 
 \begin_inset Formula $\boldsymbol{a}_{ss}^{\ast}$
 \end_inset
@@ -3794,7 +3902,8 @@ Simulate households
 \emph on
 forwards
 \emph default
- until convergence, i.e.
+ until convergence,
+ i.e.
  find 
 \begin_inset Formula $\boldsymbol{D}_{ss}$
 \end_inset
@@ -3836,6 +3945,7 @@ Direct implementation (alternative)
 
 \series bold
 Technology:
+
 \series default
  
 \begin_inset Formula $F(K,L)=\Gamma K^{\alpha}L^{1-\alpha}$
@@ -3885,7 +3995,8 @@ Solve infinite horizon household problem
 \emph on
 backwards
 \emph default
-, i.e.
+,
+ i.e.
  find 
 \begin_inset Formula $\boldsymbol{a}_{ss}^{\ast}$
 \end_inset
@@ -3898,7 +4009,8 @@ Simulate households
 \emph on
 forwards
 \emph default
- until convergence, i.e.
+ until convergence,
+ i.e.
  find 
 \begin_inset Formula $\boldsymbol{D}_{ss}$
 \end_inset
@@ -3940,6 +4052,7 @@ Indirect implementation
 
 \series bold
 Technology:
+
 \series default
  
 \begin_inset Formula $F(K,L)=\Gamma K^{\alpha}L^{1-\alpha}$
@@ -3987,7 +4100,8 @@ Solve infinite horizon household problem
 \emph on
 backwards
 \emph default
-, i.e.
+,
+ i.e.
  find 
 \begin_inset Formula $\boldsymbol{a}_{ss}^{\ast}$
 \end_inset
@@ -4000,7 +4114,8 @@ Simulate households
 \emph on
 forwards
 \emph default
- until convergence, i.e.
+ until convergence,
+ i.e.
  find 
 \begin_inset Formula $\boldsymbol{D}_{ss}$
 \end_inset
@@ -4082,6 +4197,7 @@ Calibration
 
 \series bold
 Preferences:
+
 \series default
  
 \begin_inset Formula $u(c)=\frac{c^{1-\sigma}}{1-\sigma}$
@@ -4092,7 +4208,8 @@ Preferences:
 
 \begin_deeper
 \begin_layout Enumerate
-Discount factors: 
+Discount factors:
+ 
 \begin_inset Formula $\beta\in\{0.965,0.975,0.985\}$
 \end_inset
 
@@ -4101,7 +4218,8 @@ Discount factors:
 \end_layout
 
 \begin_layout Enumerate
-Abilities: 
+Abilities:
+ 
 \begin_inset Formula $\phi=1$
 \end_inset
 
@@ -4109,7 +4227,8 @@ Abilities:
 \end_layout
 
 \begin_layout Enumerate
-Relative risk aversion: 
+Relative risk aversion:
+ 
 \begin_inset Formula $\sigma=2$
 \end_inset
 
@@ -4125,7 +4244,8 @@ Income:
 
 \begin_deeper
 \begin_layout Enumerate
-AR(1): 
+AR(1):
+ 
 \begin_inset Formula $\rho_{z}=0.95$
 \end_inset
 
@@ -4133,7 +4253,8 @@ AR(1):
 \end_layout
 
 \begin_layout Enumerate
-Std.: 
+Std.:
+ 
 \begin_inset Formula $\sigma_{\psi}=0.30\sqrt{(1-\rho_{z}^{2})}$
 \end_inset
 
@@ -4145,6 +4266,7 @@ Std.:
 
 \series bold
 Technology:
+
 \series default
  
 \begin_inset Formula $F(K,L)=\Gamma K^{\alpha}L^{1-\alpha}$
@@ -4155,7 +4277,8 @@ Technology:
 
 \begin_deeper
 \begin_layout Enumerate
-Capital share: 
+Capital share:
+ 
 \begin_inset Formula $\alpha=0.36$
 \end_inset
 
@@ -4163,7 +4286,8 @@ Capital share:
 \end_layout
 
 \begin_layout Enumerate
-TFP: 
+TFP:
+ 
 \begin_inset Formula $\Gamma_{ss}=1.082$
 \end_inset
 
@@ -4171,7 +4295,8 @@ TFP:
 \end_layout
 
 \begin_layout Enumerate
-Depreciation: 
+Depreciation:
+ 
 \begin_inset Formula $\delta=0.193$
 \end_inset
 
@@ -4187,7 +4312,8 @@ Steady state:
 
 \begin_deeper
 \begin_layout Enumerate
-Prices: 
+Prices:
+ 
 \begin_inset Formula $r_{ss}=0.01$
 \end_inset
 
@@ -4199,7 +4325,8 @@ Prices:
 \end_layout
 
 \begin_layout Enumerate
-Quantities: 
+Quantities:
+ 
 \begin_inset Formula $K_{ss}/Y_{ss}=1.776$
 \end_inset
 
@@ -4233,6 +4360,7 @@ Code
 
 \series bold
 Notebook:
+
 \series default
  HANC/HANC.ipynb in 
 \begin_inset CommandInset href
@@ -4254,7 +4382,8 @@ Used packages:
 
 \begin_deeper
 \begin_layout Enumerate
-EconModel: 
+EconModel:
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "github.com/NumEconCopenhagen/EconModel"
@@ -4268,6 +4397,7 @@ literal "false"
 
 \begin_layout Enumerate
 ConSav:
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "github.com/NumEconCopenhagen/ConsumptionSaving"
@@ -4280,7 +4410,8 @@ literal "false"
 \end_layout
 
 \begin_layout Enumerate
-GEModelTools: 
+GEModelTools:
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "github.com/NumEconCopenhagen/GEModelTools"
@@ -4322,7 +4453,8 @@ Euler-equation still necessary for
 \begin_inset Formula $a_{it}>0$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula 
 \[
 c_{it}^{-\sigma}=\beta_{i}(1+r_{t+1})\mathbb{E}_{t}\left[c_{it+1}^{-\sigma}\right]
@@ -4337,6 +4469,7 @@ c_{it}^{-\sigma}=\beta_{i}(1+r_{t+1})\mathbb{E}_{t}\left[c_{it+1}^{-\sigma}\righ
 
 \series bold
 Precautionary saving:
+
 \series default
  
 \end_layout
@@ -4433,7 +4566,8 @@ Low vs.
 status open
 
 \begin_layout Plain Layout
-Distribution, 
+Distribution,
+ 
 \begin_inset Formula $\boldsymbol{D}_{t}$
 \end_inset
 
@@ -4449,7 +4583,8 @@ Distribution,
 \begin_layout Itemize
 
 \series bold
-Productivity: 
+Productivity:
+ 
 \series default
 Marginal distribution over only 
 \begin_inset Formula $z_{it}$
@@ -4461,7 +4596,8 @@ Marginal distribution over only
 \begin_layout Itemize
 
 \series bold
-Savings: 
+Savings:
+ 
 \series default
 Marginal distribution over 
 \begin_inset Formula $a_{it}$
@@ -4540,7 +4676,8 @@ status open
 
 
 \series bold
-Representative agent / complete markets: 
+Representative agent / complete markets:
+ 
 \end_layout
 
 \begin_deeper
@@ -4570,7 +4707,8 @@ status open
 
 
 \series bold
-Heterogeneous agents: 
+Heterogeneous agents:
+ 
 \series default
 \emph on
 No such equation exists
@@ -4634,7 +4772,8 @@ PE (
 \begin_inset Formula $r_{ss}=1\%$
 \end_inset
 
-), 
+),
+ 
 \begin_inset Formula $A^{hh}$
 \end_inset
 
@@ -4649,7 +4788,8 @@ PE (
 \begin_layout Plain Layout
 
 \size footnotesize
-GE, 
+GE,
+ 
 \begin_inset Formula $r_{ss}$
 \end_inset
 
@@ -4664,7 +4804,8 @@ GE,
 \begin_layout Plain Layout
 
 \size footnotesize
-GE, 
+GE,
+ 
 \begin_inset Formula $A^{hh}$
 \end_inset
 
@@ -4881,7 +5022,8 @@ vspace{2mm}
 \series bold
 Partial Equilibrium
 \series default
-: Same interest rate.
+:
+ Same interest rate.
 \end_layout
 
 \begin_layout Standard
@@ -4889,7 +5031,8 @@ Partial Equilibrium
 \series bold
 General Equilibrium
 \series default
-: Capital+labor market clearing.
+:
+ Capital+labor market clearing.
 \end_layout
 
 \end_deeper
@@ -4920,6 +5063,7 @@ Wealth inequality
 
 \series bold
 Paper:
+
 \series default
  Hubmer et.
  al.
@@ -4946,7 +5090,8 @@ Income risk?
 \end_layout
 
 \begin_layout Enumerate
-Heterogeneous returns? (incl.
+Heterogeneous returns?
+ (incl.
  entrepreneurship)
 \end_layout
 
@@ -4955,6 +5100,7 @@ Heterogeneous returns? (incl.
 
 \series bold
 Notebook:
+
 \series default
  
 \begin_inset Formula $\phi_{i}\in\{0.5,1,1.5\}$
@@ -4967,6 +5113,7 @@ Notebook:
 
 \series bold
 Central observation:
+
 \series default
  Wealth inequality 
 \begin_inset Formula $>$
@@ -5014,7 +5161,8 @@ status open
 
 
 \series bold
-External calibration: 
+External calibration:
+ 
 \series default
 Set subset of parameters to the 
 \emph on
@@ -5045,7 +5193,8 @@ status open
 
 
 \series bold
-Internal calibration: 
+Internal calibration:
+ 
 \series default
 Set remaining parameters so the model fit a number of chosen 
 \emph on
@@ -5062,7 +5211,8 @@ based on empirical estimates
 \begin_layout Enumerate
 
 \series bold
-Informal: 
+Informal:
+ 
 \series default
 Roughly match targets by hand
 \end_layout
@@ -5070,7 +5220,8 @@ Roughly match targets by hand
 \begin_layout Enumerate
 
 \series bold
-Formal: 
+Formal:
+ 
 \end_layout
 
 \begin_deeper
@@ -5088,7 +5239,8 @@ Formal:
 \begin_layout Enumerate
 
 \series bold
-Estimation: 
+Estimation:
+ 
 \series default
 Formal with squared loss function + standard errors
 \end_layout
@@ -5108,11 +5260,11 @@ status open
 
 \series bold
 Complication:
+
 \series default
  
 \emph on
-We must always solve for the steady state for each guess of the parameters
- to be calibrated
+We must always solve for the steady state for each guess of the parameters to be calibrated
 \end_layout
 
 \end_deeper
@@ -5153,7 +5305,8 @@ No physical savings instrument
 \begin_layout Itemize
 
 \series bold
-Households: 
+Households:
+ 
 \series default
 Get stochastic endowment
 \series bold
@@ -5178,15 +5331,18 @@ Choose government spending
 \end_layout
 
 \begin_layout Enumerate
-Collect taxes, 
+Collect taxes,
+ 
 \begin_inset Formula $\tau_{t}$
 \end_inset
 
-, proportional to endowment
+,
+ proportional to endowment
 \end_layout
 
 \begin_layout Enumerate
-Bonds: Pays 
+Bonds:
+ Pays 
 \begin_inset Formula $1$
 \end_inset
 
@@ -5378,7 +5534,8 @@ What happens for
 \begin_layout Enumerate
 
 \series bold
-When is average household utility maximized? 
+When is average household utility maximized?
+ 
 \end_layout
 
 \end_deeper
@@ -5410,7 +5567,7 @@ Summary and what's next
 \begin_layout Itemize
 
 \series bold
-Today: 
+This lecture:
 \end_layout
 
 \begin_deeper
@@ -5459,7 +5616,8 @@ status open
 \begin_layout Itemize
 
 \series bold
-Next: 
+Next:
+ 
 \series default
 \emph on
 Transitional dynamics
@@ -5473,7 +5631,7 @@ You should:
 
 \begin_deeper
 \begin_layout Enumerate
-Study today's code
+Study the code
 \end_layout
 
 \begin_layout Enumerate

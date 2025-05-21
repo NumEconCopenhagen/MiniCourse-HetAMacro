@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -65,14 +65,17 @@
 % toc
 \setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
 \setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \options t,10pt
 \use_default_options false
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
 \inputencoding utf8
-\fontencoding global
+\fontencoding auto
 \font_roman "lmodern" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -80,7 +83,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -114,15 +119,17 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
 \secnumdepth 2
 \tocdepth 1
-\paragraph_separation skip
-\defskip smallskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style danish
@@ -130,11 +137,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -156,7 +168,8 @@ vspace{-2mm}}
 
 
 \backslash
-subtitle{Mini-Course: Heterogenous Agent Macro}
+subtitle{Mini-Course:
+ Heterogenous Agent Macro}
 \end_layout
 
 \begin_layout Plain Layout
@@ -170,7 +183,7 @@ author{Jeppe Druedahl}
 
 
 \backslash
-date{2024}
+date{2025}
 \end_layout
 
 \begin_layout Plain Layout
@@ -215,7 +228,8 @@ maketitle
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -247,7 +261,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -279,7 +294,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -311,7 +327,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -411,7 +428,8 @@ status open
 
 
 \series bold
-Last time: 
+Previously:
+ 
 \series default
 \emph on
 Stationary equilibrium
@@ -430,7 +448,8 @@ status open
 
 
 \series bold
-Today:
+Now:
+
 \series default
  
 \emph on
@@ -451,6 +470,7 @@ status open
 
 \series bold
 Model:
+
 \series default
  Heterogeneous Agent Neo-Classical (HANC) model
 \end_layout
@@ -469,6 +489,7 @@ status open
 
 \series bold
 Code:
+
 \series default
  
 \end_layout
@@ -574,19 +595,20 @@ status open
 
 
 \series bold
-Literature: 
+Literature:
+ 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 Auclert et.
  al.
- (2021), 
+ (2021),
+ 
 \begin_inset Quotes ald
 \end_inset
 
-Using the Sequence-Space Jacobian to Solve and Estimate Heterogeneous-Agent
- Models
+Using the Sequence-Space Jacobian to Solve and Estimate Heterogeneous-Agent Models
 \begin_inset Quotes ard
 \end_inset
 
@@ -664,7 +686,8 @@ Ramsey
 status open
 
 \begin_layout Plain Layout
-Ramsey: Summary
+Ramsey:
+ Summary
 \end_layout
 
 \end_inset
@@ -694,6 +717,7 @@ K_{t} & =(1-\delta)K_{t-1}+F(\Gamma_{t},K_{t-1},1)-C_{t}^{hh}
 
 \series bold
 Production function:
+
 \series default
  
 \begin_inset Formula $\Gamma_{t}K_{t-1}^{\alpha}L_{t}^{1-\alpha}$
@@ -706,6 +730,7 @@ Production function:
 
 \series bold
 Utility function:
+
 \series default
  
 \begin_inset Formula $\frac{\left(C_{t}^{hh}\right)^{1-\sigma}}{1-\sigma}$
@@ -742,7 +767,8 @@ C_{ss}^{hh} & =(1-\delta)K_{ss}+\Gamma_{ss}K_{ss}^{\alpha}-K_{ss}
 status open
 
 \begin_layout Plain Layout
-Ramsey: As an equation system
+Ramsey:
+ As an equation system
 \end_layout
 
 \end_inset
@@ -773,6 +799,7 @@ L_{t}-L_{t}^{hh}\\
 
 \series bold
 Remember:
+
 \series default
  Perfect foresight
 \end_layout
@@ -790,7 +817,8 @@ Remember:
 status open
 
 \begin_layout Plain Layout
-Truncated, reduced vector form
+Truncated,
+ reduced vector form
 \end_layout
 
 \end_inset
@@ -828,7 +856,8 @@ where
 \begin_inset Formula $\boldsymbol{X}=(X_{0},X_{1},\dots,X_{T-1})$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $A_{-1}^{hh}=K_{-1}$
 \end_inset
 
@@ -852,6 +881,7 @@ A_{t}^{hh} & =(1+r_{t})A_{t-1}^{hh}+w_{t}L_{t}^{hh}-C_{t}^{hh}\,\text{\,\,(forwa
 \series bold
 \size default
 Truncation:
+
 \series default
  
 \begin_inset Formula $T<\infty$
@@ -922,7 +952,8 @@ where
 \begin_inset Formula $\boldsymbol{X}=(X_{0},X_{1},\dots,X_{T-1})$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $A_{-1}^{hh}=K_{-1}$
 \end_inset
 
@@ -1029,6 +1060,7 @@ Solve
 
 \series bold
 Notebook:
+
 \series default
  
 \emph on
@@ -1080,6 +1112,7 @@ Column
 \end_inset
 
 :
+
 \series default
  Dynamic effect of change in capital in period 
 \begin_inset Formula $s$
@@ -1106,7 +1139,8 @@ Decomposition:
 
 \begin_deeper
 \begin_layout Enumerate
-Mechanic effect: 
+Mechanic effect:
+ 
 \begin_inset Formula $\frac{\partial\boldsymbol{A}}{\partial\boldsymbol{K}}=\boldsymbol{I}$
 \end_inset
 
@@ -1114,7 +1148,8 @@ Mechanic effect:
 \end_layout
 
 \begin_layout Enumerate
-Pricing through firms: 
+Pricing through firms:
+ 
 \begin_inset Formula $\mathcal{J}^{r,K}$
 \end_inset
 
@@ -1126,7 +1161,8 @@ Pricing through firms:
 \end_layout
 
 \begin_layout Enumerate
-Consumption-saving through households: 
+Consumption-saving through households:
+ 
 \begin_inset Formula $\mathcal{J}^{A^{hh},r}$
 \end_inset
 
@@ -1151,7 +1187,8 @@ Consumption-saving through households:
 status open
 
 \begin_layout Plain Layout
-Example 1: Initially low capital
+Example 1:
+ Initially low capital
 \end_layout
 
 \end_inset
@@ -1167,7 +1204,8 @@ Example 1: Initially low capital
 \begin_layout Standard
 
 \series bold
-Initially away from steady state: 
+Initially away from steady state:
+ 
 \begin_inset Formula $K_{-1}=0.75K_{ss}$
 \end_inset
 
@@ -1199,7 +1237,8 @@ Initially away from steady state:
 status open
 
 \begin_layout Plain Layout
-Example 2: Technology shock
+Example 2:
+ Technology shock
 \end_layout
 
 \end_inset
@@ -1215,13 +1254,15 @@ Example 2: Technology shock
 \begin_layout Standard
 
 \series bold
-Technology shock: 
+Technology shock:
+ 
 \begin_inset Formula $\Gamma_{t}=0.01\Gamma_{ss}0.95^{t}$
 \end_inset
 
  
 \series default
-(exogenous, deterministic)
+(exogenous,
+ deterministic)
 \end_layout
 
 \begin_layout Standard
@@ -1249,7 +1290,8 @@ Technology shock:
 status open
 
 \begin_layout Plain Layout
-Example 3: Future technology shock
+Example 3:
+ Future technology shock
 \end_layout
 
 \end_inset
@@ -1265,7 +1307,8 @@ Example 3: Future technology shock
 \begin_layout Standard
 
 \series bold
-Technology shock: 
+Technology shock:
+ 
 \series default
 
 \begin_inset Formula $\Gamma_{t}=\begin{cases}
@@ -1278,7 +1321,8 @@ Technology shock:
 \begin_inset Newline newline
 \end_inset
 
-(exogenous, deterministic)
+(exogenous,
+ deterministic)
 \end_layout
 
 \begin_layout Standard
@@ -1392,9 +1436,11 @@ status open
 
 
 \series bold
-Policy functions: 
+Policy functions:
+ 
 \series default
-Aggregate prices are hidden as inputs, i.e.
+Aggregate prices are hidden as inputs,
+ i.e.
 \size footnotesize
 
 \begin_inset Formula 
@@ -1450,7 +1496,8 @@ status open
 
 \end_inset
 
-Beginning-of-period: 
+Beginning-of-period:
+ 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{t}$
 \end_inset
 
@@ -1458,11 +1505,13 @@ Beginning-of-period:
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\phi_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $z_{it-1}$
 \end_inset
 
@@ -1497,7 +1546,8 @@ status open
 
 \end_inset
 
-Productivity transition: 
+Productivity transition:
+ 
 \begin_inset Formula $\boldsymbol{D}_{t}=\Pi_{z}^{\prime}\underline{\boldsymbol{D}}_{t}$
 \end_inset
 
@@ -1505,11 +1555,13 @@ Productivity transition:
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\phi_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $z_{it}$
 \end_inset
 
@@ -1544,7 +1596,8 @@ status open
 
 \end_inset
 
-Savings transition: 
+Savings transition:
+ 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{t+1}=\Lambda_{t}^{\prime}\boldsymbol{D}_{t}$
 \end_inset
 
@@ -1762,7 +1815,8 @@ the distributions
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $z_{t}$
 \end_inset
 
@@ -1780,7 +1834,8 @@ and the policy functions
 \begin_inset Formula $\{a_{t}^{\ast}\}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\{\ell_{t}^{\ast}\}$
 \end_inset
 
@@ -1906,7 +1961,8 @@ status open
 
 
 \series bold
-Underlying assumption: 
+Underlying assumption:
+ 
 \series default
 No aggregate uncertainty
 \end_layout
@@ -1932,11 +1988,13 @@ Shock
 \begin_inset Quotes ard
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\boldsymbol{\Gamma}$
 \end_inset
 
-: 
+:
+ 
 \series default
 A fully unexpected non-recurrent event 
 \begin_inset Formula $\equiv$
@@ -1960,28 +2018,33 @@ status open
 
 
 \series bold
-Transition path, 
+Transition path,
+ 
 \begin_inset Formula $\boldsymbol{K}$
 \end_inset
 
-: 
+:
+ 
 \series default
 Non-linear perfect foresight response to
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Initial distribution, 
+Initial distribution,
+ 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{0}\neq\boldsymbol{D}_{ss}$
 \end_inset
 
-, 
+,
+ 
 \emph on
 or to
 \end_layout
 
 \begin_layout Enumerate
-Shock, 
+Shock,
+ 
 \begin_inset Formula $\Gamma_{t}\neq\Gamma_{ss}$
 \end_inset
 
@@ -2007,7 +2070,8 @@ Shock,
 status open
 
 \begin_layout Plain Layout
-Truncated, reduced vector form
+Truncated,
+ reduced vector form
 \end_layout
 
 \end_inset
@@ -2045,7 +2109,8 @@ where
 \begin_inset Formula $\boldsymbol{X}=(X_{0},X_{1},\dots,X_{T-1})$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $K_{-1}=\int a_{t-1}d\underline{\boldsymbol{D}}_{0}$
 \end_inset
 
@@ -2070,6 +2135,7 @@ L_{t}^{hh} & =\boldsymbol{\ell}_{t}^{\ast\prime}\boldsymbol{D}_{t}\\
 \series bold
 \size default
 Truncation:
+
 \series default
  
 \begin_inset Formula $T<\infty$
@@ -2140,7 +2206,8 @@ where
 \begin_inset Formula $\boldsymbol{X}=(X_{0},X_{1},\dots,X_{T-1})$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $K_{-1}=\int a_{t-1}d\underline{\boldsymbol{D}}_{0}$
 \end_inset
 
@@ -2165,6 +2232,7 @@ A_{t}^{hh} & =\boldsymbol{a}_{t}^{\ast\prime}\boldsymbol{D}_{t}\\
 \series bold
 \size default
 Truncation:
+
 \series default
  
 \begin_inset Formula $T<\infty$
@@ -2274,6 +2342,7 @@ Increment
 
 \series bold
 Note:
+
 \series default
  
 \emph on
@@ -2302,7 +2371,8 @@ Much more stable than relaxation
 status open
 
 \begin_layout Plain Layout
-Bottleneck: How do we find the Jacobian?
+Bottleneck:
+ How do we find the Jacobian?
 \end_layout
 
 \end_inset
@@ -2324,7 +2394,8 @@ status open
 
 
 \series bold
-Naive approach: 
+Naive approach:
+ 
 \series default
 For each 
 \begin_inset Formula $s\in\{0,1,...,T-1\}$
@@ -2401,7 +2472,8 @@ Calculate
 \begin_layout Standard
 
 \series bold
-Bottleneck: 
+Bottleneck:
+ 
 \series default
 We need 
 \begin_inset Formula $T^{2}$
@@ -2424,7 +2496,8 @@ status open
 
 
 \series bold
-Fake news algorithm: 
+Fake news algorithm:
+ 
 \series default
 From household Jacobian to full Jacobian
 \emph on
@@ -2468,7 +2541,8 @@ vspace{-5mm}
 \begin_inset Formula $\mathcal{J}^{r,K},\mathcal{J}^{w,K}$
 \end_inset
 
-: Fast from the onset - 
+:
+ Fast from the onset - 
 \emph on
 only involve aggregates
 \end_layout
@@ -2488,7 +2562,8 @@ status open
 \begin_inset Formula $\mathcal{J}^{A^{hh},r},\mathcal{J}^{A^{hh},w}$
 \end_inset
 
-: Only requires 
+:
+ Only requires 
 \begin_inset Formula $T$
 \end_inset
 
@@ -2557,12 +2632,14 @@ are
 \begin_layout Itemize
 
 \series bold
-Ordered blocks: 
+Ordered blocks:
+ 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Production firm: 
+Production firm:
+ 
 \begin_inset Formula $\boldsymbol{\Gamma},\boldsymbol{K},\boldsymbol{L},K_{-1}\rightarrow\boldsymbol{r^{K}},\boldsymbol{w}$
 \end_inset
 
@@ -2570,7 +2647,8 @@ Production firm:
 \end_layout
 
 \begin_layout Enumerate
-Mutual fund: 
+Mutual fund:
+ 
 \begin_inset Formula $\boldsymbol{K},\boldsymbol{r^{K}}\rightarrow\boldsymbol{A},\boldsymbol{r}$
 \end_inset
 
@@ -2578,7 +2656,8 @@ Mutual fund:
 \end_layout
 
 \begin_layout Enumerate
-Households: 
+Households:
+ 
 \begin_inset Formula $\boldsymbol{r},\boldsymbol{w},\underline{\boldsymbol{D}}_{0}\rightarrow\boldsymbol{A^{hh}},\boldsymbol{L^{hh}}$
 \end_inset
 
@@ -2586,7 +2665,8 @@ Households:
 \end_layout
 
 \begin_layout Enumerate
-Market clearing: 
+Market clearing:
+ 
 \begin_inset Formula $\boldsymbol{A},\boldsymbol{L},\boldsymbol{A^{hh}},\boldsymbol{L^{hh}}\rightarrow\boldsymbol{A-A^{hh}},\boldsymbol{L-L^{hh}}$
 \end_inset
 
@@ -2637,7 +2717,8 @@ Jacobian:
 status open
 
 \begin_layout Plain Layout
-DAG: Directed Acyclical Growth
+DAG:
+ Directed Acyclical Growth
 \end_layout
 
 \end_inset
@@ -2650,6 +2731,7 @@ DAG: Directed Acyclical Growth
 
 \series bold
 Orange square:
+
 \series default
  Shocks (exogenous)
 \end_layout
@@ -2658,6 +2740,7 @@ Orange square:
 
 \series bold
 Purple square:
+
 \series default
  Unknowns (endogenous)
 \end_layout
@@ -2666,6 +2749,7 @@ Purple square:
 
 \series bold
 Green circles:
+
 \series default
  Blocks (with variables and targets inside)
 \end_layout
@@ -2720,7 +2804,8 @@ Interpreting the household Jacobians
 
 \series bold
 Jacobian of consumption wrt.
- wage: 
+ wage:
+ 
 \series default
 \emph on
 What happens to consumption in period 
@@ -2753,6 +2838,7 @@ What happens to consumption in period
 
 \series bold
 Columns:
+
 \series default
  The full dynamic response to a shock in period 
 \begin_inset Formula $s$
@@ -3034,6 +3120,7 @@ Decomposition of GE response
 
 \series bold
 GE transition path:
+
 \series default
  
 \begin_inset Formula $\boldsymbol{r}^{\ast}$
@@ -3077,13 +3164,16 @@ Calculate outcomes of interest
 \begin_layout Itemize
 
 \series bold
-Additionally: 
+Additionally:
+ 
 \series default
-We can vary the initial distribution, 
+We can vary the initial distribution,
+ 
 \begin_inset Formula $\underline{\boldsymbol{D}}_{0}$
 \end_inset
 
-, to find the response of sub-groups
+,
+ to find the response of sub-groups
 \end_layout
 
 \end_deeper
@@ -3144,7 +3234,8 @@ centering
 status open
 
 \begin_layout Plain Layout
-More shocks: Future technology shock
+More shocks:
+ Future technology shock
 \end_layout
 
 \end_inset
@@ -3176,7 +3267,8 @@ More shocks: Future technology shock
 status open
 
 \begin_layout Plain Layout
-More shocks: 5% less capital
+More shocks:
+ 5% less capital
 \end_layout
 
 \end_inset
@@ -3199,6 +3291,7 @@ More shocks: 5% less capital
 
 \series bold
 Distribution:
+
 \series default
  
 \emph on
@@ -3244,7 +3337,8 @@ There is a continuum of households (index
 \begin_inset Formula $i$
 \end_inset
 
-, when needed).
+,
+ when needed).
 \end_layout
 
 \begin_layout Enumerate
@@ -3253,15 +3347,18 @@ There is
 perfect foresight
 \emph default
  wrt.
- all aggregate variables, 
+ all aggregate variables,
+ 
 \begin_inset Formula $\boldsymbol{X}$
 \end_inset
 
-, indexed by 
+,
+ indexed by 
 \begin_inset Formula $\mathcal{N}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\boldsymbol{X}=\{\boldsymbol{X}_{t}\}_{t=0}^{\infty}=\{\boldsymbol{X}^{j}\}_{j\in\mathcal{N}}=\{X_{t}^{j}\}_{t=0,j\in\mathcal{N}}^{\infty},$
 \end_inset
 
@@ -3269,13 +3366,15 @@ perfect foresight
 \begin_inset Formula $\mathcal{N}=\mathcal{Z}\cup\mathcal{U}\cup\mathcal{O}$
 \end_inset
 
-, and 
+,
+ and 
 \begin_inset Formula $\mathcal{Z}$
 \end_inset
 
  are 
 \emph on
-exogenous shocks, 
+exogenous shocks,
+ 
 \begin_inset Formula $\mathcal{U}$
 \end_inset
 
@@ -3285,11 +3384,13 @@ are
 \emph on
  unknowns
 \emph default
-, 
+,
+ 
 \begin_inset Formula $\mathcal{O}$
 \end_inset
 
- are outputs, and 
+ are outputs,
+ and 
 \begin_inset Formula $\mathcal{H\in\mathcal{O}}$
 \end_inset
 
@@ -3307,15 +3408,20 @@ indexed by
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
-, where each block has inputs, 
+,
+ where each block has inputs,
+ 
 \begin_inset Formula $\mathcal{I}_{b}\subset\mathcal{N}$
 \end_inset
 
-, and outputs, 
+,
+ and outputs,
+ 
 \begin_inset Formula $\mathcal{O}_{b}\subset\mathcal{O}$
 \end_inset
 
-, and there exists functions 
+,
+ and there exists functions 
 \begin_inset Formula $h^{o}(\{\boldsymbol{X}^{i}\}_{i\in\mathcal{I}_{b}})$
 \end_inset
 
@@ -3335,9 +3441,9 @@ ordered
 \emph on
 unique
 \emph default
- to a block, (ii) the first block only have shocks and unknowns as inputs,
- and (iii) later blocks only additionally take outputs of previous blocks
- as inputs.
+ to a block,
+ (ii) the first block only have shocks and unknowns as inputs,
+ and (iii) later blocks only additionally take outputs of previous blocks as inputs.
  This implies the blocks can be structured as a 
 \emph on
 directed acyclical graph
@@ -3378,7 +3484,8 @@ status open
 
 \end_inset
 
-The number of targets are equal to the number of unknowns, and an 
+The number of targets are equal to the number of unknowns,
+ and an 
 \emph on
 equilibrium
 \emph default
@@ -3391,7 +3498,8 @@ equilibrium
 \end_inset
 
 .
- Equivalently, the model can be summarized by an 
+ Equivalently,
+ the model can be summarized by an 
 \emph on
 target equation system
 \emph default
@@ -3494,7 +3602,8 @@ where
 \begin_inset Formula $\boldsymbol{y}(\underline{\boldsymbol{v}}_{t+1},\boldsymbol{X}_{t}^{hh})$
 \end_inset
 
- as individual level measures (savings, consumption labor supply etc.).
+ as individual level measures (savings,
+ consumption labor supply etc.).
 \end_layout
 
 \begin_layout Enumerate
@@ -3508,19 +3617,23 @@ status open
 
 \end_inset
 
-Given the sequence of shocks, 
+Given the sequence of shocks,
+ 
 \begin_inset Formula $\boldsymbol{Z}$
 \end_inset
 
-, there exists a 
+,
+ there exists a 
 \emph on
 truncation period
 \emph default
-, 
+,
+ 
 \begin_inset Formula $T$
 \end_inset
 
-, such all variables return to steady state beforehand.
+,
+ such all variables return to steady state beforehand.
 \end_layout
 
 \end_deeper
@@ -3553,6 +3666,7 @@ Fake news algorithm
 
 \series bold
 Household block:
+
 \series default
  
 \begin_inset Formula 
@@ -3569,6 +3683,7 @@ Household block:
 
 \series bold
 Goal:
+
 \series default
  Fast computation of
 \begin_inset Formula 
@@ -3585,6 +3700,7 @@ Goal:
 
 \series bold
 Naive approach:
+
 \series default
  Requires 
 \begin_inset Formula $T^{2}$
@@ -3596,7 +3712,8 @@ Naive approach:
 \begin_layout Itemize
 
 \series bold
-Next slides: 
+Next slides:
+ 
 \series default
 \emph on
 Sketch of much faster approach
@@ -3638,6 +3755,7 @@ Forward looking behavior
 
 \series bold
 Notation:
+
 \series default
  
 \begin_inset Formula $\bullet_{t}^{s,i}$
@@ -3657,7 +3775,8 @@ Notation:
 \begin_layout Itemize
 
 \series bold
-Time to shock: 
+Time to shock:
+ 
 \series default
 Sufficient statistic for value and policy functions
 \begin_inset Formula 
@@ -3694,6 +3813,7 @@ Sufficient statistic for value and policy functions
 
 \series bold
 Computation:
+
 \series default
  Only a single backward iteration required!
 \end_layout
@@ -3702,6 +3822,7 @@ Computation:
 
 \series bold
 Note:
+
 \series default
  This is not an approximation
 \end_layout
@@ -3760,6 +3881,7 @@ Effect on beginning-of-period distribution in period
 \end_inset
 
 :
+
 \series default
  
 \begin_inset Formula 
@@ -3775,7 +3897,8 @@ Effect on beginning-of-period distribution in period
 \begin_layout Itemize
 
 \series bold
-Expectation vector: 
+Expectation vector:
+ 
 \series default
 
 \begin_inset Formula $\mathcal{E}_{t}^{o}\equiv\left(\Pi_{ss}\Lambda_{ss}\right)^{t}\Pi_{ss}\boldsymbol{y}_{ss}^{o},$
@@ -3816,7 +3939,8 @@ The cost of computing
 \begin_inset Formula $\mathcal{E}_{s}^{o}$
 \end_inset
 
- is negligible in comparison and can be done recursively, 
+ is negligible in comparison and can be done recursively,
+ 
 \begin_inset Formula $\mathcal{E}_{t}^{o}=\Pi_{ss}\Lambda_{ss}\mathcal{E}_{t-1}^{o}$
 \end_inset
 
@@ -3855,9 +3979,9 @@ Main result
 
 \series bold
 Result:
+
 \series default
- Tedious algebra imply the Jacobian can be constructed from the known objects
- as
+ Tedious algebra imply the Jacobian can be constructed from the known objects as
 \begin_inset Formula 
 \begin{align*}
 \mathcal{F}_{t,s}^{,i,o} & \equiv\begin{cases}
@@ -3876,6 +4000,7 @@ Result:
 
 \series bold
 Intuition:
+
 \series default
  ???
 \end_layout
@@ -3884,6 +4009,7 @@ Intuition:
 
 \series bold
 Mathematically:
+
 \series default
  Use the chain-rule over and over again
 \end_layout
@@ -3892,6 +4018,7 @@ Mathematically:
 
 \series bold
 Note:
+
 \series default
  Use linearity and that we start from steady state
 \end_layout
@@ -4040,7 +4167,8 @@ Bottlenecks
 \begin_layout Itemize
 
 \series bold
-Small models: 
+Small models:
+ 
 \series default
 Finding the stationary equilibrium
 \end_layout
@@ -4050,6 +4178,7 @@ Finding the stationary equilibrium
 
 \series bold
 Trick:
+
 \series default
  
 \emph on
@@ -4062,6 +4191,7 @@ Trick:
 
 \series bold
 Idea:
+
 \series default
  Multiple steps as once when finding the value function
 \end_layout
@@ -4077,10 +4207,10 @@ See e.g.
 \begin_layout Itemize
 
 \series bold
-Bigger models: 
+Bigger models:
+ 
 \series default
-With many unknowns and targets both computing the Jacobian and solving the
- equation system can be costly
+With many unknowns and targets both computing the Jacobian and solving the equation system can be costly
 \begin_inset Newline newline
 \end_inset
 
@@ -4158,6 +4288,7 @@ Reminder of model class
 
 \series bold
 Unknowns:
+
 \series default
  
 \begin_inset Formula $\boldsymbol{U}$
@@ -4170,6 +4301,7 @@ Unknowns:
 
 \series bold
 Shock:
+
 \series default
  
 \begin_inset Formula $\boldsymbol{Z}$
@@ -4182,6 +4314,7 @@ Shock:
 
 \series bold
 Additional variables:
+
 \series default
  
 \begin_inset Formula $\boldsymbol{X}$
@@ -4257,7 +4390,8 @@ status open
 
 
 \series bold
-New: 
+New:
+ 
 \series default
 Just consider the 
 \emph on
@@ -4304,7 +4438,8 @@ Solve for Impulse Response Functions (IRFs) for unknowns
 status collapsed
 
 \begin_layout Plain Layout
-IRF: Path of variable in response to shock path
+IRF:
+ Path of variable in response to shock path
 \end_layout
 
 \end_inset
@@ -4362,7 +4497,8 @@ status open
 
 
 \series bold
-Computation: 
+Computation:
+ 
 \series default
 Same for 
 \begin_inset Formula $\boldsymbol{Z}$
@@ -4468,7 +4604,8 @@ status open
 
 
 \series bold
-Aggregate stochastic variables: 
+Aggregate stochastic variables:
+ 
 \begin_inset Formula $\boldsymbol{Z}$
 \end_inset
 
@@ -4483,7 +4620,8 @@ follow some known process with innovations
 \emph on
 State space form
 \emph default
-: RHS is what is known today 
+:
+ RHS is what is known today 
 \size small
 
 \begin_inset Formula 
@@ -4531,6 +4669,7 @@ status open
 
 \series bold
 Observation:
+
 \series default
  Linearization of aggregate variables imply 
 \emph on
@@ -4570,18 +4709,20 @@ status open
 
 
 \series bold
-Insight: 
+Insight:
+ 
 \series default
 \emph on
 The IRF from an MIT shock is 
 \bar under
 equivalent
 \bar default
- to the IRF in a model with aggregate risk, which is linearized in the aggregate
- variables
+ to the IRF in a model with aggregate risk,
+ which is linearized in the aggregate variables
 \emph default
  (Boppart et.
- al., 2018)
+ al.,
+ 2018)
 \end_layout
 
 \end_deeper
@@ -4611,8 +4752,10 @@ Comparisons
 \series bold
 State-space approach with linearization
 \series default
-: Ahn et al.
- (2018); 
+:
+ Ahn et al.
+ (2018);
+ 
 \begin_inset ERT
 status open
 
@@ -4645,8 +4788,10 @@ status open
 
 \end_inset
 
-; Bhandari et al.
- (2023); Bilal (2023)
+;
+ Bhandari et al.
+ (2023);
+ Bilal (2023)
 \end_layout
 
 \begin_deeper
@@ -4655,7 +4800,8 @@ status open
 \bar under
 Con
 \bar default
-: 
+:
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -4673,6 +4819,7 @@ Pro
 \series bold
 \bar default
 :
+
 \series default
  
 \end_layout
@@ -4690,6 +4837,7 @@ Easier path to 2nd and higher order approximations
 
 \series bold
 Global solution:
+
 \series default
  The distribution of households is a state variable for each household 
 \begin_inset Formula $\Rightarrow$
@@ -4706,7 +4854,10 @@ explosion in complexity
 \bar under
 Original
 \bar default
-: Krusell and Smith (1997, 1998); Algan et al.
+:
+ Krusell and Smith (1997,
+ 1998);
+ Algan et al.
  (2014);
 \end_layout
 
@@ -4715,25 +4866,20 @@ Original
 \bar under
 Deep learning
 \bar default
-: Fernández-Villaverde et al.
- (2021); Maliar et al.
- (2021); Han et al.
- (2021); Kase et al.
- (2022); Azinovic et al.
- (2022); Gu et al.
- (2023); Chen et al.
- (2023)
+:
+ Fernández-Villaverde et al.
+ (2021);
+ Maliar et al.
+ (2021);
+ Han et al.
+ (2021);
+ Kase et al.
+ (2022);
+ Azinovic et al.
+ (2022)
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-
-\series bold
-Discrete aggregate risk:
-\series default
- Lin and Peruffo (2023)
-\end_layout
-
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -4747,7 +4893,8 @@ Discrete aggregate risk:
 status open
 
 \begin_layout Plain Layout
-Example: Global HANC (Krusell-Smith)
+Example:
+ Global HANC (Krusell-Smith)
 \end_layout
 
 \end_inset
@@ -4782,7 +4929,8 @@ a_{it} & \geq0,
 \begin_layout Itemize
 
 \series bold
-Problem: 
+Problem:
+ 
 \series default
 How to discretize 
 \begin_inset Formula $\boldsymbol{D}_{t}$
@@ -4796,6 +4944,7 @@ How to discretize
 
 \series bold
 Note:
+
 \series default
  
 \begin_inset Formula $\boldsymbol{D}_{t}$
@@ -4865,7 +5014,8 @@ status open
 
 
 \series bold
-Shocks: 
+Shocks:
+ 
 \series default
 Write the shocks as an 
 \begin_inset Formula $MA(\infty)$
@@ -4919,7 +5069,8 @@ status open
 
 \end_inset
 
-Draw time series of innovations, 
+Draw time series of innovations,
+ 
 \begin_inset Formula $\tilde{\boldsymbol{\epsilon}}_{t}$
 \end_inset
 
@@ -4946,7 +5097,8 @@ Calculate the time series of shocks as
 
 \begin_deeper
 \begin_layout Standard
-Note: 
+Note:
+ 
 \begin_inset Formula $d\boldsymbol{Z}_{s}\tilde{\boldsymbol{\epsilon}}_{t-s}=$
 \end_inset
 
@@ -5007,6 +5159,7 @@ status open
 
 \series bold
 Intuition:
+
 \series default
  Sum of first order effects from all previous shocks
 \end_layout
@@ -5025,9 +5178,9 @@ status open
 
 \series bold
 Equivalence:
+
 \series default
- Same result if we linearize all aggregated equations and write the model
- in MA(
+ Same result if we linearize all aggregated equations and write the model in MA(
 \begin_inset Formula $\infty$
 \end_inset
 
@@ -5083,6 +5236,7 @@ status open
 
 \series bold
 Generality:
+
 \series default
  Add auxiliary variables (incl.
  distributional moments) to calculate additional IRFs and simulations
@@ -5482,7 +5636,8 @@ status open
 
 
 \series bold
-Also possible: 
+Also possible:
+ 
 \series default
 \emph on
 Bayesian likelihood estimation 
@@ -5536,7 +5691,8 @@ status open
 
 
 \series bold
-Speed: 
+Speed:
+ 
 \series default
 For a new set of parameters?
 \end_layout
@@ -5555,7 +5711,8 @@ same Jacobians
 \begin_inset Formula $\boldsymbol{G}_{\boldsymbol{U}}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
@@ -5610,7 +5767,7 @@ Summary and what's next
 \begin_layout Itemize
 
 \series bold
-Today: 
+This lecture:
 \end_layout
 
 \begin_deeper
@@ -5660,17 +5817,19 @@ status open
 
 \series bold
 You should:
+
 \series default
  
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Study today's code
+Study the code
 \end_layout
 
 \begin_layout Enumerate
-Glance at Kaplan, Moll and Violante (2018)
+Glance at Kaplan,
+ Moll and Violante (2018)
 \end_layout
 
 \end_deeper

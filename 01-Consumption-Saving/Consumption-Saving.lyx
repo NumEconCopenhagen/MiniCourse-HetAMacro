@@ -4603,7 +4603,7 @@ Unconditional owner behavior,
 \begin_layout Standard
 \begin_inset Graphics
 	filename figs/illiquid_owner_behavior_final.pdf
-	height 90theight%
+	height 85theight%
 
 \end_inset
 
@@ -4697,7 +4697,7 @@ Post-decision values in
 \begin_layout Standard
 \begin_inset Graphics
 	filename figs/illiquid_wq_initial.pdf
-	width 90text%
+	width 80text%
 
 \end_inset
 
@@ -4713,7 +4713,7 @@ Problems for owners:
 \begin_layout Standard
 \begin_inset Graphics
 	filename figs/illiquid_c_endo_initial.pdf
-	width 90text%
+	width 80text%
 
 \end_inset
 
@@ -6963,7 +6963,6 @@ Summary and what's next
 
 \series bold
 This lecture:
- 
 \end_layout
 
 \begin_deeper
@@ -7002,7 +7001,7 @@ You should:
 
 \begin_deeper
 \begin_layout Enumerate
-Study today's code
+Study the code
 \end_layout
 
 \begin_layout Enumerate
