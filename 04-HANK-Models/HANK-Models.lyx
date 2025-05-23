@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -65,14 +65,17 @@
 % toc
 \setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
 \setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
 \end_preamble
 \options t,10pt
 \use_default_options false
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
 \inputencoding utf8
-\fontencoding global
+\fontencoding auto
 \font_roman "lmodern" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -80,7 +83,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -114,15 +119,17 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
 \secnumdepth 2
 \tocdepth 1
-\paragraph_separation skip
-\defskip smallskip
+\paragraph_separation indent
+\paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style danish
@@ -130,11 +137,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -156,7 +168,8 @@ vspace{-2mm}}
 
 
 \backslash
-subtitle{Mini-Course: Heterogenous Agent Macro} 
+subtitle{Mini-Course:
+ Heterogenous Agent Macro} 
 \end_layout
 
 \begin_layout Plain Layout
@@ -170,7 +183,7 @@ author{Jeppe Druedahl}
 
 
 \backslash
-date{2024}
+date{2025}
 \end_layout
 
 \begin_layout Plain Layout
@@ -215,7 +228,8 @@ maketitle
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -247,7 +261,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -279,7 +294,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -311,7 +327,8 @@ end{tikzpicture}
 
 
 \backslash
-begin{tikzpicture}[overlay, remember picture]
+begin{tikzpicture}[overlay,
+ remember picture]
 \end_layout
 
 \begin_layout Plain Layout
@@ -411,7 +428,8 @@ status open
 
 
 \series bold
-Today: 
+Now:
+ 
 \series default
 HANK - Heterogeneous Agent 
 \emph on
@@ -435,12 +453,14 @@ opening the black box
 
 \begin_deeper
 \begin_layout Enumerate
-Zero-liquidity (Werning, 2015)
+Zero-liquidity (Werning,
+ 2015)
 \end_layout
 
 \begin_layout Enumerate
-Intertemporal Keynesian Cross (IKC) (Aucler et.
- al, 2023)
+Intertemporal Keynesian Cross (IKC) (Auclert et.
+ al,
+ 2024)
 \end_layout
 
 \end_deeper
@@ -449,12 +469,16 @@ Sticky prices and sticky wages in practice
 \begin_inset Newline newline
 \end_inset
 
-(Kaplan, Moll, Violante, 2018)
+(Kaplan,
+ Moll,
+ Violante,
+ 2018)
 \end_layout
 
 \begin_layout Itemize
 Search-and-match labor market (Broer et.
- al., 2024)
+ al.,
+ 2024)
 \end_layout
 
 \end_deeper
@@ -471,7 +495,8 @@ status open
 
 
 \series bold
-GEModelTools: 
+GEModelTools:
+ 
 \end_layout
 
 \begin_deeper
@@ -488,7 +513,8 @@ HANK-SAM
 \end_layout
 
 \begin_layout Enumerate
-I-HANK (not covered)
+I-HANK (mentioned,
+ not covered)
 \end_layout
 
 \begin_layout Enumerate
@@ -560,7 +586,8 @@ Households
 
 \begin_deeper
 \begin_layout Enumerate
-Preferences: 
+Preferences:
+ 
 \begin_inset Formula $\sum_{t=0}^{\infty}\beta^{t}\mathbb{E}_{0}\left[\frac{c_{t}^{1-\sigma}}{1-\sigma}\right]$
 \end_inset
 
@@ -568,19 +595,23 @@ Preferences:
 \end_layout
 
 \begin_layout Enumerate
-Idiosyncratic productivity, 
+Idiosyncratic productivity,
+ 
 \begin_inset Formula $s_{t}\sim\mathcal{S}$
 \end_inset
 
-, which follows a Markov process
+,
+ which follows a Markov process
 \end_layout
 
 \begin_layout Enumerate
-Risk-less bonds, 
+Risk-less bonds,
+ 
 \begin_inset Formula $b_{t-1}$
 \end_inset
 
-, with a real gross return of 
+,
+ with a real gross return of 
 \begin_inset Formula $R_{t-1}$
 \end_inset
 
@@ -588,7 +619,8 @@ Risk-less bonds,
 \end_layout
 
 \begin_layout Enumerate
-Income: 
+Income:
+ 
 \begin_inset Formula $\gamma(s_{t},Y_{t})$
 \end_inset
 
@@ -600,7 +632,8 @@ Income:
 \end_layout
 
 \begin_layout Enumerate
-Budget constraint, 
+Budget constraint,
+ 
 \begin_inset Formula $c_{t}+b_{t}\leq\gamma(z_{t},Y_{t})+R_{t-1}b_{t-1}$
 \end_inset
 
@@ -608,7 +641,8 @@ Budget constraint,
 \end_layout
 
 \begin_layout Enumerate
-Borrowing constraint: 
+Borrowing constraint:
+ 
 \begin_inset Formula $b_{t}\geq0$
 \end_inset
 
@@ -616,7 +650,8 @@ Borrowing constraint:
 \end_layout
 
 \begin_layout Enumerate
-Optimal policy functions: 
+Optimal policy functions:
+ 
 \begin_inset Formula $c_{t}^{\ast}(s_{t},b_{t-1})$
 \end_inset
 
@@ -628,7 +663,8 @@ Optimal policy functions:
 \end_layout
 
 \begin_layout Enumerate
-Unconstrained, 
+Unconstrained,
+ 
 \begin_inset Formula $b_{t}>0$
 \end_inset
 
@@ -644,7 +680,8 @@ c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}=\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{
 \end_layout
 
 \begin_layout Enumerate
-Constrained, 
+Constrained,
+ 
 \begin_inset Formula $b_{t}=0$
 \end_inset
 
@@ -689,7 +726,8 @@ Market clearing:
 
 \begin_deeper
 \begin_layout Enumerate
-Goods: 
+Goods:
+ 
 \begin_inset Formula 
 \[
 Y_{t}=C_{t}^{hh}=\int c_{t}^{\ast}(s_{t},b_{t-1})d\boldsymbol{D}_{t}
@@ -701,7 +739,8 @@ Y_{t}=C_{t}^{hh}=\int c_{t}^{\ast}(s_{t},b_{t-1})d\boldsymbol{D}_{t}
 \end_layout
 
 \begin_layout Enumerate
-Assets: 
+Assets:
+ 
 \begin_inset Formula 
 \[
 B_{t}=B_{t}^{hh}\int b_{t}^{\ast}(s_{t},b_{t-1})d\boldsymbol{D}_{t}
@@ -718,7 +757,8 @@ B_{t}=B_{t}^{hh}\int b_{t}^{\ast}(s_{t},b_{t-1})d\boldsymbol{D}_{t}
 \series bold
 Vanishing liquidity
 \series default
-, 
+,
+ 
 \begin_inset Formula $B_{t}\rightarrow0$
 \end_inset
 
@@ -781,16 +821,19 @@ Marginal saver
 
 \series bold
 Equilibrium condition:
+
 \series default
  For a given 
 \begin_inset Formula $\{Y_{t}\}_{t\geq0}$
 \end_inset
 
-, the unique equilibrium price path is 
+,
+ the unique equilibrium price path is 
 \begin_inset Formula $\{R_{t}^{\ast}\}_{t\geq0}$
 \end_inset
 
-, where 
+,
+ where 
 \begin_inset Formula $R_{t}^{\ast}$
 \end_inset
 
@@ -828,14 +871,16 @@ Intuition:
 \begin_inset Formula $R_{t}>R_{t}^{\ast}$
 \end_inset
 
-: Some households would like to save.
+:
+ Some households would like to save.
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $R_{t}<R_{t}^{\ast}$
 \end_inset
 
-: The Euler-equation would not bind for any household.
+:
+ The Euler-equation would not bind for any household.
 \begin_inset Note Note
 status collapsed
 
@@ -853,13 +898,15 @@ Assume
 \series bold
 \emph on
 Unconstrained households:
+
 \series default
 \emph default
  In each period 
 \begin_inset Formula $c_{t}^{\ast}(s_{t}^{\ast},0)=\gamma(s_{t}^{\ast},Y_{t})$
 \end_inset
 
-, and the Euler equation for any household with 
+,
+ and the Euler equation for any household with 
 \begin_inset Formula $s_{t}=s^{\ast}$
 \end_inset
 
@@ -888,6 +935,7 @@ c_{t}^{\ast}(s_{t}^{\ast},0)=\gamma(s_{t}^{\ast},Y_{t})\Leftrightarrow b_{t}^{\a
 \series bold
 \emph on
 Constrained households:
+
 \series default
 \emph default
  For any household with 
@@ -913,6 +961,7 @@ reference "eq:R_tilde"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -961,6 +1010,7 @@ Ruling out
 higher
 \bar default
  interest rates:
+
 \series default
 \emph default
  If 
@@ -983,6 +1033,7 @@ Ruling out
 lower
 \bar default
  interest rates:
+
 \series default
 \emph default
  If 
@@ -1006,6 +1057,7 @@ lower
 
 \series bold
 Marginal saver:
+
 \series default
  
 \begin_inset Formula $s_{t}^{\ast}\equiv s_{t}^{\ast}(\{Y_{t}\}_{t\geq0})=\arg\min_{s_{t}\in\mathcal{S}}\tilde{R_{t}}(s_{t}),$
@@ -1040,12 +1092,13 @@ Equilibrium
 
 \series bold
 Equilibrium path:
+
 \series default
  
 \begin_inset Formula $\{C_{t},R_{t}\}_{t\geq0}$
 \end_inset
 
- must satisfy
+ must satisfy an RA-like Euler-equation
 \begin_inset Formula 
 \[
 \gamma(s_{t}^{\ast},C_{t})^{-\sigma}=\beta R_{t}\mathbb{E}_{t}^{\ast}[\gamma(s_{t+1},C_{t+1})^{-\sigma}]
@@ -1089,8 +1142,8 @@ status collapsed
 We have:
 \begin_inset Formula 
 \begin{align*}
-g(R_{t},C_{t},C_{t+1}) & =\log R_{t}+\log\left(\mathbb{E}_{t}^{\ast}\left[\frac{(\gamma(s_{t+1},C_{t+1}))^{-\sigma}}{\gamma(s_{t}^{\ast},C_{t})^{-\sigma}}\right]\right)\\
- & =\log R_{t}+\log\left(\mathbb{E}_{t}^{\ast}\left[(\gamma(s_{t+1},C_{t+1}))^{-\sigma}\right]\right)-\log\gamma(s_{t}^{\ast},C_{t})^{-\sigma}
+g(R_{t},C_{t},C_{t+1}) & =\log\beta+\log R_{t}+\log\left(\mathbb{E}_{t}^{\ast}\left[\frac{(\gamma(s_{t+1},C_{t+1}))^{-\sigma}}{\gamma(s_{t}^{\ast},C_{t})^{-\sigma}}\right]\right)\\
+ & =\log\beta+\log R_{t}+\log\left(\mathbb{E}_{t}^{\ast}\left[(\gamma(s_{t+1},C_{t+1}))^{-\sigma}\right]\right)-\log\gamma(s_{t}^{\ast},C_{t})^{-\sigma}
 \end{align*}
 
 \end_inset
@@ -1120,7 +1173,7 @@ g_{C_{t+1}} & =-\sigma\frac{\mathbb{E}_{t}^{\ast}\left[(\gamma(s_{t+1},C_{t+1}))
 Total differentiation implies
 \begin_inset Formula 
 \begin{align*}
-g_{R_{t}}dR_{t}+g_{C_{t}}dC_{t}+g_{C_{t+1}}dC_{t+1} & =0\\
+g_{R_{t}}dR_{t}+g_{C_{t}}dC_{t}+g_{C_{t+1}}dC_{t+1} & =0\Leftrightarrow\\
 R_{t}g_{R_{t}}d\log R_{t}+C_{t}g_{C_{t}}d\log C_{t}+C_{t+1}g_{C_{t+1}}d\log C_{t+1} & =0
 \end{align*}
 
@@ -1175,7 +1228,8 @@ Neutrality of heterogeneity
 status open
 
 \begin_layout Plain Layout
-Example: Employed vs.
+Example:
+ Employed vs.
  unemployed
 \end_layout
 
@@ -1189,6 +1243,7 @@ Example: Employed vs.
 
 \series bold
 Employed:
+
 \series default
  
 \begin_inset Formula $\overline{y}Y^{\gamma},\gamma>0$
@@ -1201,12 +1256,14 @@ Employed:
 
 \series bold
 Unemployed:
+
 \series default
  
 \begin_inset Formula $\underline{y}Y^{\gamma}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\underline{y}<\overline{y}$
 \end_inset
 
@@ -1218,11 +1275,13 @@ Unemployed:
 \series bold
 Unemployment risk
 \series default
-, 
+,
+ 
 \begin_inset Formula $\lambda(Y)$
 \end_inset
 
-: 
+:
+ Satisfy 
 \begin_inset Formula $Y=\left(1-\lambda\left(Y\right)\right)\overline{y}Y^{\gamma}+\lambda\left(Y\right)\underline{y}Y^{\gamma}$
 \end_inset
 
@@ -1238,26 +1297,10 @@ Marginal saver
 \begin_inset Formula 
 \begin{align*}
 \left(\overline{y}Y^{\gamma}\right)^{-\sigma} & =\beta R_{t}\left[\left(1-\lambda\left(Y_{t+1}\right)\right)\left(\overline{y}Y_{t+1}^{\gamma}\right)^{-\sigma}+\lambda\left(Y_{t+1}\right)\left(\underline{y}Y_{t+1}^{\gamma}\right)^{-\sigma}\right]\Leftrightarrow\\
-Y_{t}^{-\sigma} & =\tilde{\beta}(Y_{t+1})R_{t}Y_{t+1}^{-\sigma}
+Y_{t}^{-\sigma} & =\tilde{\beta}(Y_{t+1})R_{t}^{\frac{1}{\gamma}}Y_{t+1}^{-\sigma}\\
+\text{with }\tilde{\beta}(Y_{t+1}) & =\left(\beta\left(1-\lambda(Y_{t+1})\right)+\lambda(Y_{t+1})\left(\underline{y}/\overline{y}\right)^{-\sigma}\right)^{\frac{1}{\gamma}}
 \end{align*}
 
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-2mm}
-\end_layout
-
-\end_inset
-
-where 
-\begin_inset Formula $\beta(Y_{t+1})=\left(\beta\left(1-\lambda(Y_{t+1})\right)+\lambda(Y_{t+1})\left(\underline{y}/\overline{y}\right)^{-\sigma}\right)^{\frac{1}{\gamma}}$
 \end_inset
 
 
@@ -1267,6 +1310,7 @@ where
 
 \series bold
 Equivalence:
+
 \series default
  If 
 \begin_inset Formula $\gamma=1$
@@ -1284,11 +1328,13 @@ Equivalence:
 \series bold
 Counter-cyclical income risk
 \series default
-, 
+,
+ 
 \begin_inset Formula $\gamma<1$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\frac{\partial\lambda(Y)}{\partial Y}<0$
 \end_inset
 
@@ -1297,20 +1343,30 @@ Counter-cyclical income risk
 
 \begin_deeper
 \begin_layout Enumerate
-Amplification: 
+Amplification:
+ 
 \begin_inset Formula $\frac{d\log C_{t}}{d\log R_{t}}_{|d\log C_{t+1}=0}\uparrow$
 \end_inset
 
+ (from 
+\begin_inset Formula $R_{t}^{\frac{1}{\gamma}}$
+\end_inset
 
+ with 
+\begin_inset Formula $\frac{1}{\gamma}>1$
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Enumerate
-Propagation: 
+Propagation:
+ 
 \begin_inset Formula $\frac{d\log C_{t}}{d\log C_{t+1}}_{|d\log R_{t}=0}\uparrow$
 \end_inset
 
  (because 
-\begin_inset Formula $\frac{\partial\beta(Y)}{\partial Y}<0$
+\begin_inset Formula $\frac{\partial\tilde{\beta}(Y)}{\partial Y}<0$
 \end_inset
 
 )
@@ -1370,6 +1426,7 @@ status open
 
 \series bold
 Households:
+
 \series default
  
 \end_layout
@@ -1462,7 +1519,8 @@ status open
 
 
 \series bold
-Government: 
+Government:
+ 
 \end_layout
 
 \begin_deeper
@@ -1490,7 +1548,8 @@ status open
 \series bold
 Central bank
 \series default
-: Set nominal interest rate
+:
+ Set nominal interest rate
 \end_layout
 
 \end_deeper
@@ -1572,11 +1631,14 @@ Static
 
 \end_inset
 
-for given output price, 
+for given output price,
+ 
 \begin_inset Formula $P_{t}$
 \end_inset
 
-, and input prices, 
+,
+ and input prices,
+ 
 \begin_inset Formula $p_{jt}$
 \end_inset
 
@@ -1628,6 +1690,7 @@ status open
 
 \series bold
 Note:
+
 \series default
  Zero profits (can be used to derive price index)
 \end_layout
@@ -1775,8 +1838,10 @@ status open
 
 \series bold
 Symmetry:
+
 \series default
- In equilibrium all firms set the same price, 
+ In equilibrium all firms set the same price,
+ 
 \begin_inset Formula $p_{jt}=P_{t}$
 \end_inset
 
@@ -1827,13 +1892,15 @@ status open
 
 
 \series bold
-Implied production: 
+Implied production:
+ 
 \begin_inset Formula $Y_{t}=y_{jt}$
 \end_inset
 
 
 \series default
-, 
+,
+ 
 \begin_inset Formula $N_{t}=n_{jt}$
 \end_inset
 
@@ -1853,7 +1920,8 @@ status open
 
 
 \series bold
-Implied dividends: 
+Implied dividends:
+ 
 \begin_inset Formula $d_{t}=Y_{t}-w_{t}N_{t}-\frac{\mu}{\mu-1}\frac{1}{2\kappa}\left[\log\left(1+\pi_{t}\right)\right]^{2}Y_{t}$
 \end_inset
 
@@ -1927,7 +1995,8 @@ status open
 
 
 \series bold
-Envelope condition: 
+Envelope condition:
+ 
 \begin_inset Formula $J_{t+1}^{\prime}(p_{jt})=\frac{\mu}{\mu-1}\frac{1}{\kappa}\frac{\log\left(\frac{p_{jt+1}}{p_{jt}}\right)}{p_{jt}}Y_{t+1}$
 \end_inset
 
@@ -2010,6 +2079,7 @@ status open
 
 \series bold
 Zero-inflation steady state:
+
 \series default
  
 \begin_inset Newline newline
@@ -2037,19 +2107,24 @@ status open
 \series bold
 Larger adjustment costs
 \series default
-, 
+,
+ 
 \begin_inset Formula $\kappa\downarrow$
 \end_inset
 
- (more sticky prices): 
+ (more sticky prices):
+ 
 \begin_inset Newline newline
 \end_inset
 
-Less pass-through from marginal costs, 
+Less pass-through from marginal costs,
+ 
 \begin_inset Formula $\frac{w_{t}}{Z_{t}}$
 \end_inset
 
-, to inflation, 
+,
+ to inflation,
+ 
 \begin_inset Formula $\pi_{t}$
 \end_inset
 
@@ -2069,7 +2144,8 @@ status open
 
 
 \series bold
-Larger (expected) future inflation, 
+Larger (expected) future inflation,
+ 
 \begin_inset Formula $\pi_{t+1}\uparrow$
 \end_inset
 
@@ -2079,7 +2155,8 @@ Larger (expected) future inflation,
 
 
 \series default
-Increase price today, 
+Increase price today,
+ 
 \begin_inset Formula $\pi_{t}\uparrow$
 \end_inset
 
@@ -2087,7 +2164,8 @@ Increase price today,
 \begin_inset Newline newline
 \end_inset
 
-Especially in a boom, 
+Especially in a boom,
+ 
 \begin_inset Formula $\frac{Y_{t+1}}{Y_{t}}>1$
 \end_inset
 
@@ -2107,7 +2185,8 @@ status open
 
 
 \series bold
-Dividends: 
+Dividends:
+ 
 \series default
 \emph on
 Counter-cyclical
@@ -2128,7 +2207,8 @@ vspace{4mm}
 
 \end_inset
 
-(Note: Sometimes a 
+(Note:
+ Sometimes a 
 \begin_inset Formula $\beta^{\text{firm}}$
 \end_inset
 
@@ -2189,7 +2269,9 @@ status open
 \series bold
 Household problem
 \series default
-: Distribution,
+:
+ Distribution,
+
 \series bold
  
 \series default
@@ -2197,7 +2279,8 @@ Household problem
 \begin_inset Formula $\boldsymbol{D}_{t}$
 \end_inset
 
-, over 
+,
+ over 
 \begin_inset Formula $z_{it}$
 \end_inset
 
@@ -2244,7 +2327,8 @@ status open
 
 
 \series bold
-Dividends: 
+Dividends:
+ 
 \series default
 Distributed proportional to productivity (ad hoc)
 \end_layout
@@ -2262,7 +2346,8 @@ status open
 
 
 \series bold
-Taxes: 
+Taxes:
+ 
 \series default
 Collected proportional to productivity (ad hoc)
 \end_layout
@@ -2308,7 +2393,8 @@ status open
 
 
 \series bold
-Effective labor-supply: 
+Effective labor-supply:
+ 
 \begin_inset Formula $n_{it}=z_{it}\ell_{it}$
 \end_inset
 
@@ -2350,7 +2436,8 @@ status open
 
 
 \series bold
-Beginning-of-period value function: 
+Beginning-of-period value function:
+ 
 \begin_inset Formula 
 \[
 \underline{v}_{a,t}(z_{it-1},a_{it-1})=\mathbb{E}_{t}\left[v_{a,t}(z_{it},a_{it-1})\right]=\mathbb{E}_{t}\left[(1+r_{t})c_{it}^{-\sigma}\right]
@@ -2374,7 +2461,8 @@ status open
 
 
 \series bold
-Endogenous grid method: 
+Endogenous grid method:
+ 
 \series default
 Vary 
 \begin_inset Formula $z_{t}$
@@ -2411,6 +2499,7 @@ status open
 
 \series bold
 Consumption and labor supply:
+
 \series default
  Use linear interpolation to find 
 \begin_inset Formula 
@@ -2437,6 +2526,7 @@ status open
 
 \series bold
 Savings:
+
 \series default
  
 \begin_inset Formula $a^{\ast}(z_{it},a_{it-1})=(1+r_{t})a_{it-1}-c_{it}^{\ast}+(w_{t}\ell_{it}^{\ast}-\tau_{t}+d_{t})z_{it}$
@@ -2481,6 +2571,7 @@ status open
 
 \series bold
 Problem:
+
 \series default
  
 \begin_inset Formula $a_{t}^{\ast}(z_{it},a_{it-1})<\underline{a}$
@@ -2661,7 +2752,8 @@ status open
 
 
 \series bold
-Monetary policy: 
+Monetary policy:
+ 
 \series default
 Follow Taylor-rule:
 \begin_inset Formula 
@@ -2717,7 +2809,8 @@ status open
 
 
 \series bold
-Government: 
+Government:
+ 
 \series default
 Choose 
 \begin_inset Formula $\tau_{t}$
@@ -2770,7 +2863,8 @@ vspace{-2mm}
 
 \begin_deeper
 \begin_layout Enumerate
-Assets: 
+Assets:
+ 
 \begin_inset Formula $B_{ss}=\int a_{t}^{\ast}(z_{it},a_{it-1})d\boldsymbol{D}_{t}$
 \end_inset
 
@@ -2778,7 +2872,8 @@ Assets:
 \end_layout
 
 \begin_layout Enumerate
-Labor: 
+Labor:
+ 
 \begin_inset Formula $N_{t}=\int n_{t}^{\ast}(z_{it},a_{it-1})d\boldsymbol{D}_{t}$
 \end_inset
 
@@ -2786,7 +2881,8 @@ Labor:
 \end_layout
 
 \begin_layout Enumerate
-Goods: 
+Goods:
+ 
 \begin_inset Formula $Y_{t}=\int c_{t}^{\ast}(z_{it},a_{it-1})d\boldsymbol{D}_{t}+G_{t}+\frac{\mu}{\mu-1}\frac{1}{2\kappa}\left[\log\left(1+\pi_{t}\right)\right]^{2}Y_{t}$
 \end_inset
 
@@ -2923,17 +3019,20 @@ Steady state
 \begin_layout Itemize
 
 \series bold
-Chosen: 
+Chosen:
+ 
 \series default
 
 \begin_inset Formula $B_{ss}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $G_{ss}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $r_{ss}$
 \end_inset
 
@@ -2950,7 +3049,8 @@ Analytically:
 \begin_layout Enumerate
 
 \series bold
-Normalization: 
+Normalization:
+ 
 \begin_inset Formula $Z_{ss}=N_{ss}=1$
 \end_inset
 
@@ -2961,6 +3061,7 @@ Normalization:
 
 \series bold
 Zero-inflation:
+
 \series default
  
 \begin_inset Formula $\pi_{ss}=0\Rightarrow i_{ss}=i_{ss}^{\ast}=(1+r_{ss})(1+\pi_{ss})-1$
@@ -2972,13 +3073,15 @@ Zero-inflation:
 \begin_layout Enumerate
 
 \series bold
-Firms: 
+Firms:
+ 
 \series default
 
 \begin_inset Formula $Y_{ss}=Z_{ss}N_{ss}$
 \end_inset
 
 ,
+
 \series bold
  
 \begin_inset Formula $w_{ss}=\frac{Z_{ss}}{\mu}$
@@ -2997,6 +3100,7 @@ and
 
 \series bold
 Government:
+
 \series default
  
 \begin_inset Formula $\tau_{ss}=r_{ss}B_{ss}+G_{ss}$
@@ -3009,6 +3113,7 @@ Government:
 
 \series bold
 Assets:
+
 \series default
  
 \begin_inset Formula $A_{ss}=B_{ss}$
@@ -3021,7 +3126,8 @@ Assets:
 \begin_layout Itemize
 
 \series bold
-Numerically: 
+Numerically:
+ 
 \series default
 Choose 
 \begin_inset Formula $\beta$
@@ -3059,7 +3165,8 @@ Transmission mechanism to monetary policy shock
 \begin_layout Enumerate
 
 \series bold
-Monetary policy shock: 
+Monetary policy shock:
+ 
 \begin_inset Formula $i_{t}^{\ast}\downarrow\,\Rightarrow\,i_{t}=i_{t}^{\ast}+\phi\pi_{t}\downarrow$
 \end_inset
 
@@ -3070,6 +3177,7 @@ Monetary policy shock:
 
 \series bold
 Real interest rate:
+
 \series default
  
 \begin_inset Formula $r_{t}=\frac{1+i_{t-1}}{1+\pi_{t}}\downarrow$
@@ -3082,6 +3190,7 @@ Real interest rate:
 
 \series bold
 Taxes:
+
 \series default
  
 \begin_inset Formula $\tau_{t}=r_{t}B_{ss}\downarrow$
@@ -3095,7 +3204,8 @@ Taxes:
 \series bold
 Household consumption
 \series default
-, 
+,
+ 
 \begin_inset Formula $C_{t}^{hh}$
 \end_inset
 
@@ -3104,6 +3214,7 @@ Household consumption
 \end_inset
 
 ,
+
 \series bold
  
 \series default
@@ -3121,7 +3232,8 @@ due to
 \begin_layout Enumerate
 
 \series bold
-Firms production, 
+Firms production,
+ 
 \begin_inset Formula $Y_{t}$
 \end_inset
 
@@ -3131,11 +3243,13 @@ Firms production,
 \begin_inset Formula $\uparrow$
 \end_inset
 
-, and
+,
+ and
 \series bold
  labor demand
 \series default
 ,
+
 \series bold
  
 \begin_inset Formula $N_{t}$
@@ -3153,13 +3267,15 @@ Firms production,
 \begin_layout Enumerate
 
 \series bold
-Inflation, 
+Inflation,
+ 
 \begin_inset Formula $\pi_{t}\uparrow$
 \end_inset
 
 
 \series default
 ,
+
 \series bold
  
 \series default
@@ -3168,6 +3284,7 @@ and
 wage
 \series default
 ,
+
 \series bold
  
 \begin_inset Formula $w_{t}$
@@ -3184,6 +3301,7 @@ and
 dividends
 \series default
 ,
+
 \series bold
  
 \begin_inset Formula $d_{t}$
@@ -3202,6 +3320,7 @@ dividends
 Household labor supply
 \series default
 ,
+
 \series bold
  
 \begin_inset Formula $N_{t}^{hh}$
@@ -3213,7 +3332,8 @@ Household labor supply
 
 
 \series default
-, due to 
+,
+ due to 
 \begin_inset Formula $w_{t}\uparrow$
 \end_inset
 
@@ -3237,7 +3357,8 @@ but dampened
 \series bold
 Nominal rate
 \series default
-, 
+,
+ 
 \begin_inset Formula $i_{t}\uparrow$
 \end_inset
 
@@ -3257,7 +3378,8 @@ Nominal rate
 \series bold
 Household consumption
 \series default
-, 
+,
+ 
 \begin_inset Formula $C_{t}^{hh}$
 \end_inset
 
@@ -3266,6 +3388,7 @@ Household consumption
 \end_inset
 
 ,
+
 \series bold
  
 \series default
@@ -3301,7 +3424,64 @@ but dampened by
 status open
 
 \begin_layout Plain Layout
-Representative agent
+Transmission mechanism to monetary policy shock
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Notebook:
+
+\series default
+ GEModelToolsNotebooks/HANK-sticky-prices
+\end_layout
+
+\begin_layout Itemize
+Look at:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Stationary equilibrium (policies + distribution)
+\end_layout
+
+\begin_layout Enumerate
+Non-linear and linear transition path
+\end_layout
+
+\begin_layout Enumerate
+Effect of changing slope of Phillips curve 
+\begin_inset Formula $(\kappa$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Decomposition of consumption and labor supply
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Representative agent (RANK)
 \end_layout
 
 \end_inset
@@ -3328,7 +3508,8 @@ C_{t}^{-\sigma} & =\beta(1+r_{t+1})C_{t\text{+1}}^{-\sigma}\\
 \end_layout
 
 \begin_layout Itemize
-From resource constraint: 
+From resource constraint:
+ 
 \begin_inset Formula $C_{t}=Y_{t}-G_{t}-\frac{\mu}{\mu-1}\frac{1}{2\kappa}\left[\log\left(1+\pi_{t}\right)\right]^{2}Y_{t}$
 \end_inset
 
@@ -3336,7 +3517,8 @@ From resource constraint:
 \end_layout
 
 \begin_layout Itemize
-Ensure same steady state: 
+Ensure same steady state:
+ 
 \begin_inset Formula $\beta^{RA}=\frac{1}{1+r_{ss}},\,\,\,\varphi^{RA}=\frac{w_{ss}\left(C_{ss}^{hh}\right)^{-\sigma}}{\left(N_{ss}\right)^{\nu}}$
 \end_inset
 
@@ -3376,6 +3558,106 @@ where
 status open
 
 \begin_layout Plain Layout
+Direct effect vs.
+ indirect effects
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Euler-equation implies
+\series bold
+:
+ 
+\begin_inset Formula $C_{t+1}=\left(\beta(1+r_{t+1})\right)^{\frac{1}{\sigma}}C_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Direct effect:
+
+\series default
+ Full effect of 
+\begin_inset Formula $\left\{ r_{t}\right\} $
+\end_inset
+
+
+\series bold
+
+\begin_inset Formula 
+\begin{align*}
+C_{t} & =\left(\beta\left(1+r_{t}\right)\right)^{\frac{t}{\sigma}}C_{0}\\
+C_{0} & =\frac{(1+r_{0})A_{ss}^{hh}+\sum_{t=0}^{\infty}q_{t}\left(w_{ss}N_{ss}-\tau_{ss}+d_{ss}\right)}{\sum_{t=0}^{\infty}q_{t}\nu_{t}}
+\end{align*}
+
+\end_inset
+
+
+\series default
+where
+\begin_inset Formula 
+\begin{align*}
+q_{t} & =(1+r_{t})^{-1}q_{t-1},\,\,q_{0}=1\\
+\nu_{t} & =\left(\beta\left(1+r_{t}\right)\right)^{\frac{1}{\sigma}}\nu_{0},\,\,\nu_{0}=1
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Indirect effect:
+ 
+\series default
+Residual (from 
+\begin_inset Formula $\left\{ w_{t}N_{t}-\tau_{t}+d_{t}\right\} $
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Note:
+
+\series default
+ We keep labor supply fixed here
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Notebook:
+
+\series default
+ GEModelToolsNotebooks/HANK-Sticky-prices
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Monetary Policy According to HANK
 \end_layout
 
@@ -3386,6 +3668,32 @@ Monetary Policy According to HANK
 
 \begin_deeper
 \begin_layout Standard
+
+\series bold
+Kaplan,
+ Moll and Violante (2018):
+ 
+\series default
+\emph on
+Indirect effects dominate in a large HANK model with both liquid and illiquid assets and detailed calibration
+\emph default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename figs/KMV.png
 	lyxscale 50
@@ -3394,38 +3702,6 @@ Monetary Policy According to HANK
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-4mm}
-\end_layout
-
-\end_inset
-
-
-\series bold
-RANK: 
-\series default
-Everything is due to substitution
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-HANK: 
-\series default
-It is the indirect effects, which dominates
-\end_layout
-
-\begin_layout Standard
-Source: Kaplan, Moll and Violante (2018)
 \end_layout
 
 \end_deeper
@@ -3477,8 +3753,10 @@ a_{t} & \geq0
 
 \series bold
 Active decisions:
+
 \series default
- Consumption-saving, 
+ Consumption-saving,
+ 
 \begin_inset Formula $c_{t}$
 \end_inset
 
@@ -3493,18 +3771,28 @@ Active decisions:
 
 \series bold
 Union decision:
+
 \series default
- Labor supply, 
+ Labor supply,
+ 
 \begin_inset Formula $\ell_{t}$
 \end_inset
 
-
+ (same for everybody)
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(Alternative:
+ Greenwood–Hercowitz–Huffman preferences)
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 
 \series bold
-Consumption function: 
+Consumption function:
+ 
 \begin_inset Formula $C_{t}^{hh}=C^{hh}\left(\{r_{s}^{a},\tau_{s},w_{s},\ell_{s},\chi_{s}\}_{s\geq0}\right)$
 \end_inset
 
@@ -3568,7 +3856,8 @@ First order condition:
 
 \begin_deeper
 \begin_layout Standard
-Zero profits: 
+Zero profits:
+ 
 \begin_inset Formula $\Pi_{t}=0$
 \end_inset
 
@@ -3649,6 +3938,12 @@ New Keynesian Wage (Phillips) Curve
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(Can also be micro-founded)
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -3674,7 +3969,8 @@ Government
 \begin_layout Itemize
 
 \series bold
-Spending: 
+Spending:
+ 
 \begin_inset Formula $G_{t}$
 \end_inset
 
@@ -3685,6 +3981,7 @@ Spending:
 
 \series bold
 Tax bill:
+
 \series default
  
 \begin_inset Formula $T_{t}$
@@ -3734,6 +4031,7 @@ B_{t} & =(1+r_{t}^{b})B_{t-1}+G_{t}+\chi_{t}-T_{t}
 If 
 \series bold
 long-term bonds:
+
 \series default
  Geometrically declining payment stream of 
 \begin_inset Formula $1,\delta,\delta^{2},\dots$
@@ -3829,6 +4127,7 @@ Standard
 
 \series bold
 Alternative:
+
 \series default
  Real rate rule 
 \begin_inset Formula 
@@ -3842,7 +4141,8 @@ Alternative:
 \end_layout
 
 \begin_layout Standard
-Indeterminacy: Consider limit or assume future tightening
+Indeterminacy:
+ Consider limit or assume future tightening
 \end_layout
 
 \end_deeper
@@ -3887,7 +4187,8 @@ One-period
 \emph on
 real
 \emph default
- bond, 
+ bond,
+ 
 \begin_inset Formula $q_{t}=1$
 \end_inset
 
@@ -3904,11 +4205,13 @@ r_{0}^{b}=r_{0}^{a} & =1+r_{ss}
 \end_layout
 
 \begin_layout Enumerate
-or, one-period 
+or,
+ one-period 
 \emph on
 nominal
 \emph default
- bond, 
+ bond,
+ 
 \begin_inset Formula $q_{t}=1$
 \end_inset
 
@@ -3925,7 +4228,8 @@ t>0:\,r_{0}^{b}=r_{0}^{a} & =\left(1+r_{ss}\right)\left(1+\pi_{ss}\right)/\left(
 \end_layout
 
 \begin_layout Enumerate
-or, long-term 
+or,
+ long-term 
 \emph on
 (real)
 \emph default
@@ -3967,7 +4271,8 @@ Market clearing
 
 \begin_deeper
 \begin_layout Enumerate
-Asset market: 
+Asset market:
+ 
 \begin_inset Formula $q_{t}B_{t}=A_{t}^{hh}$
 \end_inset
 
@@ -3975,7 +4280,8 @@ Asset market:
 \end_layout
 
 \begin_layout Enumerate
-Labor market: 
+Labor market:
+ 
 \begin_inset Formula $L_{t}=L_{t}^{hh}$
 \end_inset
 
@@ -3983,7 +4289,8 @@ Labor market:
 \end_layout
 
 \begin_layout Enumerate
-Goods market: 
+Goods market:
+ 
 \begin_inset Formula $Y_{t}=C_{t}^{hh}+G_{t}$
 \end_inset
 
@@ -4195,6 +4502,262 @@ vspace{-3mm}
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fiscal multplier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Notebook:
+ 
+\series default
+GEModelToolsNotebooks/HANK-sticky-wages
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Stationary equilibrium is similar,
+ but no labor supply
+\end_layout
+
+\begin_layout Enumerate
+Realistic MPC by varying 
+\begin_inset Formula $q_{ss}B_{ss}$
+\end_inset
+
+ target
+\end_layout
+
+\begin_layout Enumerate
+Fiscal mulitplier increasing in MPC
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Impact:
+ 
+\begin_inset Formula $\frac{\partial Y_{0}}{\partial G_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Cumulative:
+
+\series bold
+ 
+\series default
+
+\begin_inset Formula $\frac{\sum_{t=0}^{\infty}(1+r_{ss})^{-t}dY_{t}}{\sum_{t=0}^{\infty}(1+r_{ss})^{-t}dG_{t}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Fiscal multiplier depends on fiscal and monetary rules
+\end_layout
+
+\begin_layout Enumerate
+The transfer multiplier is smaller
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Extension:
+ Endogenous Idiosyncratic risk
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Baseline:
+
+\series default
+ Idiosyncratic risk
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Extension:
+
+\series default
+ Endogenous idiosyncratic risk
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Empirical evidence:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Unequal exposure 
+\size small
+(Guvenen et al.,
+ 2017) 
+\end_layout
+
+\begin_layout Enumerate
+Cyclical income risk 
+\size small
+(Storesletten et al.,
+ 2004,
+ Guvenen et al.,
+ 2014)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Specification 1
+\series default
+ from Auclert et al.
+ (2024)
+\begin_inset Formula 
+\[
+\ell_{it}=L_{t}\frac{z_{t}^{\upsilon\log L_{t}}}{\mathbb{E}\left[z_{t}^{\upsilon\log L_{t}}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Specification 2 
+\series default
+from
+\begin_inset space ~
+\end_inset
+
+Acharya et al.
+ (2023)
+\begin_inset Formula 
+\[
+\sigma_{\psi,t}=\sigma_{\psi}+\upsilon\log L_{t}
+\]
+
+\end_inset
+
+and use a scaling factor to ensure 
+\begin_inset Formula $\mathbb{E}\left[z_{it}\right]=1$
+\end_inset
+
+ always
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Extension:
+ Larger fiscal multipliers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Counter-cyclical income risk and inequality with 
+\begin_inset Formula $\upsilon<$
+\end_inset
+
+ 0 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Effect:
+ 
+\series default
+Substantial boost to consumption
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Impact fiscal multiplier increase substantially
+\end_layout
+
+\begin_layout Enumerate
+Cumulative fiscal multiplier also increase
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Tight calibration is hard...
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Notebook:
+ 
+\series default
+GEModelToolsNotebooks/HANK-sticky-wages
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 IKC
 \end_layout
@@ -4225,7 +4788,8 @@ One-period real bond
 \end_layout
 
 \begin_layout Enumerate
-No lump-sum transfers, 
+No lump-sum transfers,
+ 
 \begin_inset Formula $\chi_{t}=0$
 \end_inset
 
@@ -4233,7 +4797,8 @@ No lump-sum transfers,
 \end_layout
 
 \begin_layout Enumerate
-Real rate rule: 
+Real rate rule:
+ 
 \begin_inset Formula $r_{t}=r_{ss}$
 \end_inset
 
@@ -4264,7 +4829,8 @@ Fiscal policy in terms of
 \begin_layout Itemize
 
 \series bold
-Tax-bill: 
+Tax-bill:
+ 
 \begin_inset Formula $T_{t}=\tau_{t}w_{t}\int\ell_{t}z_{t}d\boldsymbol{D}_{t}=\tau_{t}\Gamma_{t}L_{t}=\tau_{t}Y_{t}$
 \end_inset
 
@@ -4275,6 +4841,7 @@ Tax-bill:
 
 \series bold
 Household income:
+
 \series default
  
 \begin_inset Formula $(1-\tau_{t})w_{t}\ell_{t}z_{t}=\underset{\equiv Z_{t}}{\underbrace{\left(Y_{t}-T_{t}\right)}}z_{t}=Z_{t}z_{t}$
@@ -4286,7 +4853,8 @@ Household income:
 \begin_layout Itemize
 
 \series bold
-Consumption function: 
+Consumption function:
+ 
 \series default
 Simplifies to
 \series bold
@@ -4314,7 +4882,8 @@ C_{t}^{hh}=C^{hh}\left(\{Y_{s}-T_{s}\}_{s\geq0}\right)\Rightarrow\boldsymbol{C}^
 status open
 
 \begin_layout Plain Layout
-Side-note: Two-equation version in 
+Side-note:
+ Two-equation version in 
 \begin_inset Formula $\boldsymbol{Y}$
 \end_inset
 
@@ -4374,6 +4943,7 @@ vspace{-7mm}
 
 \series bold
 First equation:
+
 \series default
  Goods market clearing
 \end_layout
@@ -4381,12 +4951,14 @@ First equation:
 \begin_layout Itemize
 
 \series bold
-Second equation: 
+Second equation:
+ 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Government: 
+Government:
+ 
 \begin_inset Formula $\boldsymbol{T},\boldsymbol{Y}\rightarrow\boldsymbol{\tau}$
 \end_inset
 
@@ -4394,7 +4966,8 @@ Government:
 \end_layout
 
 \begin_layout Enumerate
-Resource constraint: 
+Resource constraint:
+ 
 \begin_inset Formula $\boldsymbol{G},\boldsymbol{Y}\rightarrow\boldsymbol{C}$
 \end_inset
 
@@ -4402,7 +4975,8 @@ Resource constraint:
 \end_layout
 
 \begin_layout Enumerate
-Firm behavior I: 
+Firm behavior I:
+ 
 \begin_inset Formula $\boldsymbol{\Gamma},\boldsymbol{Y}\rightarrow\boldsymbol{L},\boldsymbol{w}$
 \end_inset
 
@@ -4410,7 +4984,8 @@ Firm behavior I:
 \end_layout
 
 \begin_layout Enumerate
-NKWC: 
+NKWC:
+ 
 \begin_inset Formula $\boldsymbol{L},\boldsymbol{C},\boldsymbol{w},\boldsymbol{\tau}\rightarrow\boldsymbol{\pi^{w}}$
 \end_inset
 
@@ -4418,7 +4993,8 @@ NKWC:
 \end_layout
 
 \begin_layout Enumerate
-Firm behavior II: 
+Firm behavior II:
+ 
 \begin_inset Formula $\boldsymbol{\pi^{w}},\boldsymbol{\Gamma}\rightarrow\boldsymbol{\pi}$
 \end_inset
 
@@ -4426,7 +5002,8 @@ Firm behavior II:
 \end_layout
 
 \begin_layout Enumerate
-Central bank: 
+Central bank:
+ 
 \begin_inset Formula $\boldsymbol{\pi}\rightarrow\boldsymbol{i}$
 \end_inset
 
@@ -4434,7 +5011,8 @@ Central bank:
 \end_layout
 
 \begin_layout Enumerate
-Fisher: 
+Fisher:
+ 
 \begin_inset Formula $\boldsymbol{i},\boldsymbol{\pi}\rightarrow\boldsymbol{r}$
 \end_inset
 
@@ -4455,7 +5033,8 @@ Heterogeneity does not enter
 \begin_layout Itemize
 
 \series bold
-Real rate rule: 
+Real rate rule:
+ 
 \series default
 \emph on
 Inflation is a side-show
@@ -4645,10 +5224,10 @@ iMPCs in the data
 
 \series bold
 Other columns:
+
 \series default
  Druedahl et al.
- (2023) show in micro-data that consumption responds today to news about
- future income.
+ (2023) show in micro-data that consumption responds today to news about future income.
 \end_layout
 
 \end_deeper
@@ -4664,7 +5243,8 @@ Other columns:
 status open
 
 \begin_layout Plain Layout
-Perspective: Static Keynesian Cross
+Perspective:
+ Static Keynesian Cross
 \end_layout
 
 \end_inset
@@ -4677,6 +5257,7 @@ Perspective: Static Keynesian Cross
 
 \series bold
 Old Keynesians:
+
 \series default
  Consumption only depends on current income
 \begin_inset Formula 
@@ -4784,7 +5365,8 @@ NPV-vector
 \begin_layout Itemize
 
 \series bold
-NPV-vector: 
+NPV-vector:
+ 
 \begin_inset Formula $\boldsymbol{q}\equiv[1,(1+r_{ss})^{-1},(1+r_{ss})^{-2},\dots]^{\prime}$
 \end_inset
 
@@ -4794,7 +5376,8 @@ NPV-vector:
 \begin_layout Itemize
 
 \series bold
-Government: 
+Government:
+ 
 \series default
 IBC holds
 \series bold
@@ -4814,7 +5397,8 @@ IBC holds
 \begin_layout Itemize
 
 \series bold
-Households: 
+Households:
+ 
 \series default
 IBC holds 
 \series bold
@@ -4858,7 +5442,8 @@ Form of unique solution
 \begin_layout Itemize
 
 \series bold
-Problem: 
+Problem:
+ 
 \series default
 
 \begin_inset Formula $(\boldsymbol{I}-\boldsymbol{M})^{-1}$
@@ -4883,7 +5468,8 @@ because this leads to a contradiction
 \begin_layout Itemize
 
 \series bold
-Result: 
+Result:
+ 
 \series default
 If unique solution then on the form
 \begin_inset Formula 
@@ -4901,9 +5487,11 @@ d\boldsymbol{Y} & =\mathcal{M}(d\boldsymbol{G}-\boldsymbol{M}d\boldsymbol{T})\\
 
 \series bold
 Indeterminancy:
+
 \series default
  Still work-in-progress (Auclert et.
- al., 2023)
+ al.,
+ 2023)
 \end_layout
 
 \end_deeper
@@ -5004,7 +5592,8 @@ vspace{-5mm}
 
 
 \series bold
-Balanced budget multiplier: 
+Balanced budget multiplier:
+ 
 \series default
 
 \begin_inset Formula 
@@ -5019,8 +5608,8 @@ d\boldsymbol{G}=d\boldsymbol{T}\Rightarrow d\boldsymbol{Y}=d\boldsymbol{G},d\bol
 
 \begin_deeper
 \begin_layout Standard
-Note: Central that income and taxes affect household income proportionally
- in exactly the same way 
+Note:
+ Central that income and taxes affect household income proportionally in exactly the same way 
 \begin_inset Formula $=$
 \end_inset
 
@@ -5044,6 +5633,7 @@ vspace{2mm}
 
 \series bold
 Deficit multiplier:
+
 \series default
  
 \begin_inset Formula $d\boldsymbol{G}\neq d\boldsymbol{T}$
@@ -5085,56 +5675,6 @@ Numerical results needed
 status open
 
 \begin_layout Plain Layout
-Fiscal multiplier
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\series bold
-Impact-multiplier:
-\series default
- 
-\begin_inset Formula 
-\[
-\frac{\partial Y_{0}}{\partial G_{0}}
-\]
-
-\end_inset
-
-
-\series bold
-Cumulative-multiplier: 
-\series default
-
-\begin_inset Formula 
-\[
-\frac{\sum_{t=0}^{\infty}(1+r_{ss})^{-t}dY_{t}}{\sum_{t=0}^{\infty}(1+r_{ss})^{-t}dG_{t}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Comparison with RA model
 \end_layout
 
@@ -5148,6 +5688,7 @@ Comparison with RA model
 
 \series bold
 From lecture 1:
+
 \series default
  
 \begin_inset Formula $\beta(1+r_{ss})=1$
@@ -5283,6 +5824,7 @@ Comparison with TA model
 
 \series bold
 Hand-to-Mouth (HtM) households:
+
 \series default
  
 \begin_inset Formula $\lambda$
@@ -5323,7 +5865,8 @@ Intertemporal Keynesian Cross
 \begin_layout Itemize
 
 \series bold
-Same solution-form as RA: 
+Same solution-form as RA:
+ 
 \series default
 
 \begin_inset Formula $d\boldsymbol{Y}=d\tilde{\boldsymbol{G}_{t}}$
@@ -5479,7 +6022,8 @@ a_{t}+c_{t}=(Y_{t}-T_{t})z_{t}+\chi_{t}+\begin{cases}
 
 \begin_deeper
 \begin_layout Enumerate
-Real bond: 
+Real bond:
+ 
 \begin_inset Formula $\text{cap}_{0}=0$
 \end_inset
 
@@ -5487,7 +6031,8 @@ Real bond:
 \end_layout
 
 \begin_layout Enumerate
-Nominal bond: 
+Nominal bond:
+ 
 \begin_inset Formula 
 \[
 \text{cap}_{0}=\frac{(1+r_{ss})(1+\pi_{ss})}{1+\pi_{0}}-(1+r_{ss})
@@ -5499,7 +6044,8 @@ Nominal bond:
 \end_layout
 
 \begin_layout Enumerate
-Long-term bond: 
+Long-term bond:
+ 
 \begin_inset Formula 
 \[
 \text{cap}_{0}=\frac{1+\delta q_{0}}{q_{ss}}-(1+r_{ss})
@@ -5648,6 +6194,7 @@ vspace{-7mm}
 
 \series bold
 Dividends and government transfers:
+
 \series default
  
 \begin_inset Formula $\text{div}_{t}$
@@ -5665,7 +6212,8 @@ Dividends and government transfers:
 \series bold
 Real wage
 \series default
-: 
+:
+ 
 \begin_inset Formula $w_{t}$
 \end_inset
 
@@ -5675,7 +6223,8 @@ Real wage
 \begin_layout Enumerate
 
 \series bold
-Income tax: 
+Income tax:
+ 
 \series default
 
 \begin_inset Formula $\tau_{t}$
@@ -5689,7 +6238,8 @@ Income tax:
 \series bold
 Separation rate
 \series default
- for employed: 
+ for employed:
+ 
 \begin_inset Formula $\delta_{t}$
 \end_inset
 
@@ -5701,7 +6251,8 @@ Separation rate
 \series bold
 Job-finding rate 
 \series default
-for unemployed: 
+for unemployed:
+ 
 \begin_inset Formula $\lambda_{t}^{u,s}s(u_{it-1})$
 \end_inset
 
@@ -5751,7 +6302,8 @@ a) High replacement rate
 \begin_inset Formula $\overline{\phi}$
 \end_inset
 
-, 
+,
+ 
 \series default
 first 
 \begin_inset Formula $\overline{u}$
@@ -5770,6 +6322,7 @@ b) Low replacement rate
 \end_inset
 
 ,
+
 \series default
  after 
 \begin_inset Formula $\overline{u}$
@@ -5837,6 +6390,7 @@ where share of the month with UI is
 
 \series bold
 Note:
+
 \series default
  
 \emph on
@@ -5889,6 +6443,7 @@ Beginning-of-period value function:
 
 \series bold
 Grids:
+
 \series default
  
 \begin_inset Formula $u_{it}\in\{0,1,\dots,\#_{u}-1\}$
@@ -5989,7 +6544,8 @@ V_{t}^{j} & =p_{t}^{X}Z_{t}-w_{ss}+\beta^{\text{firm}}\mathbb{E}_{t}\left[(1-\de
 \begin_layout Itemize
 
 \series bold
-Vacancy value: 
+Vacancy value:
+ 
 \series default
 \size small
 
@@ -6062,7 +6618,8 @@ is given by
 \series bold
 Cobb-Douglas matching function 
 \series default
-implies: 
+implies:
+ 
 \begin_inset Formula 
 \begin{align*}
 \lambda_{t}^{v} & =A\theta_{t}^{-\alpha}\\
@@ -6116,6 +6673,7 @@ Standard New Keynesian block
 
 \series bold
 Intermediate goods price:
+
 \series default
  
 \begin_inset Formula $p_{t}^{X}$
@@ -6137,15 +6695,18 @@ demand curve
 \series bold
  Phillips curve 
 \series default
-relating marginal cost, 
+relating marginal cost,
+ 
 \begin_inset Formula $MC_{t}=p_{t}^{x}$
 \end_inset
 
-, and 
+,
+ and 
 \series bold
 final goods price inflation
 \series default
-, 
+,
+ 
 \begin_inset Formula $\Pi_{t}=P_{t}/P_{t-1},$
 \end_inset
 
@@ -6168,6 +6729,7 @@ with output
 
 \series bold
 Flexible price limit:
+
 \series default
  
 \begin_inset Formula $\phi\rightarrow0$
@@ -6218,6 +6780,7 @@ Government
 
 \series bold
 Unemployment insurance:
+
 \series default
  
 \begin_inset Formula $\Phi_{t}=w_{ss}\left(\overline{\phi}\text{UI}_{t}^{hh}+\underline{\phi}\left(u_{t}-\text{UI}_{t}^{hh}\right)\right)$
@@ -6230,6 +6793,7 @@ Unemployment insurance:
 
 \series bold
 Total expenses:
+
 \series default
  
 \begin_inset Formula $X_{t}=\Phi_{t}+G_{t}+\text{transfer}_{t}$
@@ -6242,6 +6806,7 @@ Total expenses:
 
 \series bold
 Total taxes:
+
 \series default
  
 \begin_inset Formula $\text{taxes}_{t}=\tau_{t}\left(\Phi_{t}+w_{ss}(1-u_{t})\right)$
@@ -6353,6 +6918,2961 @@ Y_{t} & =C_{t}^{hh}+G_{t}
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Code
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Notebook:
+
+\series default
+ GEModelToolsNotebooks/HANK-sticky-wages
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+HANK-SAM
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Intermediate 
+\series bold
+producers:
+
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Hire and fire in search-and-matching labor market
+\end_layout
+
+\begin_layout Enumerate
+Sell homogeneous good at price 
+\begin_inset Formula $p_{t}^{X}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Wholesale
+\series bold
+ price-setters:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set prices in monopolistic competition subject to adjustment costs
+\end_layout
+
+\begin_layout Enumerate
+Pay out dividends
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Final producers:
+ Aggregate to final good
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Government:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Pay transfers and unemployment insurance
+\end_layout
+
+\begin_layout Enumerate
+Collect taxes and issues debt
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Central bank:
+
+\series default
+ Sets nominal interest rate
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Households:
+
+\series default
+ Consume and save
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Equilibrium dynamics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Incomplete markets:
+
+\series default
+ Unemployment risk 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ demand
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size footnotesize
+Complete markets / representative agent:
+\begin_inset Newline newline
+\end_inset
+
+Only total income matters
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Sticky prices:
+
+\series default
+ Demand 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ profitability
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Frictional labor market:
+
+\series default
+ Profitability 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ unemployment risk
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Household problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-5mm}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset Formula 
+\begin{align*}
+v_{t}(\beta_{i},u_{it},a_{it-1})= & \max_{c_{it},a_{it}}\frac{c_{it}^{1-\sigma}}{1-\sigma}+\beta_{i}\mathbb{E}_{t}\left[v_{t+1}\left(\beta_{i},u_{it+1},a_{it}\right)\right]\\
+\text{s.t. } & a_{it}+c_{it}=(1+r_{t})a_{it-1}+(1-\tau_{t})y_{t}(u_{it})+\text{div}_{t}+\text{transfer}_{t}\\
+ & a_{it}\geq0
+\end{align*}
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-7mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Dividends and government transfers:
+
+\series default
+ 
+\begin_inset Formula $\text{div}_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{transfer}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Real wage
+\series default
+:
+ 
+\begin_inset Formula $w_{ss}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Income tax:
+ 
+\series default
+
+\begin_inset Formula $\tau_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Separation rate
+\series default
+ for employed:
+ 
+\begin_inset Formula $\delta_{ss}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Job-finding rate 
+\series default
+for unemployed:
+ 
+\begin_inset Formula $\lambda_{t}^{u,s}s(u_{it-1})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size footnotesize
+(where 
+\begin_inset Formula $s(u_{it-1})$
+\end_inset
+
+ is exogenous search effectiveness)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+US-style duration-dependent 
+\series bold
+UI system:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size footnotesize
+a) High replacement rate
+\series bold
+ 
+\begin_inset Formula $\overline{\phi}$
+\end_inset
+
+,
+ 
+\series default
+first 
+\begin_inset Formula $\overline{u}$
+\end_inset
+
+ months
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+b) Low replacement rate 
+\series bold
+
+\begin_inset Formula $\underline{\phi}$
+\end_inset
+
+,
+
+\series default
+ after 
+\begin_inset Formula $\overline{u}$
+\end_inset
+
+ months
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Income process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Income
+\series default
+ is
+\begin_inset Formula 
+\begin{align*}
+y_{it}(u_{it}) & =w_{ss}\cdot\begin{cases}
+1 & \text{if }u_{it}=0\\
+\overline{\phi}\text{UI}_{it}+(1-\text{UI}_{it})\underline{\phi} & \text{else}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+where the share of the month with UI is
+\begin_inset Formula 
+\begin{align*}
+\text{UI}_{it} & =\begin{cases}
+0 & \text{if }u_{it}=0\\
+1 & \text{else }\text{if }u_{it}<\overline{u}\\
+0 & \text{else if }u_{it}>\overline{u}+1\\
+\overline{u}-\left(u_{it}-1\right) & \text{else}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Note:
+
+\series default
+ 
+\emph on
+Hereby 
+\begin_inset Formula $\overline{u}$
+\end_inset
+
+ becomes a continuous variable.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Transition probabilities
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Beginning-of-period value function:
+\series default
+
+\begin_inset Formula 
+\[
+\underline{v}_{t}\left(\beta_{i},u_{it-1},a_{it-1}\right)=\mathbb{E}\left[v_{t}(\beta_{i},u_{it},a_{it-1})\,|\,u_{it-1},a_{it-1}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Grid:
+
+\series default
+ 
+\begin_inset Formula $u_{it}\in\{0,1,\dots,\#_{u}-1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Employed
+\series default
+ with 
+\begin_inset Formula $u_{it-1}=0$
+\end_inset
+
+:
+ 
+\begin_inset Formula $u_{it}=\begin{cases}
+0 & \text{with prob. }1-\delta_{ss}\\
+1 & \text{with prob. }\delta_{ss}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Unemployed
+\series default
+ with 
+\begin_inset Formula $u_{it-1}=1$
+\end_inset
+
+:
+ 
+\begin_inset Formula 
+\[
+u_{it}=\begin{cases}
+0 & \text{with prob. \lambda_{t}^{u,s}}s(u_{it-1})\\
+u_{it-1}+1 & \text{with prob. }1-\lambda_{t}^{u,s}s(u_{it-1})
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Trick:
+ 
+\begin_inset Formula $u_{it}=\min\left\{ u_{it-1}+1,\#_{u}-1\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+All unemployed search:
+ 
+\series default
+
+\begin_inset Formula $s(u_{it-1})=\begin{cases}
+0 & \text{if }u_{it-1}=0\\
+1 & \text{else}
+\end{cases}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Aggregation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Distributions:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Beginning-of-period:
+ 
+\begin_inset Formula $\underline{\boldsymbol{D}}_{t}$
+\end_inset
+
+ over 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $u_{it-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{it-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+At decision:
+ 
+\begin_inset Formula $\boldsymbol{D}_{t}$
+\end_inset
+
+ over 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{it-1}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Stochastic (time-varying) transition matrix:
+
+\series default
+ 
+\begin_inset Formula $\Pi_{t,z}=\Pi_{z}(\lambda_{t}^{u})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Deterministic savings policy matrix:
+
+\series default
+ 
+\begin_inset Formula $\Lambda_{t}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Transition steps:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{D}_{t} & =\Pi_{t,z}^{\prime}\underline{\boldsymbol{D}}_{t}\\
+\underline{\boldsymbol{D}}_{t+1} & =\Lambda_{t}^{\prime}\boldsymbol{D}_{t}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Searchers:
+
+\series default
+ 
+\begin_inset Formula $S_{t}=\int s(\beta_{i},u_{it-1},a_{it-1})d\underline{\boldsymbol{D}}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Savings:
+
+\series default
+ 
+\begin_inset Formula $A_{t}^{hh}=\int a_{t}^{\ast}(\beta_{i},u_{it},a_{it-1})d\boldsymbol{D}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Consumption:
+
+\series default
+ 
+\begin_inset Formula $C_{t}^{hh}=\int c_{t}^{\ast}(\beta_{i},u_{it},a_{it-1})d\boldsymbol{D}_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+EGM
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Beginning-of-period value function:
+ 
+\begin_inset Formula 
+\begin{align*}
+\underline{v}_{a,t}(\beta_{i},u_{it-1},a_{it-1}) & =\mathbb{E}_{t}\left[v_{a,t}(\beta_{i},u_{it},a_{it-1})\right]=\mathbb{E}_{t}\left[(1+r_{t})c_{it}^{-\sigma}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Endogenous grid method:
+ 
+\series default
+Vary 
+\begin_inset Formula $u_{it}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{it}$
+\end_inset
+
+ to find
+\begin_inset Formula 
+\begin{align*}
+c_{it} & =(\beta\underline{v}_{a,t+1}(\beta_{i},u_{it},a_{it}))^{-\frac{1}{\sigma}}\\
+m_{it} & =c_{it}+a_{it}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Consumption and labor supply:
+
+\series default
+ Use linear interpolation to find 
+\begin_inset Formula 
+\[
+c_{t}^{\ast}(\beta_{i},u_{it},a_{it-1})\text{ with }m_{it}=(1+r_{t})a_{it-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Savings:
+
+\series default
+ 
+\begin_inset Formula $a^{\ast}(u_{it},a_{it-1})=(1+r_{t})a_{it-1}-c_{t}^{\ast}(\beta_{i},u_{it},a_{it-1})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Producers:
+ Hiring and firing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Job value:
+\series default
+\size small
+
+\begin_inset Formula 
+\begin{align*}
+V_{t}^{j} & =p_{t}^{X}Z_{t}-w_{ss}+\beta^{\text{firm}}\mathbb{E}_{t}\left[(1-\delta_{ss})V_{t+1}^{j}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Vacancy value:
+ 
+\series default
+\size small
+
+\begin_inset Formula 
+\begin{align*}
+V_{t}^{v} & =-\kappa+\lambda_{t}^{v}V_{t}^{j}+(1-\lambda_{t}^{v})(1-\delta_{ss})\beta^{\text{firm}}\mathbb{E}_{t}\left[V_{t+1}^{v}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Free entry 
+\series default
+implies 
+\begin_inset Formula 
+\[
+V_{t}^{v}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Labor market dynamics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Labor market tightness 
+\series default
+is given by
+\begin_inset Formula 
+\[
+\theta_{t}=\frac{\text{vacancies}_{t}}{\text{searchers}_{t}}=\frac{v_{t}}{S_{t}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Cobb-Douglas matching function 
+\series default
+
+\begin_inset Formula 
+\[
+\text{matches}_{t}=AS_{t}^{\alpha}v_{t}^{1-\alpha},\,\,\,\alpha\in(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+implies the job-filling and job-finding rates:
+ 
+\begin_inset Formula 
+\begin{align*}
+\lambda_{t}^{v} & =\frac{\text{matches}_{t}}{v_{t}}=A\theta_{t}^{-\alpha}\\
+\lambda_{t}^{u,s} & =\frac{\text{matches}_{t}}{S_{t}}=A\theta_{t}^{1-\alpha}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Law of motion for unemployment:
+\series default
+
+\begin_inset Formula 
+\[
+u_{t}=u_{t-1}+\delta_{t}(1-u_{t-1})-\lambda_{t}^{u,s}S_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Price setters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Intermediate goods price:
+
+\series default
+ 
+\begin_inset Formula $p_{t}^{X}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dixit-Stiglitz 
+\series bold
+demand curve
+\series default
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\series bold
+ Phillips curve 
+\series default
+relating marginal cost,
+ 
+\begin_inset Formula $MC_{t}=p_{t}^{x}$
+\end_inset
+
+,
+ and 
+\series bold
+final goods price inflation
+\series default
+,
+ 
+\begin_inset Formula $\Pi_{t}=P_{t}/P_{t-1},$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+1-\epsilon+\epsilon p_{t}^{x}=\phi\pi_{t}(1+\pi_{t})-\phi\beta^{\text{firm}}\mathbb{E}_{t}\left[\pi_{t+1}(1+\pi_{t+1})\frac{Y_{t+1}}{Y_{t}}\right]
+\]
+
+\end_inset
+
+with output 
+\begin_inset Formula $Y_{t}=Z_{t}(1-u_{t})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Flexible price limit:
+
+\series default
+ 
+\begin_inset Formula $\phi\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Dividends:
+\series default
+
+\begin_inset Formula 
+\[
+\text{div}_{t}=Y_{t}-w_{t}(1-u_{t})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Central bank
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Taylor rule:
+\series default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+1+i_{t} & = & \left(1+i_{ss}\right)\left(\frac{1+\pi_{t}}{1+\pi_{ss}}\right)^{\delta_{\pi}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Government
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Unemployment insurance:
+
+\series default
+ 
+\begin_inset Formula $\Phi_{t}=w_{ss}\left(\overline{\phi}\text{UI}_{t}^{hh}+\underline{\phi}\left(u_{t}-\text{UI}_{t}^{hh}\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Total expenses:
+
+\series default
+ 
+\begin_inset Formula $X_{t}=\Phi_{t}+G_{t}+\text{transfer}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Total taxes:
+
+\series default
+ 
+\begin_inset Formula $\text{taxes}_{t}=\tau_{t}\left(\Phi_{t}+w_{ss}(1-u_{t})\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Government budget
+\series default
+ is
+\begin_inset Formula 
+\[
+q_{t}B_{t}=(1+q_{t}\delta_{q})B_{t-1}+X_{t}-\text{taxes}_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Long-term debt:
+ Real payment stream is 
+\begin_inset Formula $1,\delta,\delta^{2},\dots$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The real bond price is 
+\begin_inset Formula $q_{t}.$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Tax rule:
+\series default
+\size small
+
+\begin_inset Formula 
+\begin{align*}
+\tilde{\tau}_{t} & =\frac{\left(1+q_{t}\delta_{q}\right)B_{t-1}+X_{t}-q_{ss}B_{ss}}{\Phi_{t}+w_{ss}(1-u_{t})}\\
+\tau_{t} & =\omega\tilde{\tau}_{t}+(1-\omega)\tau_{ss}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Transfers:
+
+\series default
+ 
+\begin_inset Formula $\text{transfer}_{t}=-\text{div}_{ss}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Financial markets:
+ No arbitrage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Pricing of government debt:
+\series default
+
+\begin_inset Formula 
+\[
+\frac{1+\delta_{q}q_{t+1}}{q_{t}}=\frac{1+i_{t}}{1+\pi_{t+1}}=1+r_{t+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Ex post real return:
+\series default
+
+\begin_inset Formula 
+\[
+1+r_{t}=\begin{cases}
+\frac{(1+\delta_{q}q_{0})B_{-1}}{A_{-1}^{hh}} & \text{if }t=0\\
+\frac{1+i_{t-1}}{1+\pi_{t}} & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Market clearing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Asset market:
+ 
+\begin_inset Formula $A_{t}^{hh}=q_{t}B_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Goods market:
+ 
+\begin_inset Formula $Y_{t}=C_{t}^{hh}+G_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Tip:
+
+\series default
+ 
+\emph on
+You should be able to verify Walras' law.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Market clearing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Shocks:
+
+\series default
+ 
+\begin_inset Formula $G_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Unknowns:
+
+\series default
+ 
+\begin_inset Formula $p_{t}^{X}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $V_{t}^{j}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $v_{t}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $S_{t}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\pi_{t}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\text{UI}_{t}^{\text{guess}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Targets:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Error in Job Value
+\end_layout
+
+\begin_layout Enumerate
+Error in Vacancy Value
+\end_layout
+
+\begin_layout Enumerate
+Error in Law-of-Motion for 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Error in Philips Curve
+\end_layout
+
+\begin_layout Enumerate
+Error in Asset Market Clearing
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{t}=U_{t}^{^{hh}}=\int1\{u_{it}>0\}d\boldsymbol{D}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{UI}_{t}^{\text{guess}}=\text{UI}_{t}^{^{hh}}=\int\text{UI}_{it}d\boldsymbol{D}_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Steady State
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Zero inflation:
+ 
+\series default
+
+\begin_inset Formula $\pi_{t}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+SAM:
+ 
+\series default
+Choose 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ to ensure 
+\begin_inset Formula $\delta_{ss}=0.02$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{ss}^{u,s}=0.30$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+HANK:
+ 
+\series default
+Enforce 
+\emph on
+asset market clearing
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set 
+\begin_inset Formula $r_{ss}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Calculate implied 
+\begin_inset Formula $A_{ss}^{hh}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Adjust 
+\begin_inset Formula $G_{ss}$
+\end_inset
+
+ so 
+\begin_inset Formula $q_{ss}B_{ss}=A_{ss}^{hh}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Calibration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Real interest rate:
+
+\series default
+ 
+\begin_inset Formula $1+r_{t}=1.02^{\frac{1}{12}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Households:
+ 
+\begin_inset Formula $\sigma=2.0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+30%:
+ 
+\begin_inset Formula $\beta_{i}=\beta^{\text{HtM}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+60%:
+ 
+\begin_inset Formula $\beta_{i}=\beta^{\text{BS}}=0.94^{\frac{1}{12}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+10%:
+ 
+\begin_inset Formula $\beta_{i}=\beta^{\text{PIH}}=0.975^{\frac{1}{12}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Matching and bargaining:
+ 
+\begin_inset Formula $\alpha=0.60$
+\end_inset
+
+,
+
+\series default
+ 
+\begin_inset Formula $\theta=0.60$
+\end_inset
+
+,
+ 
+\begin_inset Formula $w_{ss}=0.90$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Producers:
+ 
+\series default
+
+\begin_inset Formula $\beta^{\text{firm}}=0.975^{\frac{1}{12}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Price-setters:
+ 
+\series default
+
+\begin_inset Formula $\epsilon=6$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi=600$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Monetary policy:
+ 
+\begin_inset Formula $\phi=1.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Government:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tax:
+ 
+\begin_inset Formula $\tau=0.30$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Debt:
+ 
+\begin_inset Formula $\delta_{q}=1-\frac{1}{36}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega=0.05$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+UI:
+ 
+\begin_inset Formula $\overline{\phi}=0.70$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\underline{\phi}=0.40$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\overline{u}=6$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Steady state analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In 
+\series bold
+steady state:
+\end_layout
+
+\begin_layout Enumerate
+Look at the consumption functions
+\end_layout
+
+\begin_layout Enumerate
+Look at the distribution of savings
+\end_layout
+
+\begin_layout Enumerate
+Look at how consumption evolves in unemployment
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Policy analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Shock:
+ 
+\series default
+Consider a 1% shock to government consumption
+\begin_inset Formula 
+\[
+G_{t}-G_{ss}=0.80^{t}\cdot0.01\cdot G_{ss}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
+Look at 
+\series bold
+impulse responses 
+\series default
+for
+\series bold
+:
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+1.
+ Output
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+2.
+ Unemployment (risk)
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+3.
+ Tax rate
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+What drives the consumption response?
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+1.
+ Interest rate
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+2.
+ Tax rate
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+3.
+ Job-finding rate
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+4.
+ Dividends
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Is the effect from the job-finding rate larger than an equivalent change in income causes by wages?
+ Why?
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Stimulus Effects of Common Fiscal Policies
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Stimulus Effects of Common Fiscal Policies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Many types of fiscal policy:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Government consumption,
+ 
+\begin_inset Formula $G_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Universal transfer,
+ 
+\begin_inset Formula $T_{t}=\text{transfer}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Higher unemployment benefits,
+ 
+\begin_inset Formula $\overline{\phi}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Longer unemployment benefit duration,
+ 
+\begin_inset Formula $\overline{u}_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Hiring subsidies,
+ 
+\begin_inset Formula $hs_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Retention subsidies,
+ 
+\begin_inset Formula $rs_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Extended model:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Endogenous separations + sluggish entry
+\end_layout
+
+\begin_layout Enumerate
+Dividends distributed equally
+\end_layout
+
+\begin_layout Enumerate
+Decreasing search intensity/efficiency while unemployed
+\end_layout
+
+\begin_layout Enumerate
+Risk of no unemployment benefits
+\end_layout
+
+\begin_layout Enumerate
+More detailed calibration
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Previous paper:
+
+\series default
+ Broer et.
+ al.
+ (2024) in zero liquidity
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Model summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Notation:
+ 
+\begin_inset Formula $\boldsymbol{x}=\left[X_{0}-X_{ss},X_{1}-X_{ss},\dots\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Household policies:
+\begin_inset Formula 
+\[
+\boldsymbol{h}=\left[\boldsymbol{g},\boldsymbol{t},\boldsymbol{\overline{\phi}},\boldsymbol{\overline{u}}\right]'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Firm policies:
+\begin_inset Formula 
+\[
+\boldsymbol{f}=\left[\boldsymbol{hs},\boldsymbol{rs}\right]'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Income process:
+ 
+\begin_inset Formula 
+\[
+\boldsymbol{inc}=\left[\boldsymbol{\boldsymbol{\delta}},\boldsymbol{\lambda^{u}},\boldsymbol{div}\right]'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Model summary:
+\series default
+
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{r^{real}} & =M_{HA}\boldsymbol{inc}+M_{h,r}\boldsymbol{h}+\text{M_{f,r}\boldsymbol{f},}\label{eq:HA}\\
+\boldsymbol{p^{x}} & =M_{NK}\boldsymbol{r^{real}},\label{eq:NK}\\
+\boldsymbol{inc} & \boldsymbol{=}M_{SAM}\boldsymbol{p^{x}}+M_{s,inc}\boldsymbol{f}.\label{eq:SAM}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Directed Cycle Graph
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../../AdvMacroHet/12-HANK-SAM/figs/model_diagram.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Directed Cycle Process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Let 
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+ denote the operator norm.
+ If 
+\begin_inset Formula $||M_{SAM}M_{NK}M_{HA}||<1$
+\end_inset
+
+,
+ there is a unique solution to the system 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:HA"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SAM"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ given by
+\begin_inset Formula 
+\[
+\boldsymbol{inc}=\underset{\text{GE}}{\underbrace{\mathcal{G}}}\times\left(\underset{\text{first round, household transfer policy}}{\underbrace{M_{\text{SAM}}M_{\text{NK}}\underset{\text{direct}}{\underbrace{M_{h,r}\boldsymbol{h}}}}}+\underset{\text{first round, firm transfer policy}}{\underbrace{M_{SAM}M_{NK}\underset{\text{direct}}{\underbrace{M_{f,r}\boldsymbol{f}}}+\underset{\text{direct}}{\underbrace{M_{f,\text{inc}}\boldsymbol{f}}}}}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ is defined by 
+\begin_inset Formula 
+\[
+\mathcal{G}=(I-M_{SAM}M_{NK}M_{HA})^{-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fiscal multipliers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Fiscal multiplier:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathcal{M} & =\text{cumulative fiscal multiplier}=\frac{\boldsymbol{1}^{\prime}\boldsymbol{y}}{\boldsymbol{1}^{\prime}\boldsymbol{taxes}}.\\
+\boldsymbol{taxes} & =M_{\text{inc},\text{taxes}}\boldsymbol{inc}+M_{h,taxes}\boldsymbol{h}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Household policies 0 and 1:
+
+\series default
+ If same direct PE real interest rate
+\begin_inset Formula 
+\[
+M_{h,r}\boldsymbol{h}^{0}=M_{h,r}\boldsymbol{h}^{1}
+\]
+
+\end_inset
+
+then output and income are the same 
+\begin_inset Formula $\boldsymbol{y}^{0}=\boldsymbol{y}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{inc}^{0}=\boldsymbol{inc}^{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Differences in taxes are due to direct fiscal costs
+\begin_inset Formula 
+\[
+\boldsymbol{1}^{\prime}\boldsymbol{taxes}^{0}-\boldsymbol{1}^{\prime}\boldsymbol{taxes}^{1}=\boldsymbol{1}^{\prime}M_{h,\text{taxes}}\boldsymbol{h}^{0}-\boldsymbol{1}^{\prime}M_{h,\text{taxes}}\boldsymbol{h}^{1},
+\]
+
+\end_inset
+
+
+\series bold
+Fiscal multipliers are ordered by direct fiscal costs:
+\series default
+
+\begin_inset Formula 
+\[
+\mathcal{M}_{h^{0}}\gtreqless\mathcal{M}_{h^{1}}\iff\boldsymbol{1}^{\prime}M_{h,\text{taxes}}\boldsymbol{h}^{0}\lesseqgtr\boldsymbol{1}^{\prime}M_{h,\text{taxes}}\boldsymbol{h}^{1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Firm policies:
+ 
+\series default
+Same result,
+ but only with representative agent
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Policy experiment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Experiment:
+
+\series default
+ Same output path for different policies.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../AdvMacroHet/12-HANK-SAM/results/policies_Y_titled.pdf
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../AdvMacroHet/12-HANK-SAM/results/policies_tax_titled.pdf
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Different fiscal multipliers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../AdvMacroHet/12-HANK-SAM/figs/table4.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Relative fiscal multiplier:
+
+\series default
+ 
+\series bold
+
+\begin_inset Formula $\frac{\mathcal{M}_{h^{j}}}{\mathcal{M}_{h^{G}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Relative tax respones:
+
+\series default
+ 
+\series bold
+
+\begin_inset Formula $\frac{\boldsymbol{1}^{\prime}\boldsymbol{taxes}^{j}}{\boldsymbol{1}^{\prime}\boldsymbol{taxes}^{G}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Decomposition for household transfers:
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{taxes}^{j} & =M_{\text{inc},\text{taxes}}\boldsymbol{inc}^{j}+M_{h,taxes}\boldsymbol{h}^{j}\\
+\text{\boldsymbol{taxes}^{j,\text{PE}}} & =M_{h,\text{taxes}}\boldsymbol{h}^{j}\\
+\text{\boldsymbol{taxes}^{j,\text{GE}}} & =M_{\text{inc},\text{taxes}}\boldsymbol{inc}^{j}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Determinants of fiscal multipliers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../AdvMacroHet/12-HANK-SAM/figs/table5.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+I-HANK
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Models
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+So far:
+
+\series default
+ Closed economy
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Reality:
+
+\series default
+ Many countries are small open economies
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Baseline New Keynesian model:
+ 
+\series default
+Gali and Monacelli
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Contractionary depreciations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Auclert et.
+ al.
+ (2024):
+ 
+\series bold
+Exchange Rates and Monetary Policy with Heterogeneous Agents:
+ Sizing up the Real Income Channel
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Depreciation causes a fall in real income
+\end_layout
+
+\begin_layout Enumerate
+Much stronger with high MPC households
+\end_layout
+
+\begin_layout Enumerate
+Depreciation can be contractionary 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/Auclert_IHANK_Fig8.png
+	width 75text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fiscal multipliers in small open economies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sundram (2024),
+ 
+\series bold
+Fiscal Policy in Small Open Economies:
+ The International Intertemporal Keynesian Cross
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The cumulative fiscal multiplier is 
+\begin_inset Formula $1$
+\end_inset
+
+ with a real rate rule
+\end_layout
+
+\begin_layout Enumerate
+Consumption boom now,
+ but bust later on as 
+\begin_inset Formula $NFA_{t}\rightarrow NFA_{ss}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The fiscal multiplier jumps in the limit of 
+\begin_inset Formula $\alpha\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/Sundram_FiscalMultiplier.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Druedahl et.
+ al.
+ (2025)
+\series bold
+,
+ Fiscal Multipliers in Small Open Economies with Heterogeneous Households
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A number of RA vs HA equivalence results can be proven
+\end_layout
+
+\begin_layout Enumerate
+Difference in fiscal multipliers smaller than in closed economies
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Foreign demand shocks
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Druedahl et.
+ al.
+ (2024),
+ 
+\series bold
+The Transmission of Foreign Demand Shocks.
+
+\series default
+ Response to foreign demand shock:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+RA:
+ Consumption falls
+\end_layout
+
+\begin_layout Enumerate
+HA:
+ Consumption increase
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ foreign demand shocks important for international co-movement
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename results/Druedahl_ForeignDemand_Figure4.png
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Summary
 \end_layout
@@ -6374,7 +9894,8 @@ Summary
 \begin_layout Itemize
 
 \series bold
-Today: 
+This lecture:
+ 
 \series default
 HANK models
 \end_layout
@@ -6396,12 +9917,36 @@ High MPC and precautionary saving become of central importance
 \begin_layout Itemize
 
 \series bold
-Next: 
+Business cycles:
+ 
 \series default
-\emph on
-Exam
+Corr.
+ of C and I from shock to I (not vice versa) 
+\series bold
+
+\begin_inset Graphics
+	filename figs/Auclert_HumpsBumps_Fig13.png
+	width 75text%
+
+\end_inset
+
+ 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\size footnotesize
+Source:
+ Auclert et.
+ al.
+ (2020),
+ Micro Jumps,
+ Macro Humps:
+ Monetary Policy and Business Cycles in an Estimated HANK Model
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain

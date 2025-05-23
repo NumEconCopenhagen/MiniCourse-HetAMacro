@@ -4262,19 +4262,16 @@ Illiuid asset:
 
 \end_layout
 
-\begin_layout Itemize
-
-\series bold
-Terminal period:
-
-\series default
+\begin_deeper
+\begin_layout Standard
+Note:
  
-\begin_inset Formula $v_{T}(\text{own}_{T-1},a_{T-1},y_{T})=\frac{\left(a_{T-1}+y_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
-\end_inset
-
-
+\emph on
+You can sell,
+ but never buy
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 
 \series bold
@@ -4283,6 +4280,10 @@ Recursive problem:
 \series default
  For 
 \begin_inset Formula $\text{own}_{t-1}\in\{0,1\}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t}=1$
 \end_inset
 
 
@@ -4303,11 +4304,10 @@ vspace{-2mm}
 
 \begin_inset Formula 
 \begin{align*}
-v_{t}(\text{own}_{t-1},a_{t-1},y_{t}) & =\max_{c_{t},\text{sell}_{t}\in\{0,1\}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}(\text{own}_{t},a_{t},y_{t+1})\right]\\
+v_{t}(\text{own}_{t-1},a_{t-1}) & =\max_{c_{t},\text{sell}_{t}\in\{0,1\}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}(\text{own}_{t},a_{t})\right]\\
 \text{s.t.\,\,\,}\text{own}_{t} & =(1-\text{sell}_{t})\text{own}_{t-1}\\
 m_{t} & =a_{t-1}+y_{t}+\text{sell}_{t}\text{own}_{t-1}(1-\gamma)k\\
 a_{t} & =m_{t}-c_{t}\\
-y_{t+1} & =1\\
 a_{t} & \geq0
 \end{align*}
 
@@ -4319,38 +4319,157 @@ a_{t} & \geq0
 \begin_layout Itemize
 
 \series bold
+Terminal period:
+
+\series default
+ 
+\begin_inset Formula $v_{T}(\text{own}_{T-1},a_{T-1})=\frac{\left(a_{T-1}+y_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
 Euler-equation:
  
 \series default
-Still 
-\emph on
-necessary
-\emph default
-,
- but no longer
-\emph on
- sufficient
+Fix end-of-period ownership,
+ 
+\begin_inset Formula $\text{own}_{t}$
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 Necessary:
- From variation argument conditional on own/sell choice
+ From variational argument conditional on 
+\begin_inset Formula $\text{sell}_{t+1}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Not sufficient due to 
-\emph on
-non-convexity
-\emph default
- 
-\begin_inset Newline newline
+Non-sufficient:
+ Savings low with 
+\begin_inset Formula $\text{sell}_{t+1}=1$
 \end_inset
 
-(more savings can trigger sell with fall in consumption)
+,
+ or high with 
+\begin_inset Formula $\text{sell}_{t+1}=0$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Timing and nesting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Beginning-of-period states:
+
+\series default
+ 
+\begin_inset Formula $\text{own}_{t-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Discrete choice:
+
+\series default
+ If 
+\begin_inset Formula $\text{own}_{t-1}=1$
+\end_inset
+
+ choose 
+\begin_inset Formula $\text{sell}_{t}\in\{0,1\}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\underline{v}_{t}(m_{t}) & =\max\left\{ v_{t}(0,m_{t}^{\text{sell}}),v_{t}(1,m_{t})\right\} \\
+ & \,\,\,m_{t}^{\text{sell}}=m_{t}+(1-\gamma)k
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Continuous choice:
+
+\series default
+ 
+\begin_inset Formula 
+\begin{align*}
+v_{t}(\text{own}_{t},m_{t}) & =\max_{c_{t}\in[0,m_{t}]}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta w_{t}(\text{own}_{t},m_{t}-c_{t})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Post-decision value function:
+\series default
+
+\begin_inset Formula 
+\begin{align*}
+w_{t}(\text{own}_{t},a_{t}) & =\mathbb{E}_{t}\left[\begin{cases}
+v_{t+1}(\text{own}_{t},m_{t+1}) & \text{if}\text{ own}_{t}=0\text{ or }t=T-1\\
+\underline{v}_{t+1}(m_{t+1}) & \text{\text{if}}\text{ own}_{t}=1\text{ and }t<T-1
+\end{cases}\right]\\
+ & \,\,\,m_{t+1}=a_{t}+y_{t+1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -4374,48 +4493,6 @@ Nesting
 
 \begin_deeper
 \begin_layout Itemize
-
-\series bold
-Sell or not?
-\series default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-2mm}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\overline{v}_{t}(m_{t}) & =\max\left\{ v_{t}(0,m_{t}^{\text{sell}}),v_{t}(1,m_{t})\right\} \\
- & \,\,\,m_{t}^{\text{sell}}=m_{t}+(1-\gamma)k
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-2mm}
-\end_layout
-
-\end_inset
-
 
 \series bold
 Post-decision value function:
@@ -4531,8 +4608,94 @@ u^{\prime}(c_{t})=\beta q_{t}\Leftrightarrow c_{t}^{-\sigma} & =\beta q_{t}
 status open
 
 \begin_layout Plain Layout
+Solution method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+For 
+\begin_inset Formula $t\in\{T-1,T-2,\dots,0\}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $q_{t}(\text{own}_{t},a_{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{t}(\text{own}_{t},a_{t})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Use inverted Euler-equation to get 
+\begin_inset Formula $c_{t}(\text{own}_{t},a_{t})$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{t}(\text{own}_{t},a_{t})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Use 
+\emph on
+upper envelope
+\emph default
+ (see below) to get 
+\begin_inset Formula $c_{t}(\text{own}_{t},m_{t})$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+on common grid for 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $v_{t}(\text{own}_{t},m_{t})$
+\end_inset
+
+ and then 
+\begin_inset Formula $\underline{v}_{t}(m_{t})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Conditional consumption function in 
-\begin_inset Formula $t=T-2$
+\begin_inset Formula $t=T-1$
 \end_inset
 
 
@@ -4547,10 +4710,18 @@ Conditional consumption function in
 \begin_layout Standard
 
 \series bold
-Solution method:
- 
+Step 1
 \series default
-EGM
+.
+ Use formulas for 
+\begin_inset Formula $v_{T}(\bullet)$
+\end_inset
+
+ and 
+\begin_inset Formula $q_{T-1}(\bullet)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4561,6 +4732,15 @@ EGM
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Step 2+3:
+ 
+\series default
+Standard EGM (no upper envelope)
 \end_layout
 
 \begin_layout Standard
@@ -4588,7 +4768,7 @@ status open
 \begin_layout Plain Layout
 Unconditional owner behavior,
  
-\begin_inset Formula $t=T-2$
+\begin_inset Formula $t=T-1$
 \end_inset
 
 
@@ -4601,9 +4781,22 @@ Unconditional owner behavior,
 
 \begin_deeper
 \begin_layout Standard
+
+\series bold
+Step 4:
+ 
+\series default
+Use 
+\begin_inset Formula $\underline{v}_{t}(m_{t})=\max\left\{ v_{t}(0,m_{t}^{\text{sell}}),v_{t}(1,m_{t})\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename figs/illiquid_owner_behavior_final.pdf
-	height 85theight%
+	height 75theight%
 
 \end_inset
 
@@ -4623,8 +4816,8 @@ Unconditional owner behavior,
 status open
 
 \begin_layout Plain Layout
-Upper envelope (given 
-\begin_inset Formula $\text{own}_{t})$
+Candidate points (given 
+\begin_inset Formula $\text{own}_{it})$
 \end_inset
 
 
@@ -4639,27 +4832,81 @@ Upper envelope (given
 \begin_layout Standard
 
 \series bold
-Step 1:
- 
-\series default
-Generate candidate points,
- 
-\begin_inset Formula $\forall i_{a}$
-\end_inset
+Closer look at step 3:
 
- 
+\series default
+ The generated candidate points from inverting the Euler-equation is
 \begin_inset Formula 
 \begin{align*}
 w^{i_{a}} & =w_{t}(\text{own}_{t},a^{i_{a}})\\
 q^{i_{a}} & =q_{t}(\text{own}_{t},a^{i_{a}})\\
 c^{i_{a}} & =u^{\prime-1}\left(\beta q^{i_{a}}\right)=\left(\beta q^{i_{a}}\right)^{-\frac{1}{\sigma}}\\
-m^{i_{a}} & =a^{i_{a}}+c^{i_{a}}\\
-v^{i_{a}} & =u\left(c^{i_{a}}\right)+w^{i_{a}}
+m^{i_{a}} & =a^{i_{a}}+c^{i_{a}}
 \end{align*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Problem:
+ 
+\series default
+Small increase in 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+ when 
+\begin_inset Formula $sell_{t+1}$
+\end_inset
+
+ goes from 1 to 0
+\end_layout
+
+\begin_layout Enumerate
+Downward jump 
+\begin_inset Formula $c_{t+1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Upward jump in 
+\begin_inset Formula $q_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Downward jump in 
+\begin_inset Formula $c_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Downward jump in 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ the 
+\begin_inset Formula $m_{t}$
+\end_inset
+
+'s will be overlapping - which one to choose?
 \end_layout
 
 \end_deeper
@@ -4687,7 +4934,7 @@ Problems with EGM
 \begin_layout Standard
 
 \series bold
-Post-decision values in 
+Step 1 in 
 \begin_inset Formula $t=T-2$
 \end_inset
 
@@ -4707,7 +4954,11 @@ Post-decision values in
 \begin_layout Standard
 
 \series bold
-Problems for owners:
+Step 2 in 
+\begin_inset Formula $t=T-2$
+\end_inset
+
+ for owners:
 \end_layout
 
 \begin_layout Standard
@@ -4758,10 +5009,10 @@ Upper envelope (given
 \begin_layout Standard
 
 \series bold
-Step 2:
- 
+Upper-envelope:
+
 \series default
-Apply upper-envelope,
+ 
 \begin_inset Formula $\forall i_{m}$
 \end_inset
 
@@ -4986,6 +5237,15 @@ Conditional consumption function in
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+
+\series bold
+Step 3:
+
+\series default
+ After applying upper envelope
+\end_layout
+
 \begin_layout Standard
 \begin_inset Graphics
 	filename figs/illiquid_solve_initial.pdf
