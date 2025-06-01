@@ -125,6 +125,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize 10
 \spacing single
 \use_hyperref false
@@ -1343,11 +1345,11 @@ The same when
 status open
 
 \begin_layout Plain Layout
-Savings (with 
-\begin_inset Formula $z_{t}=1)$
+Savings (
+\begin_inset Formula $\beta R=1$
 \end_inset
 
-
+)
 \end_layout
 
 \end_inset
@@ -1361,11 +1363,11 @@ Savings (with
 \series bold
 Constant savings 
 \series default
-with 
-\begin_inset Formula $\beta R=1$
+
+\begin_inset Formula $z_{t}=1$
 \end_inset
 
-
+:
 \series bold
 
 \begin_inset Formula 
@@ -1378,24 +1380,29 @@ c_{t}=ra_{t-1}+w\Rightarrow a_{t}=Ra_{t-1}+w-c_{t}=a_{t-1}
 
 \end_layout
 
-\begin_layout Itemize
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
 
-\series bold
-Decreasing savings
-\series default
- with 
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-5mm}
+\end_layout
+
+\end_inset
+
+Decreasing savings with 
 \begin_inset Formula $\beta R<1:c_{t}\uparrow\,\Rightarrow a_{t}<a_{t-1}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-
-\series bold
-Increasing savings
-\series default
- with 
+\begin_layout Enumerate
+Increasing savings with 
 \begin_inset Formula $\beta R>1$
 \end_inset
 
@@ -1406,6 +1413,38 @@ Increasing savings
 
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Same consumption if NPV of 
+\begin_inset Formula $wz_{t}$
+\end_inset
+
+ is unchanged
+\series default
+
+\begin_inset Formula 
+\[
+\frac{r}{1+r}\sum_{t=0}^{\infty}\frac{z_{t}}{\left(1+r\right)^{t}}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\emph on
+savings change with income
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1440,11 +1479,8 @@ savings
  are
 \series bold
 :
-\begin_inset Formula 
-\[
-a_{0}=Ra_{-1}+wz_{0}-c_{0}
-\]
-
+ 
+\begin_inset Formula $a_{0}=s_{0}+wz_{0}-c_{0}$
 \end_inset
 
 
@@ -1480,7 +1516,7 @@ Maximum consumption:
 
 \series default
  
-\begin_inset Formula $\overline{c}_{0}=Ra_{-1}+wz_{0}+wb$
+\begin_inset Formula $\overline{c}_{0}=s_{0}+wz_{0}+wb$
 \end_inset
 
 
@@ -1511,8 +1547,15 @@ c_{0}^{\ast}=\min\left\{ \overline{c}_{0},\left(1-\frac{(\beta R)^{1/\sigma}}{R}
 Empirical realism.
 
 \series default
- Incl.
- high MPC of constrained.
+ MPC of constrained is one
+\begin_inset Formula 
+\[
+c_{0}^{\ast}=\overline{c}_{0}\Rightarrow\frac{\partial c_{0}^{\ast}}{\partial s_{0}}=\frac{\partial\overline{c}_{0}}{\partial s_{0}}=1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2161,7 +2204,7 @@ FOC:
 \begin_layout Standard
 Envelope:
  
-\begin_inset Formula $v_{a}(z_{t},a_{t-1})=(1+r)c_{t}^{-\sigma}$
+\begin_inset Formula $v_{a}(z_{t},a_{t-1})=Rc_{t}^{-\sigma}$
 \end_inset
 
 
@@ -2674,7 +2717,7 @@ Note:
 \series default
  Straightforward to extend to more goods,
  more assets or other states,
- more complex uncertainty,
+ more complex risk,
  bounded rationality etc.
  
 \end_layout
@@ -2890,7 +2933,7 @@ Stochastic transition:
 \begin_inset Formula 
 \begin{align*}
 \text{Pr}\left[z_{t+1}=1\,|\,z_{t}=1\right] & =\pi\\
-\text{Pr}\left[z_{t+1}\in\{1-\Delta,1-\Delta\}\,|\,z_{t}=1\right] & =\frac{1-\pi}{2}\\
+\text{Pr}\left[z_{t+1}=1-\Delta\,|\,z_{t}=1\right]=\text{Pr}\left[z_{t+1}=1+\Delta\,|\,z_{t}=1\right] & =\frac{1-\pi}{2}\\
 \text{Pr}\left[z_{t+1}=z_{t}\,|\,z_{t}\in\{1-\Delta,1+\Delta\}\right] & =1
 \end{align*}
 
@@ -3167,6 +3210,32 @@ Grids and transition probabilities
 
 \end_layout
 
+\begin_layout Standard
+The size of risk is scaled by 
+\begin_inset Formula $\Delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Baseline:
+ 
+\begin_inset Formula $\Delta=0.8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Low risk:
+ 
+\begin_inset Formula $\Delta=0.4$
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -3391,7 +3460,7 @@ vspace{-7mm}
 
 \begin_inset Formula 
 \begin{align*}
-v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t}) & =u(c_{t})+\sum_{i_{z+1}=0}^{\#_{z}-1}\pi\left(i_{z},i_{z+1}\right)\breve{v}_{t+1}(z^{i_{z}},a)\\
+v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t}) & =u(c_{t})+\sum_{i_{z+1}=0}^{\#_{z}-1}\pi\left(i_{z},i_{z+1}\right)\breve{v}_{t+1}(z^{i_{z}},a_{t})\\
  & \text{with }a_{t}=(1+r)a^{i_{a-}}+wz^{i_{z}}-c_{t}
 \end{align*}
 
@@ -3650,8 +3719,17 @@ Intertemporal MPC
 \begin_layout Standard
 \begin_inset Graphics
 	filename figs/MPC_dyn_2.pdf
-	width 95text%
+	width 90text%
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note:
+ No wealth effect as 
+\begin_inset Formula $r=0$
 \end_inset
 
 
@@ -3900,6 +3978,133 @@ Ergodic distribution of
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Taking stock
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Value Function Iteration (VFI)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve all consumption-saving models
+\end_layout
+
+\begin_layout Enumerate
+Accurate with dense enough grids
+\end_layout
+
+\begin_layout Enumerate
+Relatively simple code and easy to run in parallel
+\end_layout
+
+\begin_layout Enumerate
+Finding optimal choices is the computational bottleneck
+\begin_inset Newline newline
+\end_inset
+
+(especially with multi-starts in non-convex models)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Potential technical improvements:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+More advanced interpolation methods (e.g.
+ cubic)
+\begin_inset Newline newline
+\end_inset
+
+(typically slower per grid point and code more complex)
+\end_layout
+
+\begin_layout Enumerate
+Howard improvement steps (Rendahl,
+ 2024)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+also compares with continuous time
+\end_layout
+
+\end_inset
+
+,
+ only in infinite horizon 
+\end_layout
+
+\begin_layout Enumerate
+Adaptive sparse grids (Scheidegger,
+ 2017)
+\end_layout
+
+\begin_layout Enumerate
+(Analytical or automatic differentiation)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+code much more complex
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+(Approximate value and policy function with global polynomials)
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Especially with borrowing constraint
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Now:
+
+\series default
+ 
+\emph on
+Use more model information
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 EGM
 \end_layout
@@ -3969,6 +4174,15 @@ Necessary and sufficient
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+
+\series bold
+EGM:
+
+\series default
+ No need for any numerical optimization or root-finding
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -4306,7 +4520,7 @@ vspace{-2mm}
 \begin{align*}
 v_{t}(\text{own}_{t-1},a_{t-1}) & =\max_{c_{t},\text{sell}_{t}\in\{0,1\}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}(\text{own}_{t},a_{t})\right]\\
 \text{s.t.\,\,\,}\text{own}_{t} & =(1-\text{sell}_{t})\text{own}_{t-1}\\
-m_{t} & =a_{t-1}+y_{t}+\text{sell}_{t}\text{own}_{t-1}(1-\gamma)k\\
+m_{t} & =a_{t-1}+\text{sell}_{t}\text{own}_{t-1}(1-\gamma)k\\
 a_{t} & =m_{t}-c_{t}\\
 a_{t} & \geq0
 \end{align*}
@@ -4323,7 +4537,7 @@ Terminal period:
 
 \series default
  
-\begin_inset Formula $v_{T}(\text{own}_{T-1},a_{T-1})=\frac{\left(a_{T-1}+y_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
+\begin_inset Formula $v_{T}(\text{own}_{T-1},a_{T-1})=\frac{\left(a_{T-1}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
 \end_inset
 
 
@@ -4674,11 +4888,15 @@ Calculate
 \begin_inset Formula $v_{t}(\text{own}_{t},m_{t})$
 \end_inset
 
- and then 
+ 
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
 \begin_inset Formula $\underline{v}_{t}(m_{t})$
 \end_inset
 
-
+ (simple look-up)
 \end_layout
 
 \end_deeper
@@ -4863,7 +5081,11 @@ Small increase in
 \begin_inset Formula $sell_{t+1}$
 \end_inset
 
- goes from 1 to 0
+ goes from 1 to 0 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -4871,15 +5093,15 @@ Downward jump
 \begin_inset Formula $c_{t+1}$
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Enumerate
-Upward jump in 
+ and upward jump in 
 \begin_inset Formula $q_{t}$
 \end_inset
 
  
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -4887,11 +5109,7 @@ Downward jump in
 \begin_inset Formula $c_{t}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Enumerate
-Downward jump in 
+ and 
 \begin_inset Formula $m_{t}$
 \end_inset
 
@@ -5225,7 +5443,7 @@ status open
 
 \begin_layout Plain Layout
 Conditional consumption function in 
-\begin_inset Formula $t=T-1$
+\begin_inset Formula $t=T-2$
 \end_inset
 
 
@@ -5328,7 +5546,7 @@ Infrequent shocks:
 \end_layout
 
 \begin_layout Standard
-(see Larkin (2024)
+(see Larkin (2024))
 \end_layout
 
 \end_deeper
@@ -6547,7 +6765,7 @@ Euler-equation:
 
 \series default
  
-\begin_inset Formula $v_{t}=\left[\beta R\cdot\mathbb{E}_{t}\left[c_{t+1}^{-\sigma}\cdot\left(\frac{w_{t+1}}{v_{t+1}}\right)^{\rho-\sigma}\right]\right]^{-\frac{1}{\sigma}}$
+\begin_inset Formula $c_{t}^{-\sigma}=\beta R\cdot\mathbb{E}_{t}\left[c_{t+1}^{-\sigma}\cdot\left(\frac{w_{t+1}}{v_{t+1}}\right)^{\rho-\sigma}\right]$
 \end_inset
 
 
@@ -6575,16 +6793,16 @@ FOC:
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray}
 \text{0} & = & \frac{1}{1-\sigma}\cdot\left[\left(1-\beta\right)\cdot c_{t}^{1-\sigma}+\beta\cdot w_{t+1}^{1-\sigma}\right]^{\frac{1}{1-\sigma}-1}\nonumber \\
  &  & \cdot\left[\left(1-\sigma\right)\cdot\left(1-\beta\right)\cdot c_{t}^{-\sigma}+\beta\cdot\left(1-\sigma\right)\cdot w_{t+1}^{-\sigma}\cdot\frac{\partial w_{t+1}}{\partial m_{t+1}}\frac{\partial m_{t+1}}{\partial c_{t}}\right]\nonumber \\
- & = & v_{t}^{\sigma}\cdot\left[\left(1-\beta\right)\cdot C_{t}^{-\sigma}-\beta R\cdot W_{t+1}^{-\sigma}\cdot\frac{1}{1-\rho}\cdot\mathbb{E}_{t}\left[V_{t+1}^{1-\rho}\right]^{\frac{1}{1-\rho}-1}\cdot\frac{\partial\mathbb{E}_{t}\left[v_{t+1}^{1-\rho}\right]}{\partial m_{t+1}}\right]\nonumber \\
- & = & v_{t}^{\sigma}\cdot\left[\left(1-\beta\right)\cdot C_{t}^{-\sigma}-\beta R\cdot w_{t+1}^{\rho-\sigma}\cdot\frac{1}{1-\rho}\cdot\left(1-\rho\right)\cdot\mathbb{E}_{t}\left[v_{t+1}^{-\rho}\cdot\frac{\partial v_{t+1}}{\partial m_{t+1}}\right]\right]\nonumber \\
- & = & v_{t}^{\sigma}\cdot\left[\left(1-\beta\right)\cdot C_{t}^{-\sigma}-\beta R\cdot w_{t+1}^{\rho-\sigma}\cdot\mathbb{E}_{t}\left[v_{t+1}^{-\rho}\cdot\frac{\partial v_{t+1}}{\partial m_{t+1}}\right]\right]\label{eq:FOC}
+ & = & v_{t}^{\sigma}\cdot\left[\left(1-\beta\right)\cdot c_{t}^{-\sigma}-\beta R\cdot w_{t+1}^{-\sigma}\cdot\frac{1}{1-\rho}\cdot\mathbb{E}_{t}\left[V_{t+1}^{1-\rho}\right]^{\frac{1}{1-\rho}-1}\cdot\frac{\partial\mathbb{E}_{t}\left[v_{t+1}^{1-\rho}\right]}{\partial m_{t+1}}\right]\nonumber \\
+ & = & v_{t}^{\sigma}\cdot\left[\left(1-\beta\right)\cdot c_{t}^{-\sigma}-\beta R\cdot w_{t+1}^{\rho-\sigma}\cdot\frac{1}{1-\rho}\cdot\left(1-\rho\right)\cdot\mathbb{E}_{t}\left[v_{t+1}^{-\rho}\cdot\frac{\partial v_{t+1}}{\partial m_{t+1}}\right]\right]\nonumber \\
+ & = & v_{t}^{\sigma}\cdot\left[\left(1-\beta\right)\cdot c_{t}^{-\sigma}-\beta R\cdot w_{t+1}^{\rho-\sigma}\cdot\mathbb{E}_{t}\left[v_{t+1}^{-\rho}\cdot\frac{\partial v_{t+1}}{\partial m_{t+1}}\right]\right]\label{eq:FOC}
 \end{eqnarray}
 
 \end_inset
@@ -6618,7 +6836,7 @@ Envelope condition:
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Define the function
@@ -6756,6 +6974,46 @@ Working paper:
  Druedahl and Røpke (2025)
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Python package:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+color{DarkRed}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "EconDLSolvers"
+target "https://github.com/NumEconCopenhagen/EconDLSolvers"
+literal "false"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -6824,7 +7082,7 @@ Recursive formulation:
 
 \begin_inset Formula 
 \begin{align*}
-v_{t}(a_{t-1},b_{t-1},\nu_{t},z_{t}) & =\max_{a_{t},b_{t}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}\left(a_{t},b_{t},z_{t+1}\right)\right]\\
+v_{t}(z_{t},\nu_{t},a_{t-1},b_{t-1}) & =\max_{a_{t},b_{t}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}\left(z_{t+1},a_{t},b_{t}\right)\right]\\
  & \text{s.t.}\\
 m_{t} & =(1+r_{f})a_{t-1}+(1+r_{f}+\nu_{t})b_{t-1}+wz_{t}\\
 c_{t} & =m_{t}-a_{t}-b_{t}\\
@@ -6868,7 +7126,7 @@ Envelope conditions:
 
 \begin_inset Formula 
 \[
-\frac{\partial v_{t}}{\partial a_{t-1}}=(1+r_{f})c_{t}^{-\sigma},\,\,\,\frac{\partial v_{t}}{\partial a_{t-1}}=(1+r_{f}+\nu_{t})c_{t}^{-\sigma}
+\frac{\partial v_{t}}{\partial a_{t-1}}=(1+r_{f})c_{t}^{-\sigma},\,\,\,\frac{\partial v_{t}}{\partial b_{t-1}}=(1+r_{f}+\nu_{t})c_{t}^{-\sigma}
 \]
 
 \end_inset
@@ -6940,7 +7198,7 @@ Consumption-decision value function:
 
 \begin_inset Formula 
 \begin{align*}
-v_{t}(m_{t},z_{t}) & =\max_{c_{t}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta w_{t}\left(a_{t},z_{t}\right)\\
+v_{t}(z_{t},m_{t}) & =\max_{c_{t}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta w_{t}\left(z_{t},a_{t}\right)\\
  & \text{s.t.}\\
 a_{t} & =m_{t}-c_{t}\\
 a_{t} & \geq0
@@ -6959,7 +7217,7 @@ Portfolio-decision value function:
 
 \begin_inset Formula 
 \begin{align*}
-w_{t}\left(a_{t},z_{t}\right) & =\max_{\alpha_{t}}\beta\mathbb{E}_{t}\left[v_{t+1}\left(m_{t+1},z_{t+1}\right)\right]\\
+w_{t}\left(z_{t},a_{t}\right) & =\max_{\alpha_{t}}\beta\mathbb{E}_{t}\left[v_{t+1}\left(z_{t+1},m_{t+1}\right)\right]\\
  & \text{s.t.}\\
 m_{t+1} & =R_{t+1}a_{t}+z_{t+1}\\
 R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}
@@ -6994,7 +7252,7 @@ Solution method
 \begin_deeper
 \begin_layout Enumerate
 Solve for 
-\begin_inset Formula $\alpha_{t}^{\ast}\left(a_{t},z_{t}\right)$
+\begin_inset Formula $\alpha_{t}^{\ast}\left(z_{t},a_{t}\right)$
 \end_inset
 
  by root-finding on 
@@ -7002,9 +7260,9 @@ Solve for
 \begin{align*}
 0 & =\mathbb{E}_{t}\left[\nu_{v+1}c_{t+1}^{-\sigma}\right]\\
  & \text{s.t.}\\
-c_{t+1} & =c_{t+1}^{\ast}\left(m_{t+1},z_{t+1}\right)\\
+c_{t+1} & =c_{t+1}^{\ast}\left(z_{t+1},m_{t+1}\right)\\
 m_{t+1} & =R_{t+1}a_{t}+z_{t+1}\\
-R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}^{\ast}\left(a_{t},z_{t}\right)
+R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}^{\ast}\left(z_{t},a_{t}\right)
 \end{align*}
 
 \end_inset
@@ -7016,7 +7274,7 @@ R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}^{\ast}\left(a_{t},z_{t}\right)
 Compute
 \begin_inset Formula 
 \[
-q_{t}\left(a_{t},z_{t}\right)=\mathbb{E}_{t}\left[R_{t+1}c_{t+1}^{-\sigma}\right]
+q_{t}\left(z_{t},a_{t}\right)=\mathbb{E}_{t}\left[R_{t+1}c_{t+1}^{-\sigma}\right]
 \]
 
 \end_inset
@@ -7032,7 +7290,7 @@ Find
  using EGM
 \begin_inset Formula 
 \begin{align*}
-c_{t}\left(a_{t},z_{t}\right) & =\left(\beta q_{t}\left(a_{t},z_{t}\right)\right)^{-\frac{1}{\sigma}}\\
+c_{t}\left(a_{t},z_{t}\right) & =\left(\beta q_{t}\left(z_{t},a_{t}\right)\right)^{-\frac{1}{\sigma}}\\
 m_{t}\left(a_{t},z_{t}\right) & =c_{t}+a_{t}
 \end{align*}
 
@@ -7078,12 +7336,26 @@ vspace{-10mm}
 
 
 \begin_inset Formula 
+\[
+v_{t}(z_{t},m_{t},\iota_{t-1})=\max_{c_{t}\in[0,m_{t}]}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\underline{w}_{t}\left(z_{t},m_{t}-c_{t},\iota_{t-1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
 \begin{align*}
-v_{t}(m_{t},z_{t},\iota_{t-1}) & =\max_{c_{t}\in[0,m_{t}]}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\underline{w}_{t}\left(m_{t}-c_{t},z_{t},\iota_{t-1}\right)\\
-\\\underline{w}_{t}\left(a_{t},z_{t},\iota_{t-1}\right) & =\max_{\iota_{t}}w_{t}\left(a_{t},z_{t},\iota_{t}\right)-\kappa\boldsymbol{1}\left\{ \iota_{t}=1\land\iota_{t-1}=0\right\} \\
+\underline{w}_{t}\left(z_{t},a_{t},\iota_{t-1}\right) & =\max_{\iota_{t}}w_{t}\left(z_{t},a_{t},\iota_{t}\right)-\kappa\boldsymbol{1}\left\{ \iota_{t}=1\land\iota_{t-1}=0\right\} \\
  & \text{s.t.}\\
-\iota_{t} & \in\left\{ 1\right\} \text{ if }\iota_{t-1}=1\text{ else }\left\{ 0,1\right\} \\
-\\w_{t}\left(a_{t},z_{t},\iota_{t}\right) & =\max_{\alpha_{t}}\beta\mathbb{E}_{t}\left[v_{t+1}\left(m_{t+1},z_{t+1},\iota_{t}\right)\right]\\
+\iota_{t} & \in\left\{ 1\right\} \text{ if }\iota_{t-1}=1\text{ else }\left\{ 0,1\right\} 
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+w_{t}\left(z_{t},a_{t},\iota_{t}\right) & =\max_{\alpha_{t}}\beta\mathbb{E}_{t}\left[v_{t+1}\left(z_{t+1},m_{t+1},\iota_{t}\right)\right]\\
  & \text{s.t.}\\
 m_{t+1} & =R_{t+1}a_{t}+z_{t+1}\\
 R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}\\
@@ -7158,10 +7430,10 @@ Before participation,
 The post-decision marginal value of cash no longer needs to be monotone
 \begin_inset Formula 
 \begin{align*}
-\underline{w}_{t}\left(a_{t},z_{t},0\right) & =\mathbb{E}_{t}\left[w_{t}\left(a_{t},z_{t},\iota_{t}\right)-\kappa\boldsymbol{1}\left\{ \iota_{t}=1\right\} \right]\\
-q_{t}\left(a_{t},z_{t},\iota_{t}\right) & =\mathbb{E}_{t}\left[R_{t+1}c_{t+1}^{-\sigma}\right]\\
+\underline{w}_{t}\left(z_{t},a_{t},0\right) & =\mathbb{E}_{t}\left[w_{t}\left(z_{t},a_{t},\iota_{t}\right)-\kappa\boldsymbol{1}\left\{ \iota_{t}=1\right\} \right]\\
+q_{t}\left(z_{t},a_{t},\iota_{t}\right) & =\mathbb{E}_{t}\left[R_{t+1}c_{t+1}^{-\sigma}\right]\\
 \iota_{t} & =\begin{cases}
-1 & \text{if }w_{t}\left(a_{t},z_{t},1\right)-\kappa>w_{t}\left(a_{t},z_{t},0\right)\\
+1 & \text{if }w_{t}\left(z_{t},a_{t},1\right)-\kappa>w_{t}\left(z_{t},a_{t},0\right)\\
 0 & \text{else}
 \end{cases}
 \end{align*}
@@ -7226,10 +7498,6 @@ This lecture:
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate
-Introduction to course
-\end_layout
-
 \begin_layout Enumerate
 Consumption-saving models
 \end_layout

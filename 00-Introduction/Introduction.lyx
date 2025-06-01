@@ -125,6 +125,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize 10
 \spacing single
 \use_hyperref false
@@ -1989,7 +1991,7 @@ Best with numbers are around 1 (underflow and overflow)
 Division,
  exp,
  log etc.
- (costly) approximations 
+ are (costly) approximations 
 \end_layout
 
 \begin_layout Itemize
@@ -2751,7 +2753,7 @@ Originally:
 
 \begin_layout Enumerate
 Now:
- More cores per CPU
+ More cores per CPU / per computer / per dollar
 \end_layout
 
 \end_deeper

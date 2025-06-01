@@ -95,6 +95,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize 10
 \spacing single
 \use_hyperref false
@@ -1569,7 +1571,7 @@ Firms:
 \begin_layout Enumerate
 
 \series bold
-Zero-profit mutual funds:
+Mutual funds:
 
 \series default
  Own capital and rent it to firms,
@@ -3521,7 +3523,10 @@ Young (2010),
 \begin_inset Newline newline
 \end_inset
 
-Ocampo and Robinson (2022)
+Ocampo and Robinson (2024),
+ Bayer et.
+ al.
+ (2024) 
 \begin_inset ERT
 status open
 
@@ -5073,6 +5078,19 @@ Paper:
 \begin_layout Itemize
 
 \series bold
+Central observation:
+
+\series default
+ Wealth inequality 
+\begin_inset Formula $>$
+\end_inset
+
+ income inequality
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
 Drivers:
 \end_layout
 
@@ -5112,14 +5130,11 @@ Notebook:
 \begin_layout Itemize
 
 \series bold
-Central observation:
+Discussion:
 
 \series default
- Wealth inequality 
-\begin_inset Formula $>$
-\end_inset
-
- income inequality
+ Is non-homothetic preferences needed for right tail of the wealth distribution?
+ Why do the rich not dis-save?
 \end_layout
 
 \end_deeper

@@ -95,6 +95,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize 10
 \spacing single
 \use_hyperref false
@@ -567,18 +569,6 @@ status open
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-(except stuff on 
-\emph on
-linearized solution
-\emph default
- and 
-\emph on
-simulation
-\emph default
-)
 \end_layout
 
 \end_deeper
@@ -686,8 +676,7 @@ Ramsey
 status open
 
 \begin_layout Plain Layout
-Ramsey:
- Summary
+Summary
 \end_layout
 
 \end_inset
@@ -767,8 +756,7 @@ C_{ss}^{hh} & =(1-\delta)K_{ss}+\Gamma_{ss}K_{ss}^{\alpha}-K_{ss}
 status open
 
 \begin_layout Plain Layout
-Ramsey:
- As an equation system
+As an equation system
 \end_layout
 
 \end_inset
@@ -1065,6 +1053,471 @@ Notebook:
  
 \emph on
 Ramsey.ipynb
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intermezzo:
+ Newton's method I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Simple example:
+
+\series default
+ Solve 1 eq.
+ with 1 unknown (x is a scalar):
+\begin_inset Formula 
+\[
+f\left(x\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+How to find
+\series default
+ x?
+\begin_inset Newline newline
+\end_inset
+
+First-order Taylor approximation around current guess 
+\begin_inset Formula $x^{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+f\left(x\right)\approx f\left(x^{i}\right)+f'\left(x^{i}\right)\left(x-x^{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Set 
+\begin_inset Formula $f\left(x\right)=0$
+\end_inset
+
+ and solve for x to get:
+\begin_inset Formula 
+\[
+x=x^{i}-\frac{f\left(x^{i}\right)}{f'\left(x^{i}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intermezzo:
+ Newton's method II
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Newton's method:
+ 
+\series default
+Given initial guess 
+\begin_inset Formula $x^{0}$
+\end_inset
+
+,
+ update guess for 
+\begin_inset Formula $x$
+\end_inset
+
+ from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $i+1$
+\end_inset
+
+ as:
+\begin_inset Formula 
+\[
+x^{i+1}=x^{i}-\frac{f\left(x^{i}\right)}{f'\left(x^{i}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Continue until 
+\begin_inset Formula $\left|f\left(x^{i}\right)\right|<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Derivative:
+
+\series default
+ 
+\begin_inset Formula $f'\left(x^{i}\right)$
+\end_inset
+
+,
+ use numerical approximation for small 
+\begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f'\left(x^{i}\right)\approx\frac{f\left(x^{i}+h\right)-f\left(x^{i}\right)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+How well does it work?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ is linear this solves 
+\begin_inset Formula $f\left(x\right)=0$
+\end_inset
+
+ in 1 iteration
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ is non-linear we typically need more iterations,
+ but works well if initial guess is within basis of attraction
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intermezzo:
+ Multivariate Newton's method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Vector-valued,
+ multivariate functions
+\series default
+ 
+\begin_inset Formula $\left[f_{1}\left(x_{1,}x_{2}\right),f_{2}\left(x_{1,}x_{2}\right)\right]'=\boldsymbol{f}\left(\boldsymbol{x}\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $\boldsymbol{x}=\left(x_{1,}x_{2}\right)'$
+\end_inset
+
+ :
+\begin_inset Formula 
+\[
+\boldsymbol{x}^{i+1}=\boldsymbol{x}^{i}-\boldsymbol{J}\left(\boldsymbol{x}^{i}\right)^{-1}\boldsymbol{f}\left(\boldsymbol{x}^{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[]
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $\boldsymbol{J}\left(\boldsymbol{x}^{i}\right)$
+\end_inset
+
+ is the 
+\emph on
+Jacobian 
+\emph default
+of
+\emph on
+ 
+\begin_inset Formula $f\left(\boldsymbol{x}\right)$
+\end_inset
+
+ 
+\emph default
+w.r.t 
+\begin_inset Formula $\boldsymbol{x}^{i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\boldsymbol{J}\left(\boldsymbol{x}_{i}\right)=\left[\begin{array}{cc}
+\frac{\partial f_{1}}{\partial x_{1}^{i}} & \frac{\partial f_{1}}{\partial x_{2}^{i}}\\
+\frac{\partial f_{2}}{\partial x_{1}^{i}} & \frac{\partial f_{2}}{\partial x_{2}^{i}}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Otherwise the same as before
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intermezzo:
+ Broyden's method I
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Newton's method
+\series default
+ updates Jacobian 
+\begin_inset Formula $\boldsymbol{J}$
+\end_inset
+
+ in 
+\series bold
+every iteration
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+- often the computational bottleneck
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Broyden's method:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $J$
+\end_inset
+
+ at the initial guess
+\end_layout
+
+\begin_layout Enumerate
+Each iteration use the (linear) update
+\begin_inset Formula 
+\[
+\boldsymbol{J}^{i-1}+\frac{(\boldsymbol{f}^{i}-\boldsymbol{f}^{i-1})-\boldsymbol{J}^{i-1}(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1})}{\left|\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right|_{2}}\left(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right)^{\prime}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Intermezzo:
+ Broyden's method II
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Guess 
+\begin_inset Formula $\boldsymbol{x}^{0}$
+\end_inset
+
+ and set 
+\begin_inset Formula $i=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calculate the Jacobian at the initial guess,
+\begin_inset Formula $\boldsymbol{J}_{\boldsymbol{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\boldsymbol{f}^{i}=\boldsymbol{f}(\boldsymbol{x}^{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Stop if 
+\begin_inset Formula $\left|\boldsymbol{f}^{i}\right|$
+\end_inset
+
+ below tolerance 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calculate Jacobian by 
+\begin_inset Formula $\boldsymbol{J}^{i}=\begin{cases}
+\boldsymbol{J}_{\boldsymbol{0}} & \text{if }i=0\\
+\boldsymbol{J}^{i-1}+\frac{(\boldsymbol{f}^{i}-\boldsymbol{f}^{i-1})-\boldsymbol{J}^{i-1}(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1})}{\left|\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right|_{2}}\left(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right)^{\prime} & \text{if }i>0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Update guess by 
+\begin_inset Formula $\boldsymbol{x}^{i+1}=\boldsymbol{x}^{i}-\left(\boldsymbol{J}^{i}\right)^{-1}\boldsymbol{f}^{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Increment 
+\begin_inset Formula $i$
+\end_inset
+
+ and return to step 3
 \end_layout
 
 \end_deeper
@@ -2576,7 +3029,7 @@ status open
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
- detailed discussed later today
+ details discussed later
 \end_layout
 
 \end_deeper
@@ -3824,7 +4277,11 @@ Computation:
 Note:
 
 \series default
- This is not an approximation
+ This is 
+\emph on
+not
+\emph default
+ an approximation
 \end_layout
 
 \end_deeper
@@ -4180,11 +4637,11 @@ Finding the stationary equilibrium
 Trick:
 
 \series default
- 
+ Howard improvements
 \emph on
-(Modified) policy function iteration
+ (Modified policy function iteration
 \emph default
- (Howard improvement)
+)
 \end_layout
 
 \begin_layout Itemize
@@ -4199,7 +4656,7 @@ Idea:
 \begin_deeper
 \begin_layout Standard
 See e.g.
- Rendahl (2022) and Eslami and Phelan (2023)
+ Eslami and Phelan (2023) and Rendahl (2024)
 \end_layout
 
 \end_deeper
@@ -4256,6 +4713,49 @@ status open
  toolbox from Auclert et.
  al.
  (2021) has some methods for speeding this up not available in GEModelTools
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Separate computation of non-household Jacobians
+\end_layout
+
+\begin_layout Enumerate
+Structured sparsity of non-household Jacobians
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+GEModelTools:
+
+\series default
+ Just numerical differentiation of 
+\begin_inset Formula $\boldsymbol{H}$
+\end_inset
+
+ using the household Jacobians computed with the fake news algorithm
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Complex models 
+\series default
+(e.g.
+ no EGM)
+\series bold
+:
+
+\series default
+ Solving backwards is much more costly than simulating forwards 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\emph on
+the second part of the fake news algorithm is not important
 \end_layout
 
 \end_deeper
@@ -4649,7 +5149,7 @@ State space form
 
  perfect foresight wrt.
  future agg.
- variables in 
+ variables as in 
 \emph on
 sequence-space
 \end_layout
@@ -5773,6 +6273,22 @@ This lecture:
 \begin_deeper
 \begin_layout Enumerate
 The concept of a transition path
+\end_layout
+
+\begin_layout Enumerate
+Decomposition of GE responses
+\end_layout
+
+\begin_layout Enumerate
+DAGs
+\end_layout
+
+\begin_layout Enumerate
+Equivalence of sequence space and linearization
+\end_layout
+
+\begin_layout Enumerate
+Simulation 
 \end_layout
 
 \begin_layout Enumerate

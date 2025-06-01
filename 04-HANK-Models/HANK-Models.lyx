@@ -95,6 +95,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize 10
 \spacing single
 \use_hyperref false
@@ -5150,7 +5152,7 @@ complexity
 status open
 
 \begin_layout Plain Layout
-iMPC matrix
+Illustration
 \end_layout
 
 \end_inset
@@ -5160,19 +5162,111 @@ iMPC matrix
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset ERT
+Writing out the IKC:
+\begin_inset Formula 
+\[
+\begin{aligned}\begin{bmatrix}dY_{0}\\
+dY_{1}\\
+dY_{2}\\
+\vdots
+\end{bmatrix} & =\begin{bmatrix}dG_{0}\\
+dG_{1}\\
+dG_{2}\\
+\vdots
+\end{bmatrix}+\begin{bmatrix}\frac{\partial C_{0}^{hh}}{\partial Z_{0}} & \frac{\partial C_{0}^{hh}}{\partial Z_{1}} & \frac{\partial C_{0}^{hh}}{\partial Z_{2}} & \cdots\\
+\frac{\partial C_{1}^{hh}}{\partial Z_{0}} & \frac{\partial C_{1}^{hh}}{\partial Z_{1}} & \frac{\partial C_{1}^{hh}}{\partial Z_{2}} & \cdots\\
+\frac{\partial C_{2}^{hh}}{\partial Z_{0}} & \frac{\partial C_{2}^{hh}}{\partial Z_{1}} & \frac{\partial C_{2}^{hh}}{\partial Z_{2}} & \cdots\\
+\vdots & \vdots & \vdots & \ddots
+\end{bmatrix}\left(\begin{bmatrix}dY_{0}\\
+dY_{1}\\
+dY_{2}\\
+\vdots
+\end{bmatrix}-\begin{bmatrix}dT_{0}\\
+dT_{1}\\
+dT_{2}\\
+\vdots
+\end{bmatrix}\right)\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-vspace{-5mm}
+iMPC matrix
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{M}$
+\end_inset
+
+ is the Jacobian of aggregate 
+\begin_inset Formula $C$
+\end_inset
+
+ w.r.t (post-tax) labor income 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Column 
+\begin_inset Formula $s$
+\end_inset
+
+:
+ Response of 
+\begin_inset Formula $C$
+\end_inset
+
+ at different dates to unit change in 
+\begin_inset Formula $Z$
+\end_inset
+
+ at date 
+\begin_inset Formula $s$
+\end_inset
+
+ (IRF)
+\end_layout
+
+\begin_layout Itemize
+Row 
+\begin_inset Formula $s$
+\end_inset
+
+:
+ Change in 
+\begin_inset Formula $C$
+\end_inset
+
+ at date 
+\begin_inset Formula $s$
+\end_inset
+
+ to change in income 
+\begin_inset Formula $Z$
+\end_inset
+
+ at different dates 
 \begin_inset Formula 
 \[
 \boldsymbol{M}=\left[\begin{array}{ccc}
@@ -5188,6 +5282,11 @@ vspace{-5mm}
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -6117,828 +6216,6 @@ Why are
 \end_inset
 
  different?
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-HANK-SAM
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Household problem
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\size footnotesize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-5mm}
-\end_layout
-
-\end_inset
-
-
-\size default
-
-\begin_inset Formula 
-\begin{align*}
-v_{t}(\beta_{i},u_{it},a_{it-1})= & \max_{c_{it},a_{it}}\frac{c_{it}^{1-\sigma}}{1-\sigma}+\beta_{i}\mathbb{E}_{t}\left[v_{t+1}\left(\beta_{i},u_{it+1},a_{it}\right)\right]\\
-\text{s.t. } & a_{it}+c_{it}=(1+r_{t})a_{it-1}+(1-\tau_{t})y_{t}(u_{it})+\text{div}_{t}+\text{transfer}_{t}\\
- & a_{it}\geq0
-\end{align*}
-
-\end_inset
-
-
-\size footnotesize
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-7mm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Dividends and government transfers:
-
-\series default
- 
-\begin_inset Formula $\text{div}_{t}$
-\end_inset
-
- and 
-\begin_inset Formula $\text{transfer}_{t}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Real wage
-\series default
-:
- 
-\begin_inset Formula $w_{t}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Income tax:
- 
-\series default
-
-\begin_inset Formula $\tau_{t}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Separation rate
-\series default
- for employed:
- 
-\begin_inset Formula $\delta_{t}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Job-finding rate 
-\series default
-for unemployed:
- 
-\begin_inset Formula $\lambda_{t}^{u,s}s(u_{it-1})$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\size footnotesize
-(where 
-\begin_inset Formula $s(u_{it-1})$
-\end_inset
-
- is exogenous search effectiveness)
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-US-style duration-dependent 
-\series bold
-UI system:
-\series default
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{1mm}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\size footnotesize
-a) High replacement rate
-\series bold
- 
-\begin_inset Formula $\overline{\phi}$
-\end_inset
-
-,
- 
-\series default
-first 
-\begin_inset Formula $\overline{u}$
-\end_inset
-
- months
-\end_layout
-
-\begin_layout Standard
-
-\size footnotesize
-b) Low replacement rate 
-\series bold
-
-\begin_inset Formula $\underline{\phi}$
-\end_inset
-
-,
-
-\series default
- after 
-\begin_inset Formula $\overline{u}$
-\end_inset
-
- months
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Income process
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Income
-\series default
- is
-\begin_inset Formula 
-\begin{align*}
-y_{it}(u_{it}) & =w_{ss}\cdot\begin{cases}
-1 & \text{if }u_{it}=0\\
-\overline{\phi}\text{UI}_{it}+(1-\text{UI}_{it})\underline{\phi} & \text{else}
-\end{cases}
-\end{align*}
-
-\end_inset
-
-where share of the month with UI is
-\begin_inset Formula 
-\begin{align*}
-\text{UI}_{it} & =\begin{cases}
-0 & \text{if }u_{it}=0\\
-1 & \text{else }\text{if }u_{it}<\overline{u}\\
-0 & \text{else if }u_{it}>\overline{u}+1\\
-\overline{u}-\left(u_{it}-1\right) & \text{else}
-\end{cases}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Note:
-
-\series default
- 
-\emph on
-Hereby 
-\begin_inset Formula $\overline{u}$
-\end_inset
-
- becomes a continuous variables
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Transition probabilities
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Beginning-of-period value function:
-\series default
-
-\begin_inset Formula 
-\[
-\underline{v}_{t}\left(\beta_{i},u_{it-1},a_{it-1}\right)=\mathbb{E}\left[v_{t}(\beta_{i},u_{it},a_{it-1})\,|\,u_{it-1},a_{it-1}\right]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Grids:
-
-\series default
- 
-\begin_inset Formula $u_{it}\in\{0,1,\dots,\#_{u}-1\}$
-\end_inset
-
- for 
-\begin_inset Formula $\#_{u}-1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Workers
-\series default
- with 
-\begin_inset Formula $u_{it-1}=0$
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{align*}
-u_{it} & =\begin{cases}
-0 & \text{with }1-\delta_{t}\\
-1 & \text{with }\delta_{t}
-\end{cases}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Unemployed
-\series default
- with 
-\begin_inset Formula $u_{it-1}=1$
-\end_inset
-
-:
-\begin_inset Formula 
-\begin{align*}
-u_{it} & =\begin{cases}
-0 & \text{with \lambda_{t}^{u,s}s(u_{it-1})}\\
-\min\left\{ u_{it-1}+1,\#_{u}-1\right\}  & \text{with }1-\lambda_{t}^{u,s}s(u_{it-1})
-\end{cases}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status collapsed
-
-\begin_layout Plain Layout
-Hiring and firing
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Job value:
-\series default
-\size small
-
-\begin_inset Formula 
-\begin{align*}
-V_{t}^{j} & =p_{t}^{X}Z_{t}-w_{ss}+\beta^{\text{firm}}\mathbb{E}_{t}\left[(1-\delta_{ss})V_{t+1}^{j}\right]
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Vacancy value:
- 
-\series default
-\size small
-
-\begin_inset Formula 
-\begin{align*}
-V_{t}^{v} & =-\kappa+\lambda_{t}^{v}V_{t}^{j}+(1-\lambda_{t}^{v})(1-\delta_{ss})\beta^{\text{firm}}\mathbb{E}_{t}\left[V_{t+1}^{v}\right]
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Free entry 
-\series default
-implies 
-\begin_inset Formula 
-\[
-V_{t}^{v}=0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status collapsed
-
-\begin_layout Plain Layout
-Labor market dynamics
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Labor market tightness 
-\series default
-is given by
-\begin_inset Formula 
-\[
-\theta_{t}=\frac{v_{t}}{S_{t}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Cobb-Douglas matching function 
-\series default
-implies:
- 
-\begin_inset Formula 
-\begin{align*}
-\lambda_{t}^{v} & =A\theta_{t}^{-\alpha}\\
-\lambda_{t}^{u,s} & =A\theta_{t}^{1-\alpha}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Law of motion for unemployment:
-\series default
-
-\begin_inset Formula 
-\[
-u_{t}=u_{t-1}+\delta_{t}(1-u_{t-1})-\lambda_{t}^{u,s}S_{t}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status collapsed
-
-\begin_layout Plain Layout
-Standard New Keynesian block
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Intermediate goods price:
-
-\series default
- 
-\begin_inset Formula $p_{t}^{X}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Dixit-Stiglitz 
-\series bold
-demand curve
-\series default
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
-
-\series bold
- Phillips curve 
-\series default
-relating marginal cost,
- 
-\begin_inset Formula $MC_{t}=p_{t}^{x}$
-\end_inset
-
-,
- and 
-\series bold
-final goods price inflation
-\series default
-,
- 
-\begin_inset Formula $\Pi_{t}=P_{t}/P_{t-1},$
-\end_inset
-
-
-\begin_inset Formula 
-\[
-1-\epsilon+\epsilon p_{t}^{x}=\phi\pi_{t}(1+\pi_{t})-\phi\beta^{\text{firm}}\mathbb{E}_{t}\left[\pi_{t+1}(1+\pi_{t+1})\frac{Y_{t+1}}{Y_{t}}\right]
-\]
-
-\end_inset
-
-with output 
-\begin_inset Formula $Y_{t}=Z_{t}(1-u_{t})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Flexible price limit:
-
-\series default
- 
-\begin_inset Formula $\phi\rightarrow0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Taylor rule:
-\series default
-
-\begin_inset Formula 
-\begin{eqnarray*}
-1+i_{t} & = & \left(1+i_{ss}\right)\left(\frac{1+\pi_{t}}{1+\pi_{ss}}\right)^{\delta_{\pi}}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status collapsed
-
-\begin_layout Plain Layout
-Government
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Unemployment insurance:
-
-\series default
- 
-\begin_inset Formula $\Phi_{t}=w_{ss}\left(\overline{\phi}\text{UI}_{t}^{hh}+\underline{\phi}\left(u_{t}-\text{UI}_{t}^{hh}\right)\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Total expenses:
-
-\series default
- 
-\begin_inset Formula $X_{t}=\Phi_{t}+G_{t}+\text{transfer}_{t}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Total taxes:
-
-\series default
- 
-\begin_inset Formula $\text{taxes}_{t}=\tau_{t}\left(\Phi_{t}+w_{ss}(1-u_{t})\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Government budget
-\series default
- is
-\begin_inset Formula 
-\[
-q_{t}B_{t}=(1+q_{t}\delta_{q})B_{t-1}+X_{t}-\text{taxes}_{t}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Tax rule:
-\end_layout
-
-\begin_layout Standard
-
-\size small
-\begin_inset Formula 
-\begin{align*}
-\tilde{\tau}_{t} & =\frac{\left(1+q_{t}\delta_{q}\right)B_{t-1}+X_{t}-q_{ss}B_{ss}}{\Phi_{t}+w_{ss}(1-u_{t})}\\
-\tau_{t} & =\omega\tilde{\tau}_{t}+(1-\omega)\tau_{ss}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status collapsed
-
-\begin_layout Plain Layout
-Equilibrium
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-
-\series bold
-Financial markets:
-\series default
-
-\begin_inset Formula 
-\begin{align*}
-\frac{1+\delta_{q}q_{t+1}}{q_{t}} & =\frac{1+i_{t}}{1+\pi_{t+1}}\\
-1+r_{t} & =\begin{cases}
-\frac{(1+\delta_{q}q_{0})B_{-1}}{A_{-1}^{hh}} & \text{if }t=0\\
-\frac{1+i_{t-1}}{1+\pi_{t}} & \text{else}
-\end{cases}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Market clearing:
-\series default
-
-\begin_inset Formula 
-\begin{align*}
-A_{t}^{hh} & =q_{t}B_{t}\\
-Y_{t} & =C_{t}^{hh}+G_{t}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status collapsed
-
-\begin_layout Plain Layout
-Code
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Notebook:
-
-\series default
- GEModelToolsNotebooks/HANK-sticky-wages
 \end_layout
 
 \end_deeper
