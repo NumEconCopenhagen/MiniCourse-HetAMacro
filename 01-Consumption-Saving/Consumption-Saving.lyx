@@ -2188,29 +2188,13 @@ Unconstrained:
 Sufficiency:
  
 \series default
-From concavity of value function
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-FOC:
- 
-\begin_inset Formula $c_{t}^{-\sigma}=\beta\mathbb{E}_{t}\left[v_{a}(z_{t+1},a_{t})\right]$
+Harder (
+\begin_inset Formula $\sim$
 \end_inset
 
-
+ convexity of the choice set)
 \end_layout
 
-\begin_layout Standard
-Envelope:
- 
-\begin_inset Formula $v_{a}(z_{t},a_{t-1})=Rc_{t}^{-\sigma}$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -2515,42 +2499,16 @@ Value function,
 \emph on
 recursively
 \emph default
- from
+ from 
+\begin_inset Formula $v_{T}(\bullet)=0$
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align*}
 v_{t}(z_{t},a_{t-1}) & =\max_{c_{t}}u(c_{t})+\beta\mathbb{E}_{t}[v_{t+1}(z_{t+1},a_{t})]\\
  & \text{s.t. }a_{t}=(1+r)a_{t-1}+wz_{t}-c_{t}\geq\underline{a}
 \end{align*}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-1mm}
-\end_layout
-
-\end_inset
-
-with 
-\begin_inset Formula $v_{T}(\bullet)=0$
-\end_inset
-
-.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{2mm}
-\end_layout
 
 \end_inset
 
@@ -2580,6 +2538,36 @@ c_{t}^{*}(z_{t},a_{t-1}) & =\arg\max_{c_{t}}u(c_{t})+\beta\mathbb{E}_{t}[v_{t+1}
 
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+Euler-equation:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+FOC:
+ 
+\begin_inset Formula $c_{t}^{-\sigma}=\beta\mathbb{E}_{t}\left[v_{t,a}(z_{t+1},a_{t})\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Envelope:
+ 
+\begin_inset Formula $v_{t,a}(z_{t},a_{t-1})=(1+r)c_{t}^{-\sigma}$
+\end_inset
+
+ (fix 
+\begin_inset Formula $a_{t}$
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -3439,7 +3427,7 @@ Maximize value-of-choice:
 \begin_inset Formula 
 \begin{align*}
 v_{t}(z^{i_{z}},a^{i_{a-}}) & =\max_{c_{t}}v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t})\\
- & \text{with }c_{t}\in[0,(1+r)a^{i_{a-}}+wz^{i_{z}}+\underline{a}]
+ & \text{with }c_{t}\in[0,(1+r)a^{i_{a-}}+wz^{i_{z}}+\chi_{t}+\underline{a}]
 \end{align*}
 
 \end_inset
@@ -3460,8 +3448,8 @@ vspace{-7mm}
 
 \begin_inset Formula 
 \begin{align*}
-v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t}) & =u(c_{t})+\sum_{i_{z+1}=0}^{\#_{z}-1}\pi\left(i_{z},i_{z+1}\right)\breve{v}_{t+1}(z^{i_{z}},a_{t})\\
- & \text{with }a_{t}=(1+r)a^{i_{a-}}+wz^{i_{z}}-c_{t}
+v_{t}(z^{i_{z}},a^{i_{a-}}|c_{t}) & =u(c_{t})+\beta\sum_{i_{z+1}=0}^{\#_{z}-1}\pi\left(i_{z},i_{z+1}\right)\breve{v}_{t+1}(z^{i_{z}},a_{t})\\
+ & \text{with }a_{t}=(1+r)a^{i_{a-}}+wz^{i_{z}}+\chi_{t}-c_{t}
 \end{align*}
 
 \end_inset
@@ -4520,7 +4508,7 @@ vspace{-2mm}
 \begin{align*}
 v_{t}(\text{own}_{t-1},a_{t-1}) & =\max_{c_{t},\text{sell}_{t}\in\{0,1\}}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[v_{t+1}(\text{own}_{t},a_{t})\right]\\
 \text{s.t.\,\,\,}\text{own}_{t} & =(1-\text{sell}_{t})\text{own}_{t-1}\\
-m_{t} & =a_{t-1}+\text{sell}_{t}\text{own}_{t-1}(1-\gamma)k\\
+m_{t} & =a_{t-1}+y_{t}+\text{sell}_{t}\text{own}_{t-1}(1-\gamma)k\\
 a_{t} & =m_{t}-c_{t}\\
 a_{t} & \geq0
 \end{align*}
@@ -4537,7 +4525,7 @@ Terminal period:
 
 \series default
  
-\begin_inset Formula $v_{T}(\text{own}_{T-1},a_{T-1})=\frac{\left(a_{T-1}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
+\begin_inset Formula $v_{T}(\text{own}_{T-1},a_{T-1})=\frac{\left(a_{T-1}+y_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}$
 \end_inset
 
 
@@ -4677,66 +4665,6 @@ v_{t+1}(\text{own}_{t},m_{t+1}) & \text{if}\text{ own}_{t}=0\text{ or }t=T-1\\
 \underline{v}_{t+1}(m_{t+1}) & \text{\text{if}}\text{ own}_{t}=1\text{ and }t<T-1
 \end{cases}\right]\\
  & \,\,\,m_{t+1}=a_{t}+y_{t+1}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Nesting
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-Post-decision value function:
-
-\series default
- 
-\begin_inset Formula 
-\begin{align*}
-w_{t}(\text{own}_{t},a_{t}) & =\mathbb{E}_{t}\left[\begin{cases}
-v_{t+1}(\text{own}_{t},m_{t+1}) & \text{if}\text{ own}_{t}=0\text{ or }t=T-1\\
-\overline{v}_{t+1}(m_{t+1}) & \text{\text{if}}\text{ own}_{t}=1\text{ and }t<T-1
-\end{cases}\right]\\
- & \,\,\,m_{t+1}=a_{t}+y_{t+1}\\
- & \text{where }v_{T}(\text{own}_{T-1},m_{T})=\frac{\left(m_{T}+\text{own}_{T-1}k\right)^{1-\sigma}}{1-\sigma}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Re-written Bellman:
-\series default
-
-\begin_inset Formula 
-\begin{align*}
-v_{t}(\text{own}_{t},m_{t}) & =\max_{c_{t}\in[0,m_{t}]}\frac{c_{t}^{1-\sigma}}{1-\sigma}+\beta w_{t}(\text{own}_{t},m_{t}-c_{t})
 \end{align*}
 
 \end_inset
@@ -4932,7 +4860,7 @@ Step 1
 \series default
 .
  Use formulas for 
-\begin_inset Formula $v_{T}(\bullet)$
+\begin_inset Formula $v_{T-1}(\bullet)$
 \end_inset
 
  and 
@@ -5644,7 +5572,7 @@ Taste shocks:
  2017)
 \begin_inset Formula 
 \begin{align*}
-\overline{v}_{t}(m_{t}) & =\max\left\{ v_{t}(0,m_{t}^{\text{sell}})+\sigma_{\varepsilon}\varepsilon(0),v_{t}(1,m_{t})+\sigma_{\varepsilon}\varepsilon(1)\right\} \\
+\underline{v}_{t}(m_{t}) & =\max\left\{ v_{t}(0,m_{t}^{\text{sell}})+\sigma_{\varepsilon}\varepsilon(0),v_{t}(1,m_{t})+\sigma_{\varepsilon}\varepsilon(1)\right\} \\
  & \,\,\,\varepsilon(x)\sim\text{Extreme value}
 \end{align*}
 
@@ -5661,7 +5589,7 @@ Logit-formula:
 
 \begin_inset Formula 
 \begin{align*}
-\overline{v}_{t}(m_{t}) & =\sigma_{\varepsilon}\log\left(\exp\frac{v_{t}(0,m_{t}^{\text{sell}})}{\sigma_{\varepsilon}}+\exp\frac{v_{t}(1,m_{t})}{\sigma_{\varepsilon}}\right)
+\underline{v}_{t}(m_{t}) & =\sigma_{\varepsilon}\log\left(\exp\frac{v_{t}(0,m_{t}^{\text{sell}})}{\sigma_{\varepsilon}}+\exp\frac{v_{t}(1,m_{t})}{\sigma_{\varepsilon}}\right)
 \end{align*}
 
 \end_inset
@@ -5875,7 +5803,7 @@ Derive
 \end_inset
 
  and 
-\begin_inset Formula $\pi_{i_{\xi-},i_{\xi}}$
+\begin_inset Formula $\pi_{i_{\xi}}$
 \end_inset
 
  given 
@@ -6175,7 +6103,7 @@ Define normalized variables:
 \end_inset
 
  and 
-\begin_inset Formula $\boldsymbol{v}_{t}(\boldsymbol{m}_{t})=\frac{v_{t}(\tilde{z}_{t},m_{t})}{\tilde{z}_{t}^{1-\rho}}$
+\begin_inset Formula $\boldsymbol{v}_{t}(\boldsymbol{m}_{t})=\frac{v_{t}(\tilde{z}_{t},m_{t})}{\tilde{z}_{t}^{1-\sigma}}$
 \end_inset
 
 
@@ -6202,7 +6130,7 @@ vspace{-1mm}
 
 \begin_inset Formula 
 \begin{align*}
-\boldsymbol{v}_{t}(\boldsymbol{m}_{t}) & =\max_{\boldsymbol{c}_{t}}\frac{\boldsymbol{c}_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[\psi_{t+1}^{1-\rho}\boldsymbol{v}_{t+1}(\boldsymbol{m}_{t+1})\right]\\
+\boldsymbol{v}_{t}(\boldsymbol{m}_{t}) & =\max_{\boldsymbol{c}_{t}}\frac{\boldsymbol{c}_{t}^{1-\sigma}}{1-\sigma}+\beta\mathbb{E}_{t}\left[\psi_{t+1}^{1-\sigma}\boldsymbol{v}_{t+1}(\boldsymbol{m}_{t+1})\right]\\
 \text{s.t.\,\,\,\,\,}\boldsymbol{a}_{t} & =\boldsymbol{m}_{t}-\boldsymbol{c}_{t}\\
 \boldsymbol{m}_{t+1} & =\frac{1+r}{\psi_{t+1}}\boldsymbol{a}_{t}+w\xi_{t+1}\\
 \boldsymbol{a}_{t} & \geq-wb
@@ -7217,7 +7145,7 @@ Portfolio-decision value function:
 
 \begin_inset Formula 
 \begin{align*}
-w_{t}\left(z_{t},a_{t}\right) & =\max_{\alpha_{t}}\beta\mathbb{E}_{t}\left[v_{t+1}\left(z_{t+1},m_{t+1}\right)\right]\\
+w_{t}\left(z_{t},a_{t}\right) & =\max_{\alpha_{t}\in[0,1]}\mathbb{E}_{t}\left[v_{t+1}\left(z_{t+1},m_{t+1}\right)\right]\\
  & \text{s.t.}\\
 m_{t+1} & =R_{t+1}a_{t}+z_{t+1}\\
 R_{t+1} & =1+r_{f}+\nu_{t+1}\alpha_{t}
@@ -7329,7 +7257,7 @@ status open
 
 
 \backslash
-vspace{-10mm}
+vspace{-5mm}
 \end_layout
 
 \end_inset
@@ -7502,14 +7430,41 @@ This lecture:
 Consumption-saving models
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(intertemporal MPCs,
+ precautionary-saving,
+ buffer-stock target,
+ wealthy hands-to-mouth)
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Basic numerical dynamic programming
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(discretization,
+ numerical integration,
+ interpolation,
+ VFI)
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 EGM and NEGM
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+(time iteration,
+ invert Euler-equation,
+ nesting,
+ upper envelope)
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Itemize
 
@@ -7529,7 +7484,7 @@ You should:
 
 \begin_deeper
 \begin_layout Enumerate
-Study the code
+Study the code from this lecture
 \end_layout
 
 \begin_layout Enumerate
