@@ -1417,7 +1417,7 @@ Calculate
 Each iteration use the (linear) update
 \begin_inset Formula 
 \[
-\boldsymbol{J}^{i-1}+\frac{(\boldsymbol{f}^{i}-\boldsymbol{f}^{i-1})-\boldsymbol{J}^{i-1}(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1})}{\left|\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right|_{2}}\left(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right)^{\prime}
+\boldsymbol{J}^{i}=\boldsymbol{J}^{i-1}+\frac{(\boldsymbol{f}^{i}-\boldsymbol{f}^{i-1})-\boldsymbol{J}^{i-1}(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1})}{\left|\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right|_{2}}\left(\boldsymbol{x}^{i}-\boldsymbol{x}^{i-1}\right)^{\prime}
 \]
 
 \end_inset
@@ -1843,7 +1843,7 @@ vspace{-2mm}
 \begin{align*}
 v_{0}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =\max_{\{c_{it}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta_{i}^{t}u(c_{it})\\
  & \text{s.t.}\\
-\ell_{it} & =z_{it}\\
+\ell_{it} & =z_{it},\,\,\,\mathbb{E}\left[\phi_{i}\right]=1\\
 a_{it} & =(1+r_{t})a_{it-1}+w_{t}\phi_{i}\ell_{it}-c_{it}+\Pi_{t}\\
 \log z_{it+1} & =\rho_{z}\log z_{it}+\psi_{it+1},\,\,\,\psi_{it}\sim\mathcal{N}(\mu_{\psi},\sigma_{\psi}),\,\,\,\mathbb{E}[z_{it}]=1\\
 a_{it} & \geq0
@@ -6276,6 +6276,11 @@ The concept of a transition path
 \end_layout
 
 \begin_layout Enumerate
+Solution:
+ Truncation + Jacobian + Broyden
+\end_layout
+
+\begin_layout Enumerate
 Decomposition of GE responses
 \end_layout
 
@@ -6284,11 +6289,12 @@ DAGs
 \end_layout
 
 \begin_layout Enumerate
-Equivalence of sequence space and linearization
+Aggregate risk:
+ Equivalence of sequence space and linearization
 \end_layout
 
 \begin_layout Enumerate
-Simulation 
+Simulation and calculating moments
 \end_layout
 
 \begin_layout Enumerate
@@ -6340,7 +6346,7 @@ You should:
 
 \begin_deeper
 \begin_layout Enumerate
-Study the code
+Study the code from this lecture
 \end_layout
 
 \begin_layout Enumerate

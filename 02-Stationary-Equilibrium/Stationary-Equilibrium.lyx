@@ -1739,7 +1739,7 @@ vspace{-2mm}
 \begin{align*}
 v_{0}(\beta_{i},\phi_{i},z_{it},a_{it-1}) & =\max_{\{c_{it}\}_{t=0}^{\infty}}\mathbb{E}_{0}\sum_{t=0}^{\infty}\beta_{i}^{t}u(c_{it})\\
  & \text{s.t.}\\
-\ell_{it} & =\phi_{i}z_{it}\\
+\ell_{it} & =\phi_{i}z_{it},\,\,\,\mathbb{E}\left[\phi_{i}\right]=1\\
 a_{it} & =(1+r_{t})a_{it-1}+w_{t}\ell_{it}-c_{it}+\Pi_{t}\\
 \log z_{it+1} & =\rho_{z}\log z_{it}+\psi_{it+1},\,\,\,\psi_{it}\sim\mathcal{N}(\mu_{\psi},\sigma_{\psi}),\,\,\,\mathbb{E}[z_{it}]=1\\
 a_{it} & \geq0
@@ -3896,7 +3896,7 @@ backwards
 ,
  i.e.
  find 
-\begin_inset Formula $\boldsymbol{a}_{ss}^{\ast}$
+\begin_inset Formula $a_{ss}^{\ast}$
 \end_inset
 
 
@@ -3918,7 +3918,7 @@ forwards
 
 \begin_layout Enumerate
 Return 
-\begin_inset Formula $K_{ss}-\boldsymbol{a}_{ss}^{\ast\prime}\boldsymbol{D}_{ss}$
+\begin_inset Formula $K_{ss}-\int a_{ss}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{ss}$
 \end_inset
 
 
@@ -4025,7 +4025,7 @@ forwards
 
 \begin_layout Enumerate
 Return 
-\begin_inset Formula $K_{ss}-\boldsymbol{a}_{ss}^{\ast\prime}\boldsymbol{D}_{ss}$
+\begin_inset Formula $K_{ss}-\int a_{ss}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{ss}$
 \end_inset
 
 
@@ -4130,7 +4130,7 @@ forwards
 
 \begin_layout Enumerate
 Set 
-\begin_inset Formula $K_{ss}=\boldsymbol{a}_{ss}^{\ast\prime}\boldsymbol{D}_{ss}$
+\begin_inset Formula $K_{ss}=\int a_{ss}^{\ast}(\beta_{i},\phi_{i},z_{it},a_{it-1})d\boldsymbol{D}_{ss}$
 \end_inset
 
 
@@ -5591,6 +5591,34 @@ The concept of a stationary equilibrium
 \end_layout
 
 \begin_layout Enumerate
+Direction and indirect solution for stationary equilibrium
+\end_layout
+
+\begin_layout Enumerate
+Histogram simulation method
+\end_layout
+
+\begin_layout Enumerate
+Precautionary saving and equilibrium interest rate
+\end_layout
+
+\begin_layout Enumerate
+Drivers of wealth income 
+\begin_inset Formula $>$
+\end_inset
+
+ income inequality
+\end_layout
+
+\begin_layout Enumerate
+Calibration
+\end_layout
+
+\begin_layout Enumerate
+(Maximizing social welfare)
+\end_layout
+
+\begin_layout Enumerate
 Introduction to the 
 \begin_inset ERT
 status open
@@ -5646,7 +5674,7 @@ You should:
 
 \begin_deeper
 \begin_layout Enumerate
-Study the code
+Study the code from this lecture
 \end_layout
 
 \begin_layout Enumerate
@@ -5659,15 +5687,7 @@ literal "false"
 
 \end_inset
 
- 
-\begin_inset Newline newline
-\end_inset
 
-(
-\emph on
-except on linearized solution and simulation
-\emph default
-)
 \end_layout
 
 \begin_layout Enumerate

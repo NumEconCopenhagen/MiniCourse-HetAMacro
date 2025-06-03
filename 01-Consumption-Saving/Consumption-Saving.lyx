@@ -5634,10 +5634,76 @@ P_{t}^{\text{\text{sell}}}(1,m_{t}) & =\frac{\exp\frac{v_{t}(0,m_{t}^{\text{sell
 \end_layout
 
 \end_deeper
-\begin_layout Frame
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Choosing a solution method
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Only consumption choice 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ use EGM!
+\end_layout
+
+\begin_layout Enumerate
+Consumption choice 
+\emph on
+central bottleneck
+\emph default
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ consider NEGM
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Nesting (time ordering of choices)
+\end_layout
+
+\begin_layout Enumerate
+Upper envelope if non-sufficient Euler-equation
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Other choices as important as consumption 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ probably VFI
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Reliable
+\end_layout
+
+\begin_layout Enumerate
+Simple code
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
