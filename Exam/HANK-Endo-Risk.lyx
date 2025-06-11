@@ -997,7 +997,7 @@ Show analytically that with a real rate rule (
 \end_inset
 
 ,
- consumption is given by
+ the consumption sequence is given by
 \begin_inset Formula 
 \begin{align}
 d\mathbf{C}^{hh} & =\left(\gamma\mathbf{M}-(1-\gamma)\chi\mathbf{M}_{\delta}\right)d\mathbf{Z}\label{eq:dC_hh}
@@ -1009,12 +1009,12 @@ where
 \begin_inset Formula $\chi\equiv\left(Z_{ss}\left(\overline{\phi}-\underline{\phi}\right)\right)^{-1}$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Paragraph*
 II.
- Fiscal shock
+ Fiscal shock.
 \end_layout
 
 \begin_layout Standard
@@ -1075,7 +1075,7 @@ Discuss how the fiscal multiplier depend on i)
 \begin_inset Formula $\xi$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -1089,7 +1089,7 @@ status open
 
 \end_inset
 
-Broaden the discussion of what determines the fiscal multiplier in the model in your own choice of direction
+Broaden the discussion of what determines the fiscal multiplier in the model in your own choice of direction.
 \end_layout
 
 \end_body
