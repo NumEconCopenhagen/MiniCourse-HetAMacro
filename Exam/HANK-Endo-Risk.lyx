@@ -496,7 +496,7 @@ New Keynesian Wage Philips Curve
 ,
 \begin_inset Formula 
 \begin{align*}
-\pi_{t}^{w}(1+\pi_{t}^{w}) & =\kappa\left(\frac{\varphi N_{t}^{\nu}}{\left(C_{t}^{\ast}\right)^{-\sigma}(1-\theta)Z_{t}/N_{t}}-1\right)+\beta\pi_{t+1}^{w}\left(1+\pi_{t+1}^{w}\right),
+\pi_{t}^{w}(1+\pi_{t}^{w}) & =\kappa\left(\frac{\varphi N_{t}^{\nu}}{\left(C_{t}^{\ast}\right)^{-\sigma}Z_{t}/N_{t}}-1\right)+\beta\pi_{t+1}^{w}\left(1+\pi_{t+1}^{w}\right),
 \end{align*}
 
 \end_inset
