@@ -483,6 +483,14 @@ Search-and-match labor market (Broer et.
  2024)
 \end_layout
 
+\begin_layout Itemize
+Small open economy (Sundram 2025,
+ Druedahl et.
+ al.
+ 2024,
+ 2025) 
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
 \begin_inset ERT
@@ -673,7 +681,7 @@ Unconstrained,
 :
 \begin_inset Formula 
 \[
-c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}=\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}]
+c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}=\beta R_{t}\mathbb{E}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}\,|\,s_{t}]
 \]
 
 \end_inset
@@ -690,7 +698,7 @@ Constrained,
 :
 \begin_inset Formula 
 \[
-c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}\geq\beta R_{t}\mathbb{E}_{t}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}]
+c_{t}^{\ast}(s_{t},b_{t-1})^{-\sigma}\geq\beta R_{t}\mathbb{E}[c_{t}^{\ast}(s_{t+1},b_{t})^{-\sigma}\,|\,s_{t}]
 \]
 
 \end_inset
@@ -2306,7 +2314,7 @@ vspace{-2mm}
 
 \begin_inset Formula 
 \begin{align*}
-v_{t}(z_{it},a_{it-1}) & =\max_{c_{it}}\frac{c_{it}^{1-\sigma}}{1-\sigma}-\varphi\frac{\ell_{it}^{1+\nu}}{1+\nu}+\beta\mathbb{E}_{t}\left[v_{t+1}(z_{it+1},a_{it})\right]\\
+v_{t}(z_{it},a_{it-1}) & =\max_{c_{it},\ell_{it}}\frac{c_{it}^{1-\sigma}}{1-\sigma}-\varphi\frac{\ell_{it}^{1+\nu}}{1+\nu}+\beta\mathbb{E}_{t}\left[v_{t+1}(z_{it+1},a_{it})\right]\\
 \text{s.t. }a_{it} & =(1+r_{t})a_{it-1}+(w_{t}\ell_{it}-\tau_{t}+d_{t})z_{it}-c_{it}\geq\underline{a}\\
 \log z_{it+1} & =\rho_{z}\log z_{it}+\psi_{it+1}\,\,\,,\psi_{it}\sim\mathcal{N}(\mu_{\psi},\sigma_{\psi}),\,\mathbb{E}[z_{it}]=1
 \end{align*}
@@ -2683,7 +2691,7 @@ status open
 Set 
 \begin_inset Formula 
 \[
-\ell_{it}^{\ast}=\frac{f(\ell_{it}^{\ast})}{f^{\prime}(\ell_{it}^{\ast})}=\frac{f(\ell_{it}^{\ast})}{1-\left(\frac{w_{t}z_{it}}{\varphi}\right)^{\frac{1}{\nu}}\left(-\frac{\sigma}{\nu}\right)\left(c_{it}^{\ast}\right)^{-\frac{\sigma}{\nu}}w_{t}z_{it}}
+\ell_{it}^{\ast}=\ell_{it}^{\ast}-\frac{f(\ell_{it}^{\ast})}{f^{\prime}(\ell_{it}^{\ast})}=\frac{f(\ell_{it}^{\ast})}{1-\left(\frac{w_{t}z_{it}}{\varphi}\right)^{\frac{1}{\nu}}\left(-\frac{\sigma}{\nu}\right)\left(c_{it}^{\ast}\right)^{-\frac{\sigma}{\nu}}w_{t}z_{it}}
 \]
 
 \end_inset
@@ -4487,7 +4495,7 @@ vspace{-3mm}
 
 
 \begin_inset Graphics
-	filename figs/DAG_HANK_sticky_prices.png
+	filename figs/DAG_HANK_sticky_wages.png
 	lyxscale 30
 	width 80text%
 
@@ -4509,7 +4517,7 @@ vspace{-3mm}
 status open
 
 \begin_layout Plain Layout
-Fiscal multplier
+Fiscal multiplier
 \end_layout
 
 \end_inset

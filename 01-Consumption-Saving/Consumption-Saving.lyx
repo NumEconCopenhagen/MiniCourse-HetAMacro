@@ -5625,7 +5625,7 @@ vspace{-2mm}
 \begin_inset Formula 
 \begin{align*}
 P_{t}^{\text{\text{sell}}}(1,m_{t}) & =\frac{\exp\frac{v_{t}(0,m_{t}^{\text{sell}})}{\sigma_{\varepsilon}}}{\exp\frac{v_{t}(0,m_{t}^{\text{sell}})}{\sigma_{\varepsilon}}+\exp\frac{v_{t}(1,m_{t})}{\sigma_{\varepsilon}}}\\
-\overline{v}_{t}(m_{t}) & =P_{t}^{\text{sell}}v_{t}(0,m_{t}^{\text{sell}})+\left(1-P_{t}^{\text{sell}}\right)v_{t}(1,m_{t})
+\underline{v}_{t}(m_{t}) & =P_{t}^{\text{sell}}v_{t}(0,m_{t}^{\text{sell}})+\left(1-P_{t}^{\text{sell}}\right)v_{t}(1,m_{t})
 \end{align*}
 
 \end_inset
